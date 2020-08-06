@@ -1,0 +1,48 @@
+PODS:
+  - AgoraRtcEngine_iOS (3.0.1.1)
+  - Alamofire (4.9.1)
+  - Cosmos (22.1.0)
+  - iCimulator (1.5)
+  - IQKeyboardManagerSwift (6.5.4)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - SkyFloatingLabelTextField (3.8.0)
+
+DEPENDENCIES:
+  - AgoraRtcEngine_iOS
+  - Alamofire (~> 4.9.1)
+  - Cosmos
+  - iCimulator
+  - IQKeyboardManagerSwift (= 6.5.4)
+  - Kingfisher
+  - NVActivityIndicatorView
+  - SkyFloatingLabelTextField (~> 3.0)
+
+SPEC REPOS:
+  trunk:
+    - AgoraRtcEngine_iOS
+    - Alamofire
+    - Cosmos
+    - iCimulator
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - NVActivityIndicatorView
+    - SkyFloatingLabelTextField
+
+SPEC CHECKSUMS:
+  AgoraRtcEngine_iOS: 8ccceaaecff2e80ab28fcd33f3dfd2b417eb5365
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
+  iCimulator: 11419d08ace3c1745ee097f7e1596392dcee37a2
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+
+PODFILE CHECKSUM: af42ebd4fb90586aae08bad738395e4cf0a70d92
+
+COCOAPODS: 1.9.3

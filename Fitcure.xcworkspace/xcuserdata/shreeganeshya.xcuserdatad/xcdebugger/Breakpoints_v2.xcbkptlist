@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "74EB0B97-FC30-4466-BD65-ED976E9DEF0B"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A63B8E2-E5FB-4B75-9E8F-05DE34445C6D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5AD5B69-69B9-44CB-8766-43827D6D37C9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA9DFFDB-FF7E-40A3-96CA-9D3766775F80"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FB4D90A-2DBA-4C4A-B550-435D3202643B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FB4D90A-2DBA-4C4A-B550-435D3202643B - bc57b4aeedefbfe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.ResultAPI&lt;Swift.Optional&lt;Fitcure.CreatePatientModel&gt;&gt;) -&gt; () in static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "8FB4D90A-2DBA-4C4A-B550-435D3202643B - bc57b4aeedefbfe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.ResultAPI&lt;Swift.Optional&lt;Fitcure.CreatePatientModel&gt;&gt;) -&gt; () in static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "8FB4D90A-2DBA-4C4A-B550-435D3202643B - bc57b4aeedefbfe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.ResultAPI&lt;Swift.Optional&lt;Fitcure.CreatePatientModel&gt;&gt;) -&gt; () in static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1622">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55D3D661-B0E5-488C-A8FD-09278CB57C95"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "55D3D661-B0E5-488C-A8FD-09278CB57C95 - 88b3bca18f0ca465"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  uuid = "55D3D661-B0E5-488C-A8FD-09278CB57C95 - bc57b4aeedefbfe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.ResultAPI&lt;Swift.Optional&lt;Fitcure.CreatePatientModel&gt;&gt;) -&gt; () in static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01FE1870-272B-459C-9BB7-1B0565C1B793"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD8DAF9F-35EF-42E9-8615-607DCDB4F572"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB8CF23B-36AF-451D-AF69-9250E79CEA73"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Extension/CreatePatientVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getPatientInfo(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2F07A92-C8C2-4D46-82F2-94DD37200214"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Extension/CreatePatientVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "api_create_patient()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "020F721B-032A-45B7-B86D-5AC8AD5F9CA3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "CreatePatientModel"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D46D2DC-E30C-4DFE-8370-2402C31E6372"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "registerPatientApi(parameters:media:complection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6D46D2DC-E30C-4DFE-8370-2402C31E6372 - bc57b4aeedefbfe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.ResultAPI&lt;Swift.Optional&lt;Fitcure.CreatePatientModel&gt;&gt;) -&gt; () in static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "6D46D2DC-E30C-4DFE-8370-2402C31E6372 - bc57b4aeedefbfe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.ResultAPI&lt;Swift.Optional&lt;Fitcure.CreatePatientModel&gt;&gt;) -&gt; () in static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "6D46D2DC-E30C-4DFE-8370-2402C31E6372 - bc57b4aeedefbfe1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.ResultAPI&lt;Swift.Optional&lt;Fitcure.CreatePatientModel&gt;&gt;) -&gt; () in static Fitcure.CreatePatientModel.registerPatientApi(parameters: Swift.Dictionary&lt;Swift.String, Any&gt;, media: Swift.Array&lt;Fitcure.APICall.Media&gt;, complection: Swift.Optional&lt;(Fitcure.Result&lt;Swift.Int&gt;) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Model/CreatePatientModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1622">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "506F6E43-E87D-4B5F-B23B-D4729CD28694"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Extension/CreatePatientVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "getPatientInfo(response:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "506F6E43-E87D-4B5F-B23B-D4729CD28694 - ed1073d5b1ee0f12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitcure.CreatePatientVC.getPatientInfo(response: Swift.Int) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Extension/CreatePatientVC+APICall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  uuid = "506F6E43-E87D-4B5F-B23B-D4729CD28694 - e43c878e1cdf0974"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.Result&lt;Swift.Array&lt;Fitcure.PatientModel&gt;&gt;) -&gt; () in Fitcure.CreatePatientVC.getPatientInfo(response: Swift.Int) -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/CreatePatientVC/Extension/CreatePatientVC+APICall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "247">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B35141B0-E8DB-45DD-A5EA-37530E6F59A4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/Extension/CreatePatientVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getPatientInfo(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "62564A71-EE40-49A5-9895-5B32A66B76F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/CreatePatientVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "btnCheckTCPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EE7DA3B1-106C-4B6D-A6ED-9CA070FB5F28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/CreatePatientVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "btnCheckTCPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB2F1A2A-7173-4AC8-A30B-0E03089D948B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/CreatePatientVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "btnCheckTCPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0DB0AABD-3F15-48EE-86FA-01C585BEDB9C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/CreatePatientVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "btnCheckTCPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5A2E28FA-39C5-4441-9956-68126B141B1A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/CreatePatientVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "tcPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D8058F9-AF73-4AB0-BF24-8C1807E13A9D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/CreatePatientVC/CreatePatientVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "tcPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31B3977D-D6D9-4F66-BC54-9E2B48854BC3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/AddFamilyMemberVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "btnSavePressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59F74D08-6D6D-4BA5-89AB-F8D20E036440"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/AddFamilyMemberVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "btnSavePressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07B99206-7B8C-4ECC-AEA5-1F04B64B5470"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/AddFamilyMemberVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "btnRelationShipPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8E2A96B-8C72-48FA-8EB3-43A57DA01450"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE54229C-BB5E-4F68-9F5A-15C79CB23A99"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC0E657F-9932-48DD-BECD-6177F06F1C34"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BC0E657F-9932-48DD-BECD-6177F06F1C34 - af91d1d9070c1075"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Fitcure.AddFamilyMemberVC.api_create_patient_family_fember() -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "4076">
+               </Location>
+               <Location
+                  uuid = "BC0E657F-9932-48DD-BECD-6177F06F1C34 - e73a35e833dc7da0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Fitcure.Result&lt;Swift.Int&gt;) -&gt; () in Fitcure.AddFamilyMemberVC.api_create_patient_family_fember() -&gt; ()"
+                  moduleName = "Fitcure"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shreeganeshya/Documents/new%20Update/fitcurepatientsiOS/Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "234">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C1D7B4D-5A60-4673-8B7A-33E1911DEBD4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADA5A3C8-EBD1-4D8B-8B2F-C3D57BE4FD30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41B5E64D-066E-4DE9-858D-B1FAF58B3CE3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "591C2EEB-2107-45D6-8563-BAF937EB9818"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8B9CE52-D1A0-4F92-888A-56E082B4BFC4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB7C99C5-E796-444E-8A89-D12892046333"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fitcure/Controller/AddFamilyMemberVC/Extension/AddFamilyMemberVC+APICall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "api_create_patient_family_fember()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
