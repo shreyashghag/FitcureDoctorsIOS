@@ -41,7 +41,7 @@ final class SettingCell: UITableViewCell {
         switch type {
         case .PrivacyPolicy:
             imgvIcon.image = UIImage(named: "f_DataPolicy")
-        case .TermsAndCondition, .FAQ:
+        case .TermsAndCondition, .FAQ, .RefundPolicy:
             imgvIcon.image = UIImage(named: "f_TAndC")
         case .Report:
             imgvIcon.image = UIImage(named: "f_Report")

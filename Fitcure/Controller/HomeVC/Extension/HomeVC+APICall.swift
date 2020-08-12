@@ -11,38 +11,45 @@ import Foundation
 // MARK:- Extension For :- APICall
 extension HomeVC {
     
-    func getDoctorListing() {
+    func getPendingListing() {
         self.showLoader()
-        self.isLoading = true
-        DoctorListModel.getList(page: intDoctorListPage) { (result) in
-            self.hideLoader()
-            switch result {
-            case .Success(let options):
-                
-                self.intTotalDoctor = options.0 ?? 0
-                self.arrDoctors = options.1
-                self.tableView.reloadData()
-                
-            case .CustomError(let str):
-                Alert.show(.appName, str)
-            }
-            self.isLoading = false
-        }
-    }
-    
-    func getPastConsultsListing() {
-        self.showLoader()
-        self.isLoading = true
-        ConsultsListModel.getList() { (result) in
+        PatientRequestMainModel.getPendingList { (result) in
             self.hideLoader()
             switch result {
             case .Success(let arr):
-                self.arrPastConsults = arr
+                self.arrRequest = arr
                 self.tableView.reloadData()
             case .CustomError(let str):
                 Alert.show(.appName, str)
             }
-            self.isLoading = false
+        }
+    }
+    
+    func getActiveListing() {
+        self.showLoader()
+        PatientRequestMainModel.getActiveList { (result) in
+            self.hideLoader()
+            switch result {
+            case .Success(let arr):
+                self.arrRequest = arr
+                self.tableView.reloadData()
+            case .CustomError(let str):
+                Alert.show(.appName, str)
+            }
+        }
+    }
+    
+    func changeConsultationStatus(_ obj: PatientRequestModel, isAccept: Bool, index: Int) {
+        PatientRequestMainModel.changeConsultationStatus(consID: obj.conID ?? 0, isAccept: isAccept) { (response) in
+            switch response {
+            case .Success(_):
+                if self.arrRequest.count > index {
+                    self.arrRequest.remove(at: index)
+                }
+                self.tableView.reloadData()
+            case .CustomError(let str):
+                Alert.show(.appName, str)
+            }
         }
     }
     

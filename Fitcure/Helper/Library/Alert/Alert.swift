@@ -185,6 +185,7 @@ extension Alert {
         case ProfilePicReq      = "Please select your profile picture."
         case ConsultationReason = "Please enter consultation reason."
         case PatientName        = "Please select patient name."
+        case MailConfigure      = "Mail services are not available"
         
     }
     

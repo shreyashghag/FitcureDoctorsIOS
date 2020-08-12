@@ -21,7 +21,7 @@ struct RelationListModel: Codable {
     }
     
     static func getRelationsListing(_ complection: ((Result<[RelationModel]>)->())?) {
-        APICall.webRequest(apiType: .GET, endPoint: .p_GetRelation, parameters: [:], decodableObj: RelationListModel.self) { (result) in
+        APICall.webRequest(apiType: .GET, endPoint: .d_GetRelation, parameters: [:], decodableObj: RelationListModel.self) { (result) in
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? true) {

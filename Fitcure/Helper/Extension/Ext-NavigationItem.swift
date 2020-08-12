@@ -19,6 +19,8 @@ extension UINavigationItem {
         case YourAddress = "Address"
         case OTPVerification = "OTP Verification"
         case FamilyMember = "Family Member"
+        case History = "History"
+        case FAQ = "FAQ's"
     }
     
     func setTitle(_ _title: NavTitle) {

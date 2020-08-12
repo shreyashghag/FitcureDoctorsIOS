@@ -24,7 +24,7 @@ final class DoctorDetailsVC: UIViewController {
     @IBOutlet private weak var btnRequest       : UIButton!
     
     // MARK:- Variables
-    var obj: DoctorModel?
+//    var obj: DoctorModel?
     var strReason: String?
     var objFamily: FamilyModel?
     
@@ -54,19 +54,19 @@ final class DoctorDetailsVC: UIViewController {
     }
     
     private func setData() {
-        guard let obj = obj else { return }
-        lblName.text = obj.name ?? ""
-        lblDegree.text = obj.qualification ?? ""
-        lblHospital.text = obj.associateHospital ?? ""
-        if let year = obj.workingSince {
-            lblWorkingSince.text = "\(year)"
-        } else {
-            lblWorkingSince.text = "NA"
-        }
-        lblCity.text = obj.city ?? ""
-        lblLanguages.text = obj.preferredLanguages ?? ""
-        
-        imgvProfile.setImage(str: obj.profileImage)
+//        guard let obj = obj else { return }
+//        lblName.text = obj.name ?? ""
+//        lblDegree.text = obj.qualification ?? ""
+//        lblHospital.text = obj.associateHospital ?? ""
+//        if let year = obj.workingSince {
+//            lblWorkingSince.text = "\(year)"
+//        } else {
+//            lblWorkingSince.text = "NA"
+//        }
+//        lblCity.text = obj.city ?? ""
+//        lblLanguages.text = obj.preferredLanguages ?? ""
+//
+//        imgvProfile.setImage(str: obj.profileImage)
     }
     
     // MARK:- Button Actions
@@ -74,11 +74,11 @@ final class DoctorDetailsVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction private func btnRequestForConsultantPressed() {
-        guard obj != nil else {
-            Alert.show(.appName, .Oops)
-            return
-        }
-        pushRequestForConsultVC()
+//        guard obj != nil else {
+//            Alert.show(.appName, .Oops)
+//            return
+//        }
+//        pushRequestForConsultVC()
     }
     
     // MARK:- Push Methods
@@ -121,16 +121,16 @@ final class DoctorDetailsVC: UIViewController {
     
     func onPaymentSuccess(_ response: [String : Any]) {
 
-        var parameter = [String: Any]()
-        parameter["doctorId"] = obj?.id
-        parameter["patientId"] = UserData.returnValue(.userID) as? Int
-        parameter["purpose"] = self.strReason
-        parameter["razorpayOrderId"] = self.objOrderRequest?.orderID
-        parameter["paymentId"] = self.objOrderRequest?.razorpayID
-        parameter["orderReceiptId"] = self.objOrderRequest?.orderReceipt
-        parameter["familyId"] = self.objFamily?.familyMemberID
-        
-        APICall_createConsultation(parameter)
+//        var parameter = [String: Any]()
+//        parameter["doctorId"] = obj?.id
+//        parameter["patientId"] = UserData.returnValue(.userID) as? Int
+//        parameter["purpose"] = self.strReason
+//        parameter["razorpayOrderId"] = self.objOrderRequest?.orderID
+//        parameter["paymentId"] = self.objOrderRequest?.razorpayID
+//        parameter["orderReceiptId"] = self.objOrderRequest?.orderReceipt
+//        parameter["familyId"] = self.objFamily?.familyMemberID
+//
+//        APICall_createConsultation(parameter)
     }
     
     // MARK:- ReceiveMemoryWarning

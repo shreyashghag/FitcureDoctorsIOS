@@ -31,7 +31,7 @@ struct PatientInfoModel: Codable {
     
      static func getPetienInfo(id:Int,_ complection: ((Result<[PatientModel]>)->())?) {
          
-          APICall.webRequest(apiType: .GET, endPoint: .p_Patient, strID: "\(id)", parameters: [:], decodableObj: PatientInfoModel.self) { (result) in
+          APICall.webRequest(apiType: .GET, endPoint: .d_Patient, strID: "\(id)", parameters: [:], decodableObj: PatientInfoModel.self) { (result) in
               switch result {
               case .Success(let obj, _, _):
                   if !(obj?.error ?? false) {

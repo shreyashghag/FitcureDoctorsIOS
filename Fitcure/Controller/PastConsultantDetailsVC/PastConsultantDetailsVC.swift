@@ -11,19 +11,21 @@ import UIKit
 final class PastConsultantDetailsVC: UIViewController {
     
     // MARK:- Outlets
-    @IBOutlet private weak var viewMain         : UIView!
-    @IBOutlet private weak var imgvProfile      : UIImageView!
+    @IBOutlet private weak var viewMain             : UIView!
+    @IBOutlet private weak var imgvProfile          : UIImageView!
     
-    @IBOutlet private weak var lblName          : UILabel!
-    @IBOutlet private weak var lblPatientName   : UILabel!
-    @IBOutlet private weak var lblPurpose       : UILabel!
-    @IBOutlet private weak var lblStatus        : UILabel!
+    @IBOutlet private weak var lblName              : UILabel!
+    @IBOutlet private weak var lblPatientName       : UILabel!
+    @IBOutlet private weak var lblAge               : UILabel!
+    @IBOutlet private weak var lblPurpose           : UILabel!
     
-    @IBOutlet private weak var btnFeedBack      : UIButton!
-    @IBOutlet private weak var btnPrescription  : UIButton!
+    @IBOutlet private weak var btnVideoCall         : UIButton!
+    @IBOutlet private weak var btnWritePrescription : UIButton!
+    @IBOutlet private weak var btnNotify            : UIButton!
         
     // MARK:- Variables
-    var obj: ConsultsModel?
+    var showActive = false
+    var obj: PatientRequestModel?
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -38,10 +40,13 @@ final class PastConsultantDetailsVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         viewMain.setCorner(withRadius: 10)
-        btnFeedBack.setCorner(withRadius: 5)
-        btnPrescription.setCorner(withRadius: 5)
-        btnFeedBack.isHidden = true
-        btnPrescription.isHidden = true
+        btnVideoCall.setCorner(withRadius: 5)
+        btnWritePrescription.setCorner(withRadius: 5)
+        btnNotify.setCorner(withRadius: 5)
+        btnVideoCall.isHidden = !showActive
+        btnWritePrescription.isHidden = !showActive
+        btnNotify.isHidden = !showActive
+        
         DispatchQueue.main.async {
             self.imgvProfile.addGradientBlack()
             self.setData()
@@ -50,23 +55,14 @@ final class PastConsultantDetailsVC: UIViewController {
     
     private func setData() {
         guard let obj = obj else { return }
-        lblName.text = obj.doctor ?? ""
-        lblPatientName.text = obj.doctor ?? ""
+        lblName.text = obj.patient ?? ""
+        lblPatientName.text = obj.patient ?? ""
+        lblAge.text = "\(obj.patientage ?? 0)"
         lblPurpose.text = obj.purpose ?? ""
-        
-        switch obj.isAccepted ?? 0 {
-        case 0:
-            lblStatus.text = "Pending"
-        case 1:
-            lblStatus.text = "Accepted"
-            btnFeedBack.isHidden = false
-        case -1:
-            lblStatus.text = "Rejected"
-        default:
-            lblStatus.text = " - "
-        }
-        btnPrescription.isHidden = (obj.prescriptionPDF ?? "").isEmpty
-        imgvProfile.setImage(str: obj.profileImage)
+        btnVideoCall.isHidden = !showActive
+        btnWritePrescription.isHidden = !showActive
+        btnNotify.isHidden = !showActive
+        imgvProfile.setImage(str: obj.profileImage, isDoc: false)
         
     }
     
@@ -74,17 +70,20 @@ final class PastConsultantDetailsVC: UIViewController {
     @IBAction private func btnBackPressed() {
         self.navigationController?.popViewController(animated: true)
     }
-    @IBAction private func btnSendFeedbackPressed() {
+    @IBAction private func btnVideoCallPressed() {
         pushSendFeedbackVC()
     }
-    @IBAction private func btnViewPrescriptionPressed() {
+    @IBAction private func btnWritePrescriptionPressed() {
+        
+    }
+    @IBAction private func btnNotifyPatientPressed() {
         
     }
     
     // MARK:- Push Methods
     private func pushSendFeedbackVC() {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: FeedBackVC.self)) as? FeedBackVC else { return }
-        vc.obj = obj
+        //vc.obj = obj
         self.present(vc, animated: true, completion: nil)
     }
     

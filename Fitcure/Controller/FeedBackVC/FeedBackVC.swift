@@ -21,7 +21,7 @@ final class FeedBackVC: UIViewController {
     @IBOutlet private weak var btnBack          : UIButton!
     
     // MARK:- Variables
-    var obj: ConsultsModel?
+//    var obj: ConsultsModel?
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -49,7 +49,7 @@ final class FeedBackVC: UIViewController {
         txtvDescription.textColor = .lightGray
         txtvDescription.setBorder(withRadius: 10)
         
-        lblTitle.text = "Review \(obj?.familyMemberName ?? "")"
+//        lblTitle.text = "Review \(obj?.familyMemberName ?? "")"
     }
     
     // MARK:- Button Actions

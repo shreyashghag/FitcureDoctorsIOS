@@ -11,22 +11,17 @@ import UIKit
 final class HomeVC: UIViewController {
     
     // MARK:- Enums
-    enum HomeSelectionTab { case Doctor, PastConsult }
+    enum HomeSelectionTab { case ActiveConsults, CallRequest, ExpertOpinion}
     
     // MARK:- Outlets
-    @IBOutlet weak var tableView    : UITableView!
-    @IBOutlet weak var btnDoctor    : UIButton!
-    @IBOutlet weak var btnPast      : UIButton!
+    @IBOutlet weak var tableView            : UITableView!
+    @IBOutlet weak var btnActiveConsults    : UIButton!
+    @IBOutlet weak var btnCallRequest       : UIButton!
+    @IBOutlet weak var btnExpertOpinion     : UIButton!
     
     // MARK:- Variable
-    var isLoading = false
-    var intTotalDoctor = 0
-    var intDoctorListPage = 1
-    
-    var type = HomeSelectionTab.Doctor
-    
-    var arrDoctors = [DoctorModel]()
-    var arrPastConsults = [ConsultsModel]()
+    var type = HomeSelectionTab.ActiveConsults
+    var arrRequest = [PatientRequestModel]()
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -48,13 +43,16 @@ final class HomeVC: UIViewController {
     }
     
     // MARK:- Button Action
-    @IBAction private func btnDoctorOrPastConsulantPressed(_ sender: UIButton) {
+    @IBAction private func btnHomeOptionsPressed(_ sender: UIButton) {
         switch sender {
-        case btnDoctor:
-            type = .Doctor
+        case btnActiveConsults:
+            type = .ActiveConsults
             setHomeSelection(type)
-        case btnPast:
-            type = .PastConsult
+        case btnCallRequest:
+            type = .CallRequest
+            setHomeSelection(type)
+        case btnExpertOpinion:
+            type = .ExpertOpinion
             setHomeSelection(type)
         default:
             break
@@ -63,31 +61,39 @@ final class HomeVC: UIViewController {
     
     // MARK:- Custom Methods
     func setHomeSelection(_ type: HomeSelectionTab) {
-        btnPast.setTitleColor(.white, for: .normal)
-        btnDoctor.setTitleColor(.white, for: .normal)
+        arrRequest = []
+        btnActiveConsults.setTitleColor(.white, for: .normal)
+        btnCallRequest.setTitleColor(.white, for: .normal)
+        btnExpertOpinion.setTitleColor(.white, for: .normal)
+        
         switch type {
-        case .Doctor:
-            intTotalDoctor = 0
-            intDoctorListPage = 1
+        case .ActiveConsults:
+            btnActiveConsults.setTitleColor(.black, for: .normal)
+            getActiveListing()
             
-            btnDoctor.setTitleColor(.black, for: .normal)
-            getDoctorListing()
-        case .PastConsult:
-            btnPast.setTitleColor(.black, for: .normal)
-            getPastConsultsListing()
+        case .CallRequest:
+            btnCallRequest.setTitleColor(.black, for: .normal)
+            getPendingListing()
+            
+        case .ExpertOpinion:
+            btnExpertOpinion.setTitleColor(.black, for: .normal)
         }
         tableView.reloadData()
     }
     
-    // MARK:- Push Methods
-    func pushDoctorDetailsVC(_ obj: DoctorModel?) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: DoctorDetailsVC.self)) as? DoctorDetailsVC else { return }
-        vc.obj = obj
-        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+    func isAcceptRequest(_ obj: PatientRequestModel?, index: Int?) {
+        guard let obj = obj, let index = index else { return }
+        changeConsultationStatus(obj, isAccept: true, index: index)
+    }
+    func isRejectRequest(_ obj: PatientRequestModel?, index: Int?) {
+        guard let obj = obj, let index = index else { return }
+        changeConsultationStatus(obj, isAccept: false, index: index)
     }
     
-    func pushPastConsultDetailsVC(_ obj: ConsultsModel?) {
+    // MARK:- Push Methods
+    func pushPastConsultDetailsVC(_ obj: PatientRequestModel?) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PastConsultantDetailsVC.self)) as? PastConsultantDetailsVC else { return }
+        vc.showActive = true
         vc.obj = obj
         self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }

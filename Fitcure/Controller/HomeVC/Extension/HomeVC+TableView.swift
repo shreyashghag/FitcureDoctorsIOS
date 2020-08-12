@@ -12,22 +12,8 @@ import UIKit
 extension HomeVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch type {
-        case .Doctor:
-            if arrDoctors.count > indexPath.row {
-                pushDoctorDetailsVC(arrDoctors[indexPath.row])
-            } else {
-                self.tableView.reloadData()
-                Alert.show(.appName, .Oops)
-            }
-        case .PastConsult:
-            if arrPastConsults.count > indexPath.row {
-                pushPastConsultDetailsVC(arrPastConsults[indexPath.row])
-            } else {
-                self.tableView.reloadData()
-                Alert.show(.appName, .Oops)
-            }
-        }
+        guard type == .ActiveConsults else { return }
+        pushPastConsultDetailsVC(arrRequest[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -40,33 +26,15 @@ extension HomeVC: UITableViewDelegate {
 extension HomeVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch type {
-        case .Doctor:
-            return arrDoctors.count
-        case .PastConsult:
-            return arrPastConsults.count
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard !isLoading, arrDoctors.count < intTotalDoctor, indexPath.row  >= arrDoctors.count - 2 else { return }
-        self.intDoctorListPage += 1
-        self.getDoctorListing()
+        return arrRequest.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        switch type {
-        case .Doctor:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeCell.self), for: indexPath) as? HomeCell else { return HomeCell() }
-            cell.setDoctorData(arrDoctors[indexPath.row])
-            return cell
-            
-        case .PastConsult:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PastConsultsVC.self), for: indexPath) as? PastConsultsVC else { return PastConsultsVC() }
-            cell.setData(arrPastConsults[indexPath.row])
-            return cell
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PastConsultsCell.self), for: indexPath) as? PastConsultsCell else { return PastConsultsCell() }
+        cell.setData(type, arrRequest[indexPath.row], index: indexPath.row)
+        cell.onAcceptPressed = isAcceptRequest
+        cell.onDeletePressed = isRejectRequest
+        return cell
     }
     
 } //extension

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bc-tN-0Ph">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -15,7 +15,16 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f_FitcureLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ytd-QJ-27T">
+                                <rect key="frame" x="107" y="368" width="200" height="160"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97278517480000004" green="0.97294431920000002" blue="0.97275131940000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ytd-QJ-27T" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="da6-tO-g6P"/>
+                            <constraint firstItem="Ytd-QJ-27T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="g3I-94-ZD9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aje-jx-qqg"/>
@@ -24,23 +33,8 @@
             </objects>
             <point key="canvasLocation" x="962.31884057971024" y="375"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aBR-b1-Wa0">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1bc-tN-0Ph" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3cf-xp-85J">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="FtK-Nu-R7w"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8jt-UR-cPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="f_FitcureLogo" width="200" height="160"/>
+    </resources>
 </document>

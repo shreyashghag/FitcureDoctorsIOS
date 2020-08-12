@@ -28,7 +28,7 @@ struct FamilyMemberModel: Codable {
             return
         }
         
-        APICall.webRequest(apiType: .GET, endPoint: .P_FamilyMember, strID: "\(id)", parameters: [:], decodableObj: FamilyMemberModel.self) {
+        APICall.webRequest(apiType: .GET, endPoint: .d_FamilyMember, strID: "\(id)", parameters: [:], decodableObj: FamilyMemberModel.self) {
             (result) in
             switch result {
             case .Success(let obj, _, _):

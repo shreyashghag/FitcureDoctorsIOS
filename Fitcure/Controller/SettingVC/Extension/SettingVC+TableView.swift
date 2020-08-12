@@ -24,14 +24,16 @@ extension SettingVC: UITableViewDelegate {
             pushWebVC(type.rawValue, APICall.PrivacyPolicy)
         case .TermsAndCondition:
             pushWebVC(type.rawValue, APICall.TearmsAndCondition)
+        case .RefundPolicy:
+            pushWebVC(type.rawValue, APICall.RefundPolicy)
         case .FAQ:
-            pushToVideoCallingVC()
+            pushFAQVC()
         case .Report:
-            pushTCPopupVC()
+            sendEmail()
         case .RateUs:
             break
         case .Logout:
-            logoutHandle()            
+            logoutHandle()
         }
     }
     

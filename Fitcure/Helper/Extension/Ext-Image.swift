@@ -26,20 +26,8 @@ extension UIImage {
 
 // MARK:- Extension for:- UIImageView
 extension UIImageView {
-    func setImage(str: String?, isDoc: Bool = true) {
-        var str = str ?? ""
-        if str.contains(" ") {
-            str = str.replacingOccurrences(of: " ", with: "%20")
-        }
-        let scale = UIScreen.main.scale
-        let imgsize = CGSize(width: self.frame.size.width * scale, height: self.frame.size.height * scale)
-        guard !str.isEmpty, let url = URL(string: (isDoc ? APICall.DocImgBaseURL : APICall.PaiImgBaseURL) + str) else { return }
-        debugPrint("Image URL:- \(url)")
-        let resizeProcessor = ResizingImageProcessor(referenceSize: imgsize)
-        self.kf.indicatorType = .activity
-        self.kf.setImage(with: url, placeholder: UIImage(named: "p_Default_image"), options: [.fromMemoryCacheOrRefresh, .processor(resizeProcessor), .transition(.fade(0.2))])
-    }
-    func setImage(str: String?, _ placeholderImageName: String, isDoc: Bool = true) {
+
+    func setImage(str: String?, _ placeholderImageName: String = "f_placeholder", isDoc: Bool = true) {
         var str = str ?? ""
         if str.contains(" ") {
             str = str.replacingOccurrences(of: " ", with: "%20")
@@ -51,7 +39,7 @@ extension UIImageView {
         self.kf.indicatorType = .activity
         self.kf.setImage(with: url, placeholder: placeholderImageName.isEmpty ? nil : UIImage(named: placeholderImageName), options: [.fromMemoryCacheOrRefresh, .processor(resizeProcessor), .transition(.fade(0.2))])
     }
-    func setImageWithoutResize(str: String?, _ placeholderImageName: String, isDoc: Bool = true) {
+    func setImageWithoutResize(str: String?, _ placeholderImageName: String = "f_placeholder", isDoc: Bool = true) {
         var str = str ?? ""
         if str.contains(" ") {
             str = str.replacingOccurrences(of: " ", with: "%20")

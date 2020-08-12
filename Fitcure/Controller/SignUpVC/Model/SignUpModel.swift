@@ -53,7 +53,7 @@ struct OtpResponseModel: Codable {
  
     
     static func getOtpApi(_ parameter: [String: Any], complection: ((Result<Int>)->())?) {
-        APICall.webRequest(apiType: .POST, endPoint: .P_GenerateOtp, parameters: parameter, decodableObj: OtpResponseModel.self) { (result) in
+        APICall.webRequest(apiType: .POST, endPoint: .d_GenerateOtp, parameters: parameter, decodableObj: OtpResponseModel.self) { (result) in
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false), let firestObj = obj?.Response {

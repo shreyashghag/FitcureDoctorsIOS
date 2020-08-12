@@ -23,12 +23,12 @@ struct LoginModel: Codable {
     static func login(_ parameter: [String: Any], complection: ((Result<UserModel>)->())?) {
       
         
-        APICall.webRequest(apiType: .POST, endPoint: .P_Login, parameters: parameter, decodableObj: LoginModel.self) { (result) in
+        APICall.webRequest(apiType: .POST, endPoint: .d_Login, parameters: parameter, decodableObj: LoginModel.self) { (result) in
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false) {
                     guard let firstObj = obj?.response?.first,
-                        let patientId = firstObj.patientID,
+                        let id = firstObj.id,
                         let name = firstObj.name,
                         let mobile = firstObj.mobile,
                         let email = firstObj.email
@@ -36,7 +36,7 @@ struct LoginModel: Codable {
                         complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
                         return
                     }
-                    UserData.saveData(.userID, patientId)
+                    UserData.saveData(.userID, id)
                     UserData.saveData(.name, name)
                     UserData.saveData(.Mobile, mobile)
                     UserData.saveData(.Email, email)
@@ -54,20 +54,27 @@ struct LoginModel: Codable {
 
 // MARK: - Response
 struct UserModel: Codable {
-    var patientID: Int?
-    var mobile, name, password, email: String?
-    var gender: String?
-    var age: Int?
-    var city, location: String?
-    var relation: Int?
-    var fcmToken, profileImage: String?
     
     static var obj: UserModel? = nil
         
+    let id: Int?
+    let name, mobile, gender, password: String?
+    let nameOfCouncil, email, registrationNo: String?
+    let workingSince: Int?
+    let qualification, associateHospital, city, preferredLanguages: String?
+    let location, profileImage, signatureImage, signatureBitmapImage: String?
+    let speciality, fcmToken: String?
+    let razorpayOrderID, paymentID, orderReceiptID: String?
+    let isApproved: Int?
+    let createdAt: String?
+    let approvedAt: String?
+
     enum CodingKeys: String, CodingKey {
-        case patientID = "patientId"
-        case mobile, name, password, email, gender, age, city, location, relation
+        case id, name, mobile, gender, password, nameOfCouncil, email, registrationNo, workingSince, qualification, associateHospital, city, preferredLanguages, location, profileImage, signatureImage, signatureBitmapImage, speciality
         case fcmToken = "fcm_token"
-        case profileImage
+        case razorpayOrderID = "razorpayOrderId"
+        case paymentID = "paymentId"
+        case orderReceiptID = "orderReceiptId"
+        case isApproved, createdAt, approvedAt
     }
 }

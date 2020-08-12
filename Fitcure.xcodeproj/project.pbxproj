@@ -17,7 +17,6 @@
 		2B1AB06A24AA37CC006A0089 /* Ext-View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AB06924AA37CC006A0089 /* Ext-View.swift */; };
 		2B1AB06C24AA3AB1006A0089 /* Ext-UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AB06B24AA3AB1006A0089 /* Ext-UIColor.swift */; };
 		2B26D70224B09D67006D2FBB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26D70124B09D67006D2FBB /* UserData.swift */; };
-		2B26D70524B09D8D006D2FBB /* DoctorListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26D70424B09D8D006D2FBB /* DoctorListModel.swift */; };
 		2B26D70724B09DAD006D2FBB /* HomeVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26D70624B09DAD006D2FBB /* HomeVC+APICall.swift */; };
 		2B26D70924B09FA6006D2FBB /* Ext-Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26D70824B09FA6006D2FBB /* Ext-Image.swift */; };
 		2B26D70C24B0A709006D2FBB /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26D70B24B0A709006D2FBB /* SplashVC.swift */; };
@@ -35,6 +34,16 @@
 		2B6428B724B4B380006E35EE /* RequestForConsultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6428B624B4B380006E35EE /* RequestForConsultVC.swift */; };
 		2B6428B924B4B3A4006E35EE /* DoctorDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6428B824B4B3A4006E35EE /* DoctorDetailsVC.swift */; };
 		2B6428BB24B4B3C0006E35EE /* PastConsultantDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6428BA24B4B3C0006E35EE /* PastConsultantDetailsVC.swift */; };
+		2B65466C24E2FCE200EECD0B /* PatientRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65466B24E2FCE200EECD0B /* PatientRequestModel.swift */; };
+		2B65466E24E3063D00EECD0B /* Ext-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65466D24E3063D00EECD0B /* Ext-String.swift */; };
+		2B8C071324E4409500D25D94 /* FAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071224E4409500D25D94 /* FAQVC.swift */; };
+		2B8C071524E4409A00D25D94 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071424E4409A00D25D94 /* FAQCell.swift */; };
+		2B8C071724E440A100D25D94 /* FAQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071624E440A100D25D94 /* FAQModel.swift */; };
+		2B8C071924E440A700D25D94 /* FAQVC+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071824E440A700D25D94 /* FAQVC+Extension.swift */; };
+		2B8C071B24E4427700D25D94 /* HistoryConsultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071A24E4427700D25D94 /* HistoryConsultsCell.swift */; };
+		2B8C071E24E4435000D25D94 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071D24E4435000D25D94 /* HistoryVC.swift */; };
+		2B8C072124E443B000D25D94 /* HistoryVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C072024E443B000D25D94 /* HistoryVC+TableView.swift */; };
+		2B8C072324E443B900D25D94 /* HistoryVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C072224E443B900D25D94 /* HistoryVC+APICall.swift */; };
 		2B97124A24C5B86C0025B26C /* TermsConditionPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B97124924C5B86C0025B26C /* TermsConditionPopUpVC.swift */; };
 		2B97124D24C5BC710025B26C /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B97124C24C5BC710025B26C /* WebVC.swift */; };
 		2B97125024C5C9700025B26C /* ConsultationFeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B97124F24C5C9700025B26C /* ConsultationFeedbackModel.swift */; };
@@ -68,14 +77,11 @@
 		5512795524AB7DFF0080909D /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512795424AB7DFF0080909D /* APICall.swift */; };
 		5512795724AB81E90080909D /* LoginVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512795624AB81E90080909D /* LoginVC+APICall.swift */; };
 		5512795C24AB89A70080909D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512795B24AB89A70080909D /* LoginModel.swift */; };
-		5521977D24B39BC7004B7742 /* PastConsultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521977C24B39BC7004B7742 /* PastConsultsVC.swift */; };
-		5521977F24B39CD9004B7742 /* ConsultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521977E24B39CD9004B7742 /* ConsultsModel.swift */; };
+		5521977D24B39BC7004B7742 /* PastConsultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521977C24B39BC7004B7742 /* PastConsultsCell.swift */; };
 		55C9C5FA24ACB69C00E53FAE /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C5F924ACB69C00E53FAE /* TabBarVC.swift */; };
 		55C9C5FF24ACB6E400E53FAE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C5FE24ACB6E400E53FAE /* HomeVC.swift */; };
 		55C9C60124ACB6ED00E53FAE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C60024ACB6ED00E53FAE /* ProfileVC.swift */; };
 		55C9C60324ACB6F700E53FAE /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C60224ACB6F700E53FAE /* SettingVC.swift */; };
-		55C9C60624ACBF1F00E53FAE /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C60524ACBF1F00E53FAE /* HomeCell.swift */; };
-		55C9C60824ACBF3000E53FAE /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C60724ACBF3000E53FAE /* TagCell.swift */; };
 		708B9F3546F42E6233D4E3B7 /* Pods_Fitcure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */; };
 		C607779524CEC91E00FFC780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B12EE6B24A9A59200EF91EB /* Assets.xcassets */; };
 		C614EA5324CAFD4A00070EC0 /* RelationFamilyMemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614EA5224CAFD4A00070EC0 /* RelationFamilyMemberModel.swift */; };
@@ -119,7 +125,6 @@
 		2B1AB06924AA37CC006A0089 /* Ext-View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-View.swift"; sourceTree = "<group>"; };
 		2B1AB06B24AA3AB1006A0089 /* Ext-UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-UIColor.swift"; sourceTree = "<group>"; };
 		2B26D70124B09D67006D2FBB /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		2B26D70424B09D8D006D2FBB /* DoctorListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorListModel.swift; sourceTree = "<group>"; };
 		2B26D70624B09DAD006D2FBB /* HomeVC+APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC+APICall.swift"; sourceTree = "<group>"; };
 		2B26D70824B09FA6006D2FBB /* Ext-Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-Image.swift"; sourceTree = "<group>"; };
 		2B26D70B24B0A709006D2FBB /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -137,6 +142,16 @@
 		2B6428B624B4B380006E35EE /* RequestForConsultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestForConsultVC.swift; sourceTree = "<group>"; };
 		2B6428B824B4B3A4006E35EE /* DoctorDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsVC.swift; sourceTree = "<group>"; };
 		2B6428BA24B4B3C0006E35EE /* PastConsultantDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastConsultantDetailsVC.swift; sourceTree = "<group>"; };
+		2B65466B24E2FCE200EECD0B /* PatientRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRequestModel.swift; sourceTree = "<group>"; };
+		2B65466D24E3063D00EECD0B /* Ext-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-String.swift"; sourceTree = "<group>"; };
+		2B8C071224E4409500D25D94 /* FAQVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQVC.swift; sourceTree = "<group>"; };
+		2B8C071424E4409A00D25D94 /* FAQCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
+		2B8C071624E440A100D25D94 /* FAQModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQModel.swift; sourceTree = "<group>"; };
+		2B8C071824E440A700D25D94 /* FAQVC+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FAQVC+Extension.swift"; sourceTree = "<group>"; };
+		2B8C071A24E4427700D25D94 /* HistoryConsultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryConsultsCell.swift; sourceTree = "<group>"; };
+		2B8C071D24E4435000D25D94 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		2B8C072024E443B000D25D94 /* HistoryVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryVC+TableView.swift"; sourceTree = "<group>"; };
+		2B8C072224E443B900D25D94 /* HistoryVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryVC+APICall.swift"; sourceTree = "<group>"; };
 		2B97124924C5B86C0025B26C /* TermsConditionPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionPopUpVC.swift; sourceTree = "<group>"; };
 		2B97124C24C5BC710025B26C /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		2B97124F24C5C9700025B26C /* ConsultationFeedbackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationFeedbackModel.swift; sourceTree = "<group>"; };
@@ -169,14 +184,11 @@
 		5512795424AB7DFF0080909D /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		5512795624AB81E90080909D /* LoginVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+APICall.swift"; sourceTree = "<group>"; };
 		5512795B24AB89A70080909D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		5521977C24B39BC7004B7742 /* PastConsultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastConsultsVC.swift; sourceTree = "<group>"; };
-		5521977E24B39CD9004B7742 /* ConsultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultsModel.swift; sourceTree = "<group>"; };
+		5521977C24B39BC7004B7742 /* PastConsultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastConsultsCell.swift; sourceTree = "<group>"; };
 		55C9C5F924ACB69C00E53FAE /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		55C9C5FE24ACB6E400E53FAE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		55C9C60024ACB6ED00E53FAE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		55C9C60224ACB6F700E53FAE /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
-		55C9C60524ACBF1F00E53FAE /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		55C9C60724ACBF3000E53FAE /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitcure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A256D2250EC3F6220B55D65D /* Pods-Fitcure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitcure.debug.xcconfig"; path = "Target Support Files/Pods-Fitcure/Pods-Fitcure.debug.xcconfig"; sourceTree = "<group>"; };
 		C614EA5224CAFD4A00070EC0 /* RelationFamilyMemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationFamilyMemberModel.swift; sourceTree = "<group>"; };
@@ -259,6 +271,7 @@
 		2B12EE7824A9A5D400EF91EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B8C070E24E4406700D25D94 /* FAQVC */,
 				2B26D70A24B0A6FA006D2FBB /* SplashVC */,
 				5512794824AB723B0080909D /* LoginVC */,
 				5512794624AB72210080909D /* SignUpVC */,
@@ -267,6 +280,7 @@
 				5512794724AB722E0080909D /* OtpVerificationVC */,
 				55C9C5F824ACB63200E53FAE /* TabbarVC */,
 				55C9C5FB24ACB6C500E53FAE /* HomeVC */,
+				2B8C071C24E4433700D25D94 /* HistoryVC */,
 				2B6428B124B4B323006E35EE /* DoctorDetailsVC */,
 				2B6428B024B4B308006E35EE /* PastConsultantDetailsVC */,
 				2B6428B324B4B348006E35EE /* FeedBackVC */,
@@ -310,6 +324,7 @@
 				2BBC69EF24ADB46000C77D24 /* Ext-ViewController.swift */,
 				2B26D70824B09FA6006D2FBB /* Ext-Image.swift */,
 				2BBC69ED24ADB3BE00C77D24 /* Constant.swift */,
+				2B65466D24E3063D00EECD0B /* Ext-String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -317,8 +332,7 @@
 		2B26D70324B09D6E006D2FBB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B26D70424B09D8D006D2FBB /* DoctorListModel.swift */,
-				5521977E24B39CD9004B7742 /* ConsultsModel.swift */,
+				2B65466B24E2FCE200EECD0B /* PatientRequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,6 +434,59 @@
 				2B97125124C5CA740025B26C /* Extension */,
 			);
 			path = FeedBackVC;
+			sourceTree = "<group>";
+		};
+		2B8C070E24E4406700D25D94 /* FAQVC */ = {
+			isa = PBXGroup;
+			children = (
+				2B8C071224E4409500D25D94 /* FAQVC.swift */,
+				2B8C071124E4408300D25D94 /* Model */,
+				2B8C070F24E4407400D25D94 /* View */,
+				2B8C071024E4407900D25D94 /* Extension */,
+			);
+			path = FAQVC;
+			sourceTree = "<group>";
+		};
+		2B8C070F24E4407400D25D94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B8C071424E4409A00D25D94 /* FAQCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B8C071024E4407900D25D94 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B8C071824E440A700D25D94 /* FAQVC+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2B8C071124E4408300D25D94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B8C071624E440A100D25D94 /* FAQModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B8C071C24E4433700D25D94 /* HistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				2B8C071D24E4435000D25D94 /* HistoryVC.swift */,
+				2B8C071F24E443A200D25D94 /* Extension */,
+			);
+			path = HistoryVC;
+			sourceTree = "<group>";
+		};
+		2B8C071F24E443A200D25D94 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B8C072224E443B900D25D94 /* HistoryVC+APICall.swift */,
+				2B8C072024E443B000D25D94 /* HistoryVC+TableView.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		2B97124824C5B8140025B26C /* TermsConditionPopUpVC */ = {
@@ -673,9 +740,8 @@
 		55C9C60424ACBF1000E53FAE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55C9C60524ACBF1F00E53FAE /* HomeCell.swift */,
-				55C9C60724ACBF3000E53FAE /* TagCell.swift */,
-				5521977C24B39BC7004B7742 /* PastConsultsVC.swift */,
+				5521977C24B39BC7004B7742 /* PastConsultsCell.swift */,
+				2B8C071A24E4427700D25D94 /* HistoryConsultsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -872,12 +938,12 @@
 				2B12EE6724A9A58E00EF91EB /* SignUpVC.swift in Sources */,
 				2B1AB06324AA2FA8006A0089 /* OtpVerificationVC.swift in Sources */,
 				5507E41224ACF56B00E9FE1C /* SettingCell.swift in Sources */,
-				5521977F24B39CD9004B7742 /* ConsultsModel.swift in Sources */,
 				2B1AB06624AA300D006A0089 /* OtpView.swift in Sources */,
 				2BE642F124C2F2D700F10EF6 /* RelationModel.swift in Sources */,
 				C6190F2924BD8C2300E5754D /* CreatePatientModel.swift in Sources */,
 				2B43F87424B9C17B00B90008 /* ProfileFooterCell.swift in Sources */,
 				C66B37DA24BEBA44004A2363 /* PatientInfoModel.swift in Sources */,
+				2B65466E24E3063D00EECD0B /* Ext-String.swift in Sources */,
 				C6190F2C24BDB77D00E5754D /* NextLocationVC+TextField.swift in Sources */,
 				2B6428AF24B4A239006E35EE /* CreatePatientVC+APICall.swift in Sources */,
 				5512795024AB749B0080909D /* Ext-AppDelegate.swift in Sources */,
@@ -887,10 +953,11 @@
 				2BFDFD4D24D9991E00957B7F /* LogViewController.swift in Sources */,
 				2B43F86D24B9A6FD00B90008 /* PatientProfileCell.swift in Sources */,
 				5512794A24AB724F0080909D /* SignUpVC+TextField.swift in Sources */,
+				2B8C071324E4409500D25D94 /* FAQVC.swift in Sources */,
 				2BE642F724C2F36200F10EF6 /* AddFamilyMemberVC+APICall.swift in Sources */,
 				2BFDFD5824D9B21900957B7F /* RazorPayHelper.swift in Sources */,
 				55C9C5FF24ACB6E400E53FAE /* HomeVC.swift in Sources */,
-				5521977D24B39BC7004B7742 /* PastConsultsVC.swift in Sources */,
+				5521977D24B39BC7004B7742 /* PastConsultsCell.swift in Sources */,
 				2B6428BB24B4B3C0006E35EE /* PastConsultantDetailsVC.swift in Sources */,
 				2BFDFD5024D9A73100957B7F /* RequestForConsultVC+APICall.swift in Sources */,
 				2B26D70724B09DAD006D2FBB /* HomeVC+APICall.swift in Sources */,
@@ -903,8 +970,10 @@
 				C673074424BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift in Sources */,
 				2B12EE6324A9A58E00EF91EB /* AppDelegate.swift in Sources */,
 				2B43F87024B9A8FB00B90008 /* FamilyModel.swift in Sources */,
+				2B8C072124E443B000D25D94 /* HistoryVC+TableView.swift in Sources */,
 				2B6428AB24B4A217006E35EE /* CreatePatientVC+TextField.swift in Sources */,
 				C657998624ADF2580094410B /* NextLocationVC.swift in Sources */,
+				2B8C071E24E4435000D25D94 /* HistoryVC.swift in Sources */,
 				2B638A4A24A9BACE001EE997 /* LoginVC.swift in Sources */,
 				2BFDFD5224D9AC6100957B7F /* RequestForConsultVC+TextView.swift in Sources */,
 				2B97125324C5CA7F0025B26C /* FeedBackVC+APICall.swift in Sources */,
@@ -913,6 +982,7 @@
 				2BDE1F8124D9BA6300CC517B /* DoctorDetailsVC+APICall.swift in Sources */,
 				2B12EE6524A9A58E00EF91EB /* SceneDelegate.swift in Sources */,
 				2B97124D24C5BC710025B26C /* WebVC.swift in Sources */,
+				2B8C071924E440A700D25D94 /* FAQVC+Extension.swift in Sources */,
 				C657997A24ADC7870094410B /* SignUpVC+APICall.swift in Sources */,
 				5512795224AB78410080909D /* LoginVC+TextField.swift in Sources */,
 				5512795724AB81E90080909D /* LoginVC+APICall.swift in Sources */,
@@ -927,15 +997,17 @@
 				2B97125524C5CC7F0025B26C /* FeedBackVC+TextView.swift in Sources */,
 				55C9C60124ACB6ED00E53FAE /* ProfileVC.swift in Sources */,
 				2BFDFD5524D9B02F00957B7F /* ConsultRequestOrderModel.swift in Sources */,
+				2B8C072324E443B900D25D94 /* HistoryVC+APICall.swift in Sources */,
 				5507E40F24ACF54E00E9FE1C /* SettingVC+TableView.swift in Sources */,
-				55C9C60824ACBF3000E53FAE /* TagCell.swift in Sources */,
 				2B97125024C5C9700025B26C /* ConsultationFeedbackModel.swift in Sources */,
-				55C9C60624ACBF1F00E53FAE /* HomeCell.swift in Sources */,
+				2B8C071B24E4427700D25D94 /* HistoryConsultsCell.swift in Sources */,
 				C657997D24ADC9C80094410B /* SignUpModel.swift in Sources */,
+				2B65466C24E2FCE200EECD0B /* PatientRequestModel.swift in Sources */,
 				2B1AB06A24AA37CC006A0089 /* Ext-View.swift in Sources */,
+				2B8C071524E4409A00D25D94 /* FAQCell.swift in Sources */,
 				5512794E24AB73CC0080909D /* Alert.swift in Sources */,
 				2B26D70224B09D67006D2FBB /* UserData.swift in Sources */,
-				2B26D70524B09D8D006D2FBB /* DoctorListModel.swift in Sources */,
+				2B8C071724E440A100D25D94 /* FAQModel.swift in Sources */,
 				5507E40C24ACE0A800E9FE1C /* HomeVC+TableView.swift in Sources */,
 				2B1AB06C24AA3AB1006A0089 /* Ext-UIColor.swift in Sources */,
 				2BBC69F024ADB46000C77D24 /* Ext-ViewController.swift in Sources */,

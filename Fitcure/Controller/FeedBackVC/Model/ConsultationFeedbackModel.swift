@@ -21,7 +21,7 @@ struct ConsultationFeedbackModel: Codable {
     }
     
     static func sendFeedback(parameter: [String : Any], _ complection: ((Result<String>)->())?) {
-        APICall.webRequest(apiType: .POST, endPoint: .p_ConsultationFeedback, parameters: parameter, decodableObj: ConsultationFeedbackModel.self) { (result) in
+        APICall.webRequest(apiType: .POST, endPoint: .d_ConsultationFeedback, parameters: parameter, decodableObj: ConsultationFeedbackModel.self) { (result) in
             
             switch result {
             case .Success(let obj, _, _):

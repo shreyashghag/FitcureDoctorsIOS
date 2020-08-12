@@ -65,33 +65,30 @@ final class APICall {
         
         case P_Login                    = "login/patient/"
         case P_CheckNo                  = "patient/check/mobile/"
-        case P_GenerateOtp              = "send/otp/"
         case P_CreatePatient            = "create/patient/"
-        case P_CreateFamilyMember       = "create/familymember/"
-        case P_DoctorList               = "get/doctors/"
-        case P_PastConsultation         = "get/consultations/"
-        case P_FamilyMember             = "get/patients/familymember/"
-        case p_Patient                  = "get/patients/"
-        case p_GetRelation              = "get/relations"
-        case p_ConsultationFeedback     = "consultation/feedback"
         case p_ConsultationRequest      = "create/order_id"
         case p_CreateConsultation       = "create/consultation"
+        
+        case d_Login                    = "login/doctor/"
+        case d_CheckNo                  = "doctor/check/mobile/"
+        case d_GenerateOtp              = "send/otp/"
+        case d_CreatePatient            = "create/doctor/"
+        case d_CreateFamilyMember       = "create/familymember/"
+        case d_DoctorList               = "get/doctors/"
+        case d_PastConsultation         = "get/consultations/"
+        case d_FamilyMember             = "get/patients/familymember/"
+        case d_Patient                  = "get/patients/"
+        case d_GetRelation              = "get/relations"
+        case d_ConsultationFeedback     = "consultation/feedback"
+        
+        case d_PendingConsultation      = "get/consultation/pending/"
+        case d_ActiveConsultation       = "get/consultation/active/"
+        case d_RejectedConsultation     = "get/consultation/rejected/"
+        case d_ChangeConsultation       = "consultation/change/"
+        
+        
     }
-    
-    public enum SubUrlDoctor: String {
-          case d_Login                    = "login/doctor/"
-          case d_CheckNo                  = "doctor/check/mobile/"
-          case d_GenerateOtp              = "send/otp/"
-          case d_CreatePatient            = "create/doctor/"
-          case d_CreateFamilyMember       = "create/familymember/"
-          case d_DoctorList               = "get/doctors/"
-          case d_PastConsultation         = "get/consultations/"
-          case d_FamilyMember             = "get/patients/familymember/"
-          case d_Patient                  = "get/patients/"
-          case d_GetRelation              = "get/relations"
-          case d_ConsultationFeedback     = "consultation/feedback"
-      }
-    
+        
     struct ErrorMessageModel: Codable {
         let detail: String?
         let message: String?

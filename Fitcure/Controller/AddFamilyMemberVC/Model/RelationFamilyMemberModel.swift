@@ -22,7 +22,7 @@ struct RelationFamilyMemberModel: Codable {
     }
     
     static func registerFamilyMemberPatientApi(strId: String, parameters : [String : Any], complection: ((Result<Int>)->())?) {
-        APICall.webRequest(apiType: strId.isEmpty ? .POST : .PUT, endPoint: .P_CreateFamilyMember, strID: strId, parameters: parameters, decodableObj: RelationFamilyMemberModel.self) { (result) in
+        APICall.webRequest(apiType: strId.isEmpty ? .POST : .PUT, endPoint: .d_CreateFamilyMember, strID: strId, parameters: parameters, decodableObj: RelationFamilyMemberModel.self) { (result) in
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false), let firestObj = obj?.response {

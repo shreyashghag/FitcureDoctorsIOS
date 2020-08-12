@@ -8,16 +8,21 @@
 
 import UIKit
 
-class PastConsultsVC: UITableViewCell {
+class PastConsultsCell: UITableViewCell {
     
     // MARK:- Outlet
     @IBOutlet private weak var lblName          : UILabel!
     @IBOutlet private weak var lblDate          : UILabel!
-    @IBOutlet private weak var lblStatus        : UILabel!
+    @IBOutlet private weak var btnAccept        : UIButton!
+    @IBOutlet private weak var btnReject        : UIButton!
     @IBOutlet private weak var viewBG           : UIView!
     @IBOutlet private weak var imgvProfile      : UIImageView!
     
     // MARK:- Variables
+    var obj: PatientRequestModel?
+    var onDeletePressed:((PatientRequestModel?)->())
+    var onAcceptPressed:((PatientRequestModel?)->())
+    
     
     // MARK:- Default Methods
     override func awakeFromNib() {
@@ -34,21 +39,22 @@ class PastConsultsVC: UITableViewCell {
     }
     
     // MARK:- Custom Methods
-    func setData(_ obj: ConsultsModel) {
-        lblName.text = obj.doctor ?? ""
-        lblDate.text = obj.createdAt ?? ""
-        imgvProfile.setImage(str: obj.profileImage)
+    func setData(_ type: HomeVC.HomeSelectionTab, _ obj: PatientRequestModel) {
+        self.obj = obj
+        btnAccept.isHidden = !(type == .CallRequest)
+        btnReject.isHidden = !(type == .CallRequest)
         
-        switch obj.isAccepted ?? 0 {
-        case 0:
-            lblStatus.text = "Pending"
-        case 1:
-            lblStatus.text = "Accepted"
-        case -1:
-            lblStatus.text = "Rejected"
-        default:
-            lblStatus.text = " - "
-        }
+        lblName.text = obj.patient ?? ""
+        lblDate.text = String.getDate(obj.createdAt)
+        imgvProfile.setImage(str: obj.profileImage, isDoc: false)
+    }
+    
+    // MARK:- Button Action Methods
+    @IBAction private func btnAcceptPressed() {
+        onAcceptPressed?(obj)
+    }
+    @IBAction private func btnRejectPressed() {
+        onDeletePressed?(obj)
     }
     
 } //class
