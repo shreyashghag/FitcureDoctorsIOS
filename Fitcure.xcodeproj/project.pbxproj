@@ -112,7 +112,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2B12EE5F24A9A58E00EF91EB /* Doctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Doctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B12EE5F24A9A58E00EF91EB /* Rehab Call Physiotherapist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rehab Call Physiotherapist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B12EE6224A9A58E00EF91EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B12EE6424A9A58E00EF91EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2B12EE6624A9A58E00EF91EB /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		2B12EE6024A9A58E00EF91EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2B12EE5F24A9A58E00EF91EB /* Doctor.app */,
+				2B12EE5F24A9A58E00EF91EB /* Rehab Call Physiotherapist.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -838,7 +838,7 @@
 			);
 			name = Fitcure;
 			productName = Fitcure;
-			productReference = 2B12EE5F24A9A58E00EF91EB /* Doctor.app */;
+			productReference = 2B12EE5F24A9A58E00EF91EB /* Rehab Call Physiotherapist.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1167,8 +1167,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Fitcure.Doctor;
-				PRODUCT_NAME = Doctor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redbytes.demo;
+				PRODUCT_NAME = "Rehab Call Physiotherapist";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1187,8 +1187,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Fitcure.Doctor;
-				PRODUCT_NAME = Doctor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redbytes.demo;
+				PRODUCT_NAME = "Rehab Call Physiotherapist";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
