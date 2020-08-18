@@ -63,16 +63,16 @@ final class APICall {
     
     public enum SubUrl: String {
         
-        case P_Login                    = "login/patient/"
-        case P_CheckNo                  = "patient/check/mobile/"
-        case P_CreatePatient            = "create/patient/"
+        
+       
+        
         case p_ConsultationRequest      = "create/order_id"
         case p_CreateConsultation       = "create/consultation"
         
         case d_Login                    = "login/doctor/"
         case d_CheckNo                  = "doctor/check/mobile/"
         case d_GenerateOtp              = "send/otp/"
-        case d_CreatePatient            = "create/doctor/"
+        case d_CreateDoctor             = "create/doctor/"
         case d_CreateFamilyMember       = "create/familymember/"
         case d_DoctorList               = "get/doctors/"
         case d_PastConsultation         = "get/consultations/"

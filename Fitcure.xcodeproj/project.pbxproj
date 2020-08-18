@@ -84,9 +84,15 @@
 		55C9C60324ACB6F700E53FAE /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C60224ACB6F700E53FAE /* SettingVC.swift */; };
 		708B9F3546F42E6233D4E3B7 /* Pods_Fitcure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */; };
 		C607779524CEC91E00FFC780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B12EE6B24A9A59200EF91EB /* Assets.xcassets */; };
+		C61365DB24E9373C00C1CDF4 /* CustomOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61365D624E9373C00C1CDF4 /* CustomOverlay.xib */; };
+		C61365DC24E9373C00C1CDF4 /* CustomPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61365D724E9373C00C1CDF4 /* CustomPage.xib */; };
+		C61365DD24E9373C00C1CDF4 /* StoryboardExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61365D824E9373C00C1CDF4 /* StoryboardExample.swift */; };
+		C61365DE24E9373C00C1CDF4 /* CustomOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61365D924E9373C00C1CDF4 /* CustomOverlay.swift */; };
+		C61365DF24E9373C00C1CDF4 /* CustomPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61365DA24E9373C00C1CDF4 /* CustomPage.swift */; };
 		C614EA5324CAFD4A00070EC0 /* RelationFamilyMemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C614EA5224CAFD4A00070EC0 /* RelationFamilyMemberModel.swift */; };
 		C6190F2924BD8C2300E5754D /* CreatePatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6190F2824BD8C2300E5754D /* CreatePatientModel.swift */; };
 		C6190F2C24BDB77D00E5754D /* NextLocationVC+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6190F2B24BDB77D00E5754D /* NextLocationVC+TextField.swift */; };
+		C63620AF24E96C2E00BC9BCC /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63620AE24E96C2E00BC9BCC /* Canvas.swift */; };
 		C657997A24ADC7870094410B /* SignUpVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657997924ADC7870094410B /* SignUpVC+APICall.swift */; };
 		C657997D24ADC9C80094410B /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657997C24ADC9C80094410B /* SignUpModel.swift */; };
 		C657998424ADEB670094410B /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998324ADEB670094410B /* LocationVC.swift */; };
@@ -191,9 +197,15 @@
 		55C9C60224ACB6F700E53FAE /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitcure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A256D2250EC3F6220B55D65D /* Pods-Fitcure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitcure.debug.xcconfig"; path = "Target Support Files/Pods-Fitcure/Pods-Fitcure.debug.xcconfig"; sourceTree = "<group>"; };
+		C61365D624E9373C00C1CDF4 /* CustomOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlay.xib; sourceTree = "<group>"; };
+		C61365D724E9373C00C1CDF4 /* CustomPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPage.xib; sourceTree = "<group>"; };
+		C61365D824E9373C00C1CDF4 /* StoryboardExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExample.swift; sourceTree = "<group>"; };
+		C61365D924E9373C00C1CDF4 /* CustomOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOverlay.swift; sourceTree = "<group>"; };
+		C61365DA24E9373C00C1CDF4 /* CustomPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPage.swift; sourceTree = "<group>"; };
 		C614EA5224CAFD4A00070EC0 /* RelationFamilyMemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationFamilyMemberModel.swift; sourceTree = "<group>"; };
 		C6190F2824BD8C2300E5754D /* CreatePatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePatientModel.swift; sourceTree = "<group>"; };
 		C6190F2B24BDB77D00E5754D /* NextLocationVC+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NextLocationVC+TextField.swift"; sourceTree = "<group>"; };
+		C63620AE24E96C2E00BC9BCC /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		C657997924ADC7870094410B /* SignUpVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpVC+APICall.swift"; sourceTree = "<group>"; };
 		C657997C24ADC9C80094410B /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		C657998324ADEB670094410B /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
@@ -271,6 +283,7 @@
 		2B12EE7824A9A5D400EF91EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C61365D524E9373C00C1CDF4 /* onBoard */,
 				2B8C070E24E4406700D25D94 /* FAQVC */,
 				2B26D70A24B0A6FA006D2FBB /* SplashVC */,
 				5512794824AB723B0080909D /* LoginVC */,
@@ -325,6 +338,7 @@
 				2B26D70824B09FA6006D2FBB /* Ext-Image.swift */,
 				2BBC69ED24ADB3BE00C77D24 /* Constant.swift */,
 				2B65466D24E3063D00EECD0B /* Ext-String.swift */,
+				C63620AE24E96C2E00BC9BCC /* Canvas.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -763,6 +777,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C61365D524E9373C00C1CDF4 /* onBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C61365D624E9373C00C1CDF4 /* CustomOverlay.xib */,
+				C61365D724E9373C00C1CDF4 /* CustomPage.xib */,
+				C61365D824E9373C00C1CDF4 /* StoryboardExample.swift */,
+				C61365D924E9373C00C1CDF4 /* CustomOverlay.swift */,
+				C61365DA24E9373C00C1CDF4 /* CustomPage.swift */,
+			);
+			path = onBoard;
+			sourceTree = "<group>";
+		};
 		C6190F2724BD8BF600E5754D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +906,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B12EE6F24A9A59200EF91EB /* LaunchScreen.storyboard in Resources */,
+				C61365DC24E9373C00C1CDF4 /* CustomPage.xib in Resources */,
+				C61365DB24E9373C00C1CDF4 /* CustomOverlay.xib in Resources */,
 				2B12EE6A24A9A58E00EF91EB /* Main.storyboard in Resources */,
 				C607779524CEC91E00FFC780 /* Assets.xcassets in Resources */,
 				2BFDFD4B24D9991E00957B7F /* Log.storyboard in Resources */,
@@ -970,6 +998,7 @@
 				C673074424BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift in Sources */,
 				2B12EE6324A9A58E00EF91EB /* AppDelegate.swift in Sources */,
 				2B43F87024B9A8FB00B90008 /* FamilyModel.swift in Sources */,
+				C63620AF24E96C2E00BC9BCC /* Canvas.swift in Sources */,
 				2B8C072124E443B000D25D94 /* HistoryVC+TableView.swift in Sources */,
 				2B6428AB24B4A217006E35EE /* CreatePatientVC+TextField.swift in Sources */,
 				C657998624ADF2580094410B /* NextLocationVC.swift in Sources */,
@@ -994,7 +1023,9 @@
 				2B4A21A524B9C8280089E836 /* AddFamilyMemberVC.swift in Sources */,
 				2B43F87224B9A9E600B90008 /* ProfileVC+APICalls.swift in Sources */,
 				5512795C24AB89A70080909D /* LoginModel.swift in Sources */,
+				C61365DE24E9373C00C1CDF4 /* CustomOverlay.swift in Sources */,
 				2B97125524C5CC7F0025B26C /* FeedBackVC+TextView.swift in Sources */,
+				C61365DF24E9373C00C1CDF4 /* CustomPage.swift in Sources */,
 				55C9C60124ACB6ED00E53FAE /* ProfileVC.swift in Sources */,
 				2BFDFD5524D9B02F00957B7F /* ConsultRequestOrderModel.swift in Sources */,
 				2B8C072324E443B900D25D94 /* HistoryVC+APICall.swift in Sources */,
@@ -1003,6 +1034,7 @@
 				2B8C071B24E4427700D25D94 /* HistoryConsultsCell.swift in Sources */,
 				C657997D24ADC9C80094410B /* SignUpModel.swift in Sources */,
 				2B65466C24E2FCE200EECD0B /* PatientRequestModel.swift in Sources */,
+				C61365DD24E9373C00C1CDF4 /* StoryboardExample.swift in Sources */,
 				2B1AB06A24AA37CC006A0089 /* Ext-View.swift in Sources */,
 				2B8C071524E4409A00D25D94 /* FAQCell.swift in Sources */,
 				5512794E24AB73CC0080909D /* Alert.swift in Sources */,

@@ -25,7 +25,7 @@ struct CreatePatientModel: Codable {
     }
     
     static func registerPatientApi(parameters : [String : Any],media:[APICall.Media], complection: ((Result<Int>)->())?) {
-        APICall.webUploadRequest(apiType: .POST, endPoint: .P_CreatePatient, parameters: parameters, arrMedia: media, decodableObj: CreatePatientModel.self) { (result) in
+        APICall.webUploadRequest(apiType: .POST, endPoint: .d_CreateDoctor, parameters: parameters, arrMedia: media, decodableObj: CreatePatientModel.self) { (result) in
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false), let firestObj = obj?.response {

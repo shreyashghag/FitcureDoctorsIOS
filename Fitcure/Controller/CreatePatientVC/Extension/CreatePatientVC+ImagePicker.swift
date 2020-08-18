@@ -89,13 +89,30 @@ extension CreatePatientVC: ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
         guard let img = image else {
-            self.imgvProfile.image = UIImage(named: "f_FitcureLogo")!
-            self.media = nil
+            if self.isProfileClick {
+                self.imgvProfile.image = UIImage(named: "f_FitcureLogo")!
+                       self.media = nil
+            }
+            else{
+                
+                self.signatureImg.image = UIImage(named: "f_FitcureLogo")!
+                self.mediaForSigimg = nil
+            }
+       
             return
         }
         DispatchQueue.main.async {
-            self.imgvProfile.image = img
-            self.media  =  APICall.Media(withImage: img, forKey: "images", andFileName: "\(self.txtfMobileNo.text ?? "")_Patient_Profile.png")
+            if self.isProfileClick {
+                
+                self.imgvProfile.image = img
+                self.media  =  APICall.Media(withImage: img, forKey: "images", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsProfilePic.png")
+            }
+            else{
+                
+                self.signatureImg.image = img
+                self.mediaForSigimg  =  APICall.Media(withImage: img, forKey: "images", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsBitmapSignature.png")
+            }
+           
         }        
     }
 }

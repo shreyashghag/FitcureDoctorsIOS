@@ -27,8 +27,8 @@ target 'Fitcure' do
   
   # Agora
   # Link:- https://docs.self.navigationController?.isNavigationBarHidden = false.io/en/Video/release_ios_video?platform=iOS
-  pod ‘AgoraRtcEngine_iOS’
-  
-  pod 'iCimulator'
-    
+   pod 'AgoraRtcEngine_iOS'
+   pod 'SwiftyOnboard'
+ 
+    pod "DrawSignatureView"
 end

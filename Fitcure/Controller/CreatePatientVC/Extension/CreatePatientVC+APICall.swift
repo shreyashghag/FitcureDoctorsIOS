@@ -18,12 +18,21 @@ extension CreatePatientVC {
         parameter["mobile"] = txtfMobileNo.text ?? ""
         parameter["gender"] = genderStr
         parameter["password"] = txtfPassword.text ?? ""
+        parameter["nameOfCouncil"] = txtfnameOfCouncil.text ?? ""
         parameter["email"] = txtfEmail.text ?? ""
-        parameter["age"] = txtfAge.text ?? ""
+        parameter["registrationNo"] = txtfMobileNo.text ?? ""
+        parameter["workingSince"] = txtfworkingSince.text ?? ""
+        parameter["qualification"] = txtfqualification.text ?? ""
+        parameter["associateHospital"] = txtfassociateHospital.text ?? ""
         parameter["city"] = txtfCity.text ?? ""
         parameter["location"] = UserData.returnValue(.currentLocation) as? String ?? ""
+        parameter["preferredLanguages"] = txtfpreferredLanguages.text ?? ""
+        parameter["speciality"] = txtfspeciality.text ?? ""
         parameter["fcm_token"] = ""
-        parameter["profile_image"] = "\( txtfMobileNo.text ?? "")_Patient_Profile.png"
+        parameter["speciality"] = txtfspeciality.text ?? ""
+        parameter["profile_image"] = "\( txtfMobileNo.text ?? "")_Doctor_Profile.png"
+        parameter["signature"] = "\( txtfMobileNo.text ?? "")_Doctor_Digital_Signature.png"
+        parameter["signature_bitmap"] = "\( txtfMobileNo.text ?? "")_Doctor_Bitmap_Signature.png"
         
         var arrMedia = [APICall.Media]()
         if let objM = media {

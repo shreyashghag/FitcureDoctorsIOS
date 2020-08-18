@@ -24,7 +24,7 @@ struct SignUpModel: Codable {
     }
     
     static func CheackUserExit(_ parameter: [String: Any], complection: ((Result<String>)->())?) {
-        APICall.webRequest(apiType: .POST, endPoint: .P_CheckNo, parameters: parameter, decodableObj: SignUpModel.self) { (result) in
+        APICall.webRequest(apiType: .POST, endPoint: .d_CheckNo, parameters: parameter, decodableObj: SignUpModel.self) { (result) in
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false), let firestObj = obj?.message {

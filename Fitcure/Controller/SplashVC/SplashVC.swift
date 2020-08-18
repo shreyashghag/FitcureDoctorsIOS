@@ -26,10 +26,14 @@ final class SplashVC: UIViewController {
             if UserData.returnValue(.userID) != nil {
                 self.pushToTabBarVC()
             } else {
-                self.pushToSignUpVC()
+                self.pushToOnboardVC()
             }
         }
     }
+    private func pushToOnboardVC() {
+          guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: StoryboardExampleViewController.self)) as? StoryboardExampleViewController else { return }
+          self.navigationController?.setViewControllers([vc], animated: true)
+      }
         
     // MARK:- Push Methods
     private func pushToSignUpVC() {

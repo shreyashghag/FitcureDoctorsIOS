@@ -10,7 +10,7 @@ import UIKit
 import SkyFloatingLabelTextField
 // MARK:- Extension For :- UITextFieldDelegate
 extension CreatePatientVC: UITextFieldDelegate {
-     
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         switch textField {
@@ -19,9 +19,22 @@ extension CreatePatientVC: UITextFieldDelegate {
         case txtfPassword:
             txtfEmail.becomeFirstResponder()
         case txtfEmail:
-            txtfAge.becomeFirstResponder()
-        case txtfCity:
+            txtfassociateHospital.becomeFirstResponder()
+        case txtfassociateHospital:
+            txtfpreferredLanguages.becomeFirstResponder()
+        case txtfpreferredLanguages:
+            txtfworkingSince.becomeFirstResponder()
+        case txtfworkingSince:
+            txtfnameOfCouncil.becomeFirstResponder()
+        case txtfnameOfCouncil:
             txtfMobileNo.becomeFirstResponder()
+        case txtfMobileNo:
+            txtfqualification.becomeFirstResponder()
+        case txtfqualification:
+            txtfCity.becomeFirstResponder()
+        case txtfCity:
+            txtfspeciality.becomeFirstResponder()
+            
         default:
             textField.resignFirstResponder()
         }
@@ -30,198 +43,339 @@ extension CreatePatientVC: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-       
-           
-           if  textField == txtfMobileNo
-           {
-              
-                   
-                   let maxLength = 10
-                   let currentString: NSString = textField.text! as NSString
-                   newString =
-                       currentString.replacingCharacters(in: range, with: string) as NSString
-                   
-                   if(newString.length<maxLength)
-                   {
-                    txtfMobileNo.errorMessage = Alert.AlertMessage.MobileNumber.rawValue
-                       
-                       
-                   }
-                       
-                       
-                       
-                   else{
-                       
-                       txtfMobileNo.errorMessage = ""
-                       
-                   }
-                   if(newString.length==0)
-                   {
-                        txtfMobileNo.errorMessage = Alert.AlertMessage.MobileNumber.rawValue
-                       
-                   }
-                   return newString.length <= maxLength
-                   // return allowedCharacters.isSuperset(of: characterSet)
-                   
-               
-              
-               
-               
-           }
-           else if textField == txtfEmail
-           {
-               
-               if let text = txtfEmail.text {
-                   if let floatingLabelTextField = textField as? SkyFloatingLabelTextField {
-                       if(!isValidEmail(testStr: text)) {
-                           
-                        txtfEmail.errorMessage = Alert.AlertMessage.invalidEmail.rawValue
-                           
-                       }
-                       else {
-                          
-                           // The error message will only disappear when we reset it to nil or empty string
-                           
-                           
-                           //LoginBtn.backgroundColor = UIColor.black
-                            txtfEmail.errorMessage = ""
-                       }
-                       if(text.count==0)
-                       {
-                           
-                          txtfEmail.errorMessage = Alert.AlertMessage.invalidEmail.rawValue
-                           
-                           
-                       }
-                   }
-               }
-               return true
-               
-               
-           }
-               
-           else if textField == txtfPassword
-           {
-               let maxLength = 20
-               let currentString: NSString = textField.text! as NSString
-               newString =
-                   currentString.replacingCharacters(in: range, with: string) as NSString
-               
-               if(newString.length<4)
-               {
-                txtfPassword.errorMessage = Alert.AlertMessage.password.rawValue
-                   
-               }
-                   
-                   
-                   
-               else{
-                   txtfPassword.errorMessage = ""
-                   
-                   
-               }
-               if(newString.length==0)
-               {
-                  txtfPassword.errorMessage = Alert.AlertMessage.password.rawValue
-                   
-               }
-               return newString.length <= maxLength
-               
-           }
-            else if textField == txtfName
-                      {
-                          let maxLength = 20
-                          let currentString: NSString = textField.text! as NSString
-                          newString =
-                              currentString.replacingCharacters(in: range, with: string) as NSString
-                          
-                          if(newString.length<4)
-                          {
-                           txtfName.errorMessage = Alert.AlertMessage.nameRequired.rawValue
-                              
-                          }
-                              
-                              
-                              
-                          else{
-                              txtfName.errorMessage = ""
-                              
-                              
-                          }
-                          if(newString.length==0)
-                          {
-                             txtfPassword.errorMessage = Alert.AlertMessage.nameRequired.rawValue
-                              
-                          }
-                          return newString.length <= maxLength
-                          
-                      }
-               
-       else if textField == txtfCity
-               {
-                   let maxLength = 20
-                   let currentString: NSString = textField.text! as NSString
-                   newString =
-                       currentString.replacingCharacters(in: range, with: string) as NSString
-                   
-                   if(newString.length<2)
-                   {
-                      txtfCity.errorMessage = Alert.AlertMessage.City.rawValue
-                       
-                   }
-                       
-                       
-                       
-                   else{
-                        txtfCity.errorMessage = ""
-                       
-                       
-                   }
-                   if(newString.length==0)
-                   {
-                        txtfCity.errorMessage = Alert.AlertMessage.City.rawValue
-                       
-                   }
-                   return newString.length <= maxLength
-                   
-               }
-        else if textField == txtfAge
-                    {
-                        let maxLength = 2
-                        let currentString: NSString = textField.text! as NSString
-                        newString =
-                            currentString.replacingCharacters(in: range, with: string) as NSString
+        
+        
+        if  textField == txtfMobileNo
+        {
+            
+            
+            let maxLength = 10
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<maxLength)
+            {
+                txtfMobileNo.errorMessage = Alert.AlertMessage.MobileNumber.rawValue
+                
+                
+            }
+                
+                
+                
+            else{
+                
+                txtfMobileNo.errorMessage = ""
+                
+            }
+            if(newString.length==0)
+            {
+                txtfMobileNo.errorMessage = Alert.AlertMessage.MobileNumber.rawValue
+                
+            }
+            return newString.length <= maxLength
+            // return allowedCharacters.isSuperset(of: characterSet)
+            
+            
+            
+            
+            
+        }
+        else if textField == txtfEmail
+        {
+            
+            if let text = txtfEmail.text {
+                if let floatingLabelTextField = textField as? SkyFloatingLabelTextField {
+                    if(!isValidEmail(testStr: text)) {
                         
-                        if(newString.length<2)
-                        {
-                            txtfAge.errorMessage = Alert.AlertMessage.Age.rawValue
-                            
-                        }
-                            
-                            
-                            
-                        else{
-                            
-                             txtfAge.errorMessage = ""
-                            
-                            
-                        }
-                        if(newString.length==0)
-                        {
-                            txtfAge.errorMessage = Alert.AlertMessage.Age.rawValue
-                            
-                        }
-                        return newString.length <= maxLength
+                        txtfEmail.errorMessage = Alert.AlertMessage.invalidEmail.rawValue
                         
                     }
-                      
-                 
-           
-           return true
-           
-           
-           
-       }
+                    else {
+                        
+                        // The error message will only disappear when we reset it to nil or empty string
+                        
+                        
+                        //LoginBtn.backgroundColor = UIColor.black
+                        txtfEmail.errorMessage = ""
+                    }
+                    if(text.count==0)
+                    {
+                        
+                        txtfEmail.errorMessage = Alert.AlertMessage.invalidEmail.rawValue
+                        
+                        
+                    }
+                }
+            }
+            return true
+            
+            
+        }
+            
+        else if textField == txtfPassword
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfPassword.errorMessage = Alert.AlertMessage.password.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfPassword.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfPassword.errorMessage = Alert.AlertMessage.password.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        else if textField == txtfName
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfName.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfName.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfName.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        else if textField == txtfnameOfCouncil
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfnameOfCouncil.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfnameOfCouncil.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfnameOfCouncil.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        else if textField == txtfqualification
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfqualification.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfqualification.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfqualification.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        else if textField == txtfassociateHospital
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfassociateHospital.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfassociateHospital.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfassociateHospital.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        else if textField == txtfpreferredLanguages
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfpreferredLanguages.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfpreferredLanguages.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfpreferredLanguages.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        else if textField == txtfspeciality
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfspeciality.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfspeciality.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfspeciality.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        else if textField == txtfworkingSince
+        {
+            let maxLength = 10
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<4)
+            {
+                txtfworkingSince.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfworkingSince.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfworkingSince.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+            
+            
+        else if textField == txtfCity
+        {
+            let maxLength = 20
+            let currentString: NSString = textField.text! as NSString
+            newString =
+                currentString.replacingCharacters(in: range, with: string) as NSString
+            
+            if(newString.length<2)
+            {
+                txtfCity.errorMessage = Alert.AlertMessage.City.rawValue
+                
+            }
+                
+                
+                
+            else{
+                txtfCity.errorMessage = ""
+                
+                
+            }
+            if(newString.length==0)
+            {
+                txtfCity.errorMessage = Alert.AlertMessage.City.rawValue
+                
+            }
+            return newString.length <= maxLength
+            
+        }
+        
+        
+        
+        
+        return true
+        
+        
+        
+    }
     
     
     func textFieldDidEndEditing(_ textField: UITextField) {
