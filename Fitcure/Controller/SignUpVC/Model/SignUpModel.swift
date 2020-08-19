@@ -14,13 +14,9 @@ struct SignUpModel: Codable {
     var error: Bool?
     var message: String?
     
-    
-    
     enum CodingKeys: String, CodingKey {
         case error = "Error"
         case message = "Message"
-        
-        
     }
     
     static func CheackUserExit(_ parameter: [String: Any], complection: ((Result<String>)->())?) {
@@ -50,7 +46,11 @@ struct OtpResponseModel: Codable {
     var message: String?
     var Response:Int?
     
- 
+    enum CodingKeys: String, CodingKey {
+        case error = "Error"
+        case message = "Message"
+        case Response = "Response"
+    }
     
     static func getOtpApi(_ parameter: [String: Any], complection: ((Result<Int>)->())?) {
         APICall.webRequest(apiType: .POST, endPoint: .d_GenerateOtp, parameters: parameter, decodableObj: OtpResponseModel.self) { (result) in

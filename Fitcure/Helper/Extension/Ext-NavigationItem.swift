@@ -12,7 +12,7 @@ import UIKit
 extension UINavigationItem {
     
     enum NavTitle: String {
-        case AppName   = "Fitcure Doctors"
+        case AppName   = "Rehab Call Physiotherapist"
         case Home = "Home"
         case Profile = "Profile"
         case Settings = "Settings"

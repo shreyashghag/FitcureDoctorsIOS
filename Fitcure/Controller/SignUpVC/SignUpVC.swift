@@ -28,6 +28,7 @@ final class SignUpVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
+        self.navigationItem.setTitle(.AppName)
         self.navigationController?.isNavigationBarHidden = false
         
         txtfMobileNumber.selectedTitleColor = .f_AppColor

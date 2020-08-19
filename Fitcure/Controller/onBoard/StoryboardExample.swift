@@ -15,7 +15,6 @@ class StoryboardExampleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigation()
         swiftonboard.style = .light
         swiftonboard.delegate = self
         swiftonboard.dataSource = self
@@ -23,13 +22,9 @@ class StoryboardExampleViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
-           self.navigationController?.isNavigationBarHidden = false
+           self.navigationController?.isNavigationBarHidden = true
        }
-    func setUpNavigation() {
-          self.navigationItem.setTitle(.AppName)
-          self.navigationController?.isNavigationBarHidden = false
-          
-      }
+    
     @objc func handleSkip() {
         swiftonboard?.goToPage(index: 2, animated: true)
     }

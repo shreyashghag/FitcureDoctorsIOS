@@ -30,15 +30,13 @@ final class ProfileVC: UIViewController {
     // MARK:- SetUpView
     private func setUpView() {
         DispatchQueue.main.async {            
-            self.viewMain.setShadow(cornerRadi: 10)
-            self.viewProfileBack.roundCorner(corners: [.topLeft, .topRight], radius: 10)
-            self.viewProfile.setCorner(withRadius: self.viewProfile.frame.height * 0.5)
-            self.imgvProfile.setCorner(withRadius: self.imgvProfile.frame.height * 0.5)
-              self.getPatientInfo()
+//            self.viewMain.setShadow(cornerRadi: 10)
+//            self.viewProfileBack.roundCorner(corners: [.topLeft, .topRight], radius: 10)
+//            self.viewProfile.setCorner(withRadius: self.viewProfile.frame.height * 0.5)
+//            self.imgvProfile.setCorner(withRadius: self.imgvProfile.frame.height * 0.5)
+//              self.getPatientInfo()
         }
                         
-        tableView.delegate = self
-        tableView.dataSource = self
         self.navigationItem.setTitle(.Profile)
     }
 

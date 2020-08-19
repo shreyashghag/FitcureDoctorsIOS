@@ -52,6 +52,7 @@ final class LoginVC: UIViewController {
     }
     
     func setUpNavigation() {
+        self.navigationItem.setTitle(.AppName)
         self.navigationController?.isNavigationBarHidden = false
         let backBtn = UIBarButtonItem(image: UIImage(named: "f_back"), style: .plain, target: self, action: #selector(backBtnPressed(_:)))
         backBtn.tintColor = .white
