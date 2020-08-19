@@ -80,11 +80,11 @@ final class LoginVC: UIViewController {
     private func checkValidations()->Bool {
         self.view.endEditing(true)
         if (txtfMobileNumber.text ?? "").count != 10 {
-            Alert.show(.appName, .MobileNumber10)
+            Alert.show(.error, .MobileNumber10)
             return false
         }
         if (txtfPassword.text ?? "").isEmpty {
-            Alert.show(.appName, .password)
+            Alert.show(.error, .password)
             return false
         }
         return true

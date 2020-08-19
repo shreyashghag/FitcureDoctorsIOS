@@ -25,7 +25,7 @@ extension LoginVC {
                 UserModel.obj = obj
                 self.pushTabbarVC()
             case .CustomError(let str):
-                Alert.show(.appName, str)
+                Alert.show(.error, str)
             }
         }
     }

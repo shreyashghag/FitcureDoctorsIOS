@@ -1,5 +1,5 @@
 //
-//  CreatePatientVC+TextField.swift
+//  CreateDoctorVC+TextField.swift
 //  Fitcure
 //
 //  Created by Shashikant's_Macmini on 07/07/20.
@@ -9,7 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 // MARK:- Extension For :- UITextFieldDelegate
-extension CreatePatientVC: UITextFieldDelegate {
+extension CreateDoctorVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         

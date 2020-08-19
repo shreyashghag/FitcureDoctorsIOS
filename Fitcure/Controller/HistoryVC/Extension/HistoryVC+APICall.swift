@@ -20,7 +20,7 @@ extension HistoryVC {
                 self.arrRequest = arr
                 self.tableView.reloadData()
             case .CustomError(let str):
-                Alert.show(.appName, str)
+                Alert.show(.error, str)
             }
         }
     }

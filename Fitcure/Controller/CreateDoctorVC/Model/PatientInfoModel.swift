@@ -5,17 +5,6 @@
 //  Created by Avinash Khairgave on 15/07/20.
 //  Copyright © 2020 redbytes. All rights reserved.
 //
-
-import Foundation
-
-//
-//  ConsultsModel.swift
-//  Fitcure
-//
-//  Created by Shashikant Bhadke on 06/07/20.
-//  Copyright © 2020 redbytes. All rights reserved.
-//
-
 import Foundation
 
 // MARK: - ConsultsModel

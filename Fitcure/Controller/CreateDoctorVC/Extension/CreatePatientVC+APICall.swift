@@ -1,5 +1,5 @@
 //
-//  CreatePatientVC+APICall.swift
+//  CreateDoctorVC+APICall.swift
 //  Fitcure
 //
 //  Created by Shashikant's_Macmini on 07/07/20.
@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK:- Extension For:- APICalls
-extension CreatePatientVC {
+extension CreateDoctorVC {
     
     func api_create_patient() {
         
@@ -38,9 +38,15 @@ extension CreatePatientVC {
         if let objM = media {
             arrMedia.append(objM)
         }
+        if let objM = mediaForSigimg {
+            arrMedia.append(objM)
+        }
+        if let objM = mediaForSigView {
+            arrMedia.append(objM)
+        }
         
         self.showLoader()
-        CreatePatientModel.registerPatientApi(parameters: parameter, media: arrMedia) { (result) in
+        CreateDoctorModel.registerDoctorApi(parameters: parameter, media: arrMedia) { (result) in
             self.hideLoader()
             switch result {
             case .Success(let str):
@@ -50,7 +56,7 @@ extension CreatePatientVC {
                 }
                 
             case .CustomError(let strErr):
-                Alert.show(.appName, strErr)
+                Alert.show(.error, strErr)
             }
         }
     }
@@ -67,7 +73,7 @@ extension CreatePatientVC {
                     let mobile = firstObj.mobile,
                     let email = firstObj.email
                 else {
-                    Alert.show(.appName, .Oops)
+                    Alert.show(.error, .Oops)
                     return
                 }
                 UserData.saveData(.userID, patientId)
@@ -79,7 +85,7 @@ extension CreatePatientVC {
                 }
                 
             case .CustomError(let str):
-                Alert.show(.appName, str)
+                Alert.show(.error, str)
             }
         }
     }

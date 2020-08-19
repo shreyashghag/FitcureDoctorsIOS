@@ -85,7 +85,7 @@ extension ImagePicker: UINavigationControllerDelegate {
     
 }
 
-extension CreatePatientVC: ImagePickerDelegate {
+extension CreateDoctorVC: ImagePickerDelegate {
     
     func didSelect(image: UIImage?) {
         guard let img = image else {
@@ -105,12 +105,12 @@ extension CreatePatientVC: ImagePickerDelegate {
             if self.isProfileClick {
                 
                 self.imgvProfile.image = img
-                self.media  =  APICall.Media(withImage: img, forKey: "images", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsProfilePic.png")
+                self.media  =  APICall.Media(withImage: img, forKey: "profile_image", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsProfilePic.png")
             }
             else{
                 
                 self.signatureImg.image = img
-                self.mediaForSigimg  =  APICall.Media(withImage: img, forKey: "images", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsBitmapSignature.png")
+                self.mediaForSigimg  =  APICall.Media(withImage: img, forKey: "signature", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsBitmapSignature.png")
             }
            
         }        

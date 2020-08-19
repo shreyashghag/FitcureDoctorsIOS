@@ -40,7 +40,7 @@ final class OtpVerificationVC: UIViewController {
     @IBAction private func btnVerifyOtpPressed() {
         debugPrint(otp)
         if viewOTP.getPin().isEmpty {
-            Alert.show(.appName, .optEnter)
+            Alert.show(.error, .optEnter)
             return
         }
         
@@ -48,7 +48,7 @@ final class OtpVerificationVC: UIViewController {
             pushLocationVC()
         } else {
             viewOTP.clearPin()
-            Alert.show(.appName, .optNotMatch)
+            Alert.show(.error, .optNotMatch)
         }
     }
     func setUpNavigation() {

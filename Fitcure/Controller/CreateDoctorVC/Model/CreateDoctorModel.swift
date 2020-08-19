@@ -1,5 +1,5 @@
 //
-//  CreatePatientModel.swift
+//  CreateDoctorModel.swift
 //  Fitcure
 //
 //  Created by Avinash Khairgave on 14/07/20.
@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import Foundation
 
 // MARK: - LoginModel
-struct CreatePatientModel: Codable {
+struct CreateDoctorModel: Codable {
     var error: Bool?
     var message: String?
     var response:Int?
@@ -20,12 +19,10 @@ struct CreatePatientModel: Codable {
         case error = "Error"
         case message = "Message"
         case response = "Response"
-        
-        
     }
     
-    static func registerPatientApi(parameters : [String : Any],media:[APICall.Media], complection: ((Result<Int>)->())?) {
-        APICall.webUploadRequest(apiType: .POST, endPoint: .d_CreateDoctor, parameters: parameters, arrMedia: media, decodableObj: CreatePatientModel.self) { (result) in
+    static func registerDoctorApi(parameters : [String : Any],media:[APICall.Media], complection: ((Result<Int>)->())?) {
+        APICall.webUploadRequest(apiType: .POST, endPoint: .d_CreateDoctor, parameters: parameters, arrMedia: media, decodableObj: CreateDoctorModel.self) { (result) in
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false), let firestObj = obj?.response {
@@ -38,15 +35,4 @@ struct CreatePatientModel: Codable {
             }
         }
     }
-    
-  
-    
- 
- }
-    
-    
-    
-
-
-
-
+}

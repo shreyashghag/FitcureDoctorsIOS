@@ -110,12 +110,12 @@ final class RequestForConsultVC: UIViewController {
         let strReason = txtvDesc.text
         
         if strReason == strPlaceHolder {
-            Alert.show(.appName, .ConsultationReason, controller: self)
+            Alert.show(.error, .ConsultationReason, controller: self)
             return false
         }
         
         if selectedMember == nil {
-            Alert.show(.appName, .PatientName, controller: self)
+            Alert.show(.error, .PatientName, controller: self)
             return false
         }
         

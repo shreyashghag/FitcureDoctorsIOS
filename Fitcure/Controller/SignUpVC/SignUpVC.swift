@@ -55,7 +55,7 @@ final class SignUpVC: UIViewController {
     private func checkValidations()->Bool {
         self.view.endEditing(true)
         if (txtfMobileNumber.text ?? "").count != 10 {
-            Alert.show(.appName, .MobileNumber10)
+            Alert.show(.error, .MobileNumber10)
             return false
         }
         return true

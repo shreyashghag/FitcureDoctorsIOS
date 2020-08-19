@@ -1,5 +1,5 @@
 //
-//  CreatePatientVC.swift
+//  CreateDoctorVC.swift
 //  Fitcure
 //
 //  Created by Avinash Khairgave on 02/07/20.
@@ -7,9 +7,11 @@
 //
 
 import UIKit
-import SkyFloatingLabelTextField
 import DrawSignatureView
-final class CreatePatientVC: UIViewController {
+import SkyFloatingLabelTextField
+
+
+final class CreateDoctorVC: UIViewController {
     
     // MARK:- Outlets
     
@@ -51,6 +53,7 @@ final class CreatePatientVC: UIViewController {
     var mediaForSigimg:APICall.Media?
     var mediaForSigView:APICall.Media?
     var isProfileClick:Bool = false
+    
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +129,7 @@ final class CreatePatientVC: UIViewController {
            print("Capture Signature: \(signature.image)")
            print("Capture time: \(signature.date)")
            self?.captureSignatureImageView.image = signature.image
-           self?.mediaForSigView  =  APICall.Media(withImage: signature.image, forKey: "images", andFileName: "\(self!.txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
+           self?.mediaForSigView  =  APICall.Media(withImage: signature.image, forKey: "signature_bitmap", andFileName: "\(self!.txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
             
           }
          }
@@ -243,7 +246,7 @@ final class CreatePatientVC: UIViewController {
     
     @IBAction func btnSavePressed(_ sender: UIButton) {
         guard media != nil else {
-            Alert.show(.appName, .ProfilePicReq)
+            Alert.show(.error, .ProfilePicReq)
             return
         }
         api_create_patient()

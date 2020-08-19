@@ -20,7 +20,7 @@ extension AddFamilyMemberVC {
                 self.arrRelations = arr
                 self.setData()
             case .CustomError(let str):
-                Alert.show(.appName, str)
+                Alert.show(.error, str)
             }
         }        
     }
@@ -47,13 +47,12 @@ extension AddFamilyMemberVC {
             self.hideLoader()
             switch result {
             case .Success(let str):
-                print("str==",str)
                 DispatchQueue.main.async {
                     self.pushProfileVC()
                 }
                 
             case .CustomError(let strErr):
-                Alert.show(.appName, strErr)
+                Alert.show(.error, strErr)
             }
         }
     }

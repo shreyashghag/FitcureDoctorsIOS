@@ -20,11 +20,11 @@ extension AddFamilyMemberVC: UITextFieldDelegate {
     
     func checkValidations()->Bool {
         if (txtfName.text ?? "").isEmpty {
-            Alert.show(.appName, .nameRequired)
+            Alert.show(.error, .nameRequired)
             return false
         }
         if (txtfEmail.text ?? "").isEmpty {
-            Alert.show(.appName, .Email)
+            Alert.show(.error, .Email)
             return false
         }
         

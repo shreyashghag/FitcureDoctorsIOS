@@ -21,7 +21,7 @@ extension OtpVerificationVC {
             case .Success(let obj):
                 self.otp = obj
             case .CustomError(let str):
-               Alert.show(.appName, str)
+               Alert.show(.error, str)
             }
         }
     }

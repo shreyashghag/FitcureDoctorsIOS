@@ -15,6 +15,7 @@ final class HomeVC: UIViewController {
     
     // MARK:- Outlets
     @IBOutlet weak var tableView            : UITableView!
+    @IBOutlet weak var viewExpert           : ExpertOpenionView!
     @IBOutlet weak var btnActiveConsults    : UIButton!
     @IBOutlet weak var btnCallRequest       : UIButton!
     @IBOutlet weak var btnExpertOpinion     : UIButton!
@@ -68,14 +69,20 @@ final class HomeVC: UIViewController {
         
         switch type {
         case .ActiveConsults:
+            tableView.isHidden = false
+            viewExpert.isHidden = true
             btnActiveConsults.setTitleColor(.black, for: .normal)
             getActiveListing()
             
         case .CallRequest:
+            tableView.isHidden = false
+            viewExpert.isHidden = true
             btnCallRequest.setTitleColor(.black, for: .normal)
             getPendingListing()
             
         case .ExpertOpinion:
+            tableView.isHidden = true
+            viewExpert.isHidden = false
             btnExpertOpinion.setTitleColor(.black, for: .normal)
         }
         tableView.reloadData()

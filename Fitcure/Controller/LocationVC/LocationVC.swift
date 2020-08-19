@@ -57,7 +57,7 @@ class LocationVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     func pushCreatePaientVC() {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: CreatePatientVC.self)) as? CreatePatientVC else { return }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: CreateDoctorVC.self)) as? CreateDoctorVC else { return }
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

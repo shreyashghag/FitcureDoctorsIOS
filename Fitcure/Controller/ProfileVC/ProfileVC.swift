@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkyFloatingLabelTextField
 
 final class ProfileVC: UIViewController {
     
@@ -14,12 +15,20 @@ final class ProfileVC: UIViewController {
     @IBOutlet private weak var viewMain         : UIView!
     @IBOutlet private weak var viewProfileBack  : UIView!
     @IBOutlet private weak var viewProfile      : UIView!
-    @IBOutlet weak var tableView                : UITableView!
-    @IBOutlet weak var imgvProfile              : UIImageView!
+    @IBOutlet private weak var imgvProfile      : UIImageView!
+    @IBOutlet private weak var btnEdit          : UIButton!
     
+    @IBOutlet private weak var lblName          : UILabel!
+    @IBOutlet private weak var lblDegree        : UILabel!
+    @IBOutlet private weak var lblEmail         : UILabel!
+    @IBOutlet private weak var lblMobileNo      : UILabel!
+    @IBOutlet private weak var lblWorkingSince  : UILabel!
+    @IBOutlet private weak var lblAssociateHos  : UILabel!
+    @IBOutlet private weak var lblLanguage      : UILabel!
+    @IBOutlet private weak var lblRegisNo       : UILabel!
+    @IBOutlet private weak var lblCity          : UILabel!
+        
     // MARK:- Variable
-    var patientObj: PatientModel?
-    var arrFamilyMember = [FamilyModel]()
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -29,15 +38,9 @@ final class ProfileVC: UIViewController {
         
     // MARK:- SetUpView
     private func setUpView() {
-        DispatchQueue.main.async {            
-//            self.viewMain.setShadow(cornerRadi: 10)
-//            self.viewProfileBack.roundCorner(corners: [.topLeft, .topRight], radius: 10)
-//            self.viewProfile.setCorner(withRadius: self.viewProfile.frame.height * 0.5)
-//            self.imgvProfile.setCorner(withRadius: self.imgvProfile.frame.height * 0.5)
-//              self.getPatientInfo()
-        }
-                        
         self.navigationItem.setTitle(.Profile)
+        viewProfile.setCorner(withRadius: viewProfile.frame.height * 0.5)
+        imgvProfile.setCorner(withRadius: imgvProfile.frame.height * 0.5)
     }
 
     // MARK:- Button Action
@@ -46,15 +49,7 @@ final class ProfileVC: UIViewController {
     }
     
     // MARK:- Custom Methods
-    func onEditPressed(_ indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            
-        } else if indexPath.section == 1, indexPath.row < arrFamilyMember.count {
-            let objFamily = arrFamilyMember[indexPath.row]
-            self.pushAddFamilyMemberVC(objFamily)
-        }
-    }
-    
+        
     
     // MARK:- Push Methods
     func pushAddFamilyMemberVC(_ obj: FamilyModel? = nil) {

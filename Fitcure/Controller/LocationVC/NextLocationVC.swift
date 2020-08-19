@@ -125,7 +125,7 @@ class NextLocationVC: UIViewController {
         debugPrint("🏹 Controller is removed from memory \(self) 🎯 🏆")
     }
     func pushCreatePatientVC() {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: CreatePatientVC.self)) as? CreatePatientVC else { return }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: CreateDoctorVC.self)) as? CreateDoctorVC else { return }
         self.navigationController?.setViewControllers([vc], animated: true)
     }
     

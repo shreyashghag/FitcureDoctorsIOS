@@ -114,7 +114,7 @@ final class DoctorDetailsVC: UIViewController {
             case .Success(let dict):
                 self.onPaymentSuccess(dict)
             case .CustomError(let str):
-                Alert.show(.appName, str)
+                Alert.show(.error, str)
             }
         }
     }

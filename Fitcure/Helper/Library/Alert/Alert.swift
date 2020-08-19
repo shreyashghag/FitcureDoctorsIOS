@@ -195,7 +195,6 @@ extension Alert {
 extension Alert {
     
     enum AlertTitle: String {
-        case appName        = "Rehab Call Physiotherapist"
         case error          = "Error!"
         case language       = "Language"
         case warning        = "Warning!"

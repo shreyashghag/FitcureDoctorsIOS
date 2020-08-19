@@ -23,7 +23,7 @@ extension RequestForConsultVC {
                     self.arrFamilyMember.insert(FamilyModel(familyMemberID: nil, patientID: nil, mobile: nil, name: strName, email: nil, gender: nil, age: nil, city: nil, relation: nil), at: 0)
                 }
             case .CustomError(let str):
-                Alert.show(.appName, str, controller: self)
+                Alert.show(.error, str, controller: self)
             }
         }
     }

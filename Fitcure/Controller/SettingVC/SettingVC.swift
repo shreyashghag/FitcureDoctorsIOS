@@ -45,7 +45,7 @@ final class SettingVC: UIViewController {
     
     // MARK:- Custom Methods
     func logoutHandle() {
-        Alert.show(.appName, .logoutCase, .No, .Yes) { [weak self] strBtn in
+        Alert.show(.error, .logoutCase, .No, .Yes) { [weak self] strBtn in
             guard let self = self, strBtn == Alert.AlertButton.Yes.rawValue else { return }
             UserData.clearData()
             self.pushToSignUpVC()
@@ -59,7 +59,7 @@ final class SettingVC: UIViewController {
             mail.setSubject("Report A Problem in Rehab Call iOS App")
             self.present(mail, animated: true)
         } else {
-            Alert.show(.appName, .MailConfigure)
+            Alert.show(.error, .MailConfigure)
         }
     }
     // MARK:- Push Methods

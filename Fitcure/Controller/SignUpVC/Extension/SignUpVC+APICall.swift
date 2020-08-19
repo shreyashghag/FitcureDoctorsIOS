@@ -20,7 +20,7 @@ extension SignUpVC {
             self.hideLoader()
             switch result {
             case .Success(let str):
-                Alert.show(.appName, str)
+                Alert.show(.error, str)
             case .CustomError(_ ):
                 self.SendOtpToUser()
             }
@@ -38,7 +38,7 @@ extension SignUpVC {
                 UserData.saveData(.Mobile,self.txtfMobileNumber.text ?? "" )
                 self.pushOtpVerificationVC(optNum: obj)
             case .CustomError(let str):
-               Alert.show(.appName, str)
+               Alert.show(.error, str)
             }
         }
         

@@ -23,13 +23,13 @@ extension DoctorDetailsVC {
                     let strOKey = obj.orderID,
                     let strAmt = obj.amount,
                     !strRKey.isEmpty, !strRKey.isEmpty, !strAmt.isEmpty else {
-                        Alert.show(.appName, .Oops, controller: self)
+                        Alert.show(.error, .Oops, controller: self)
                         return
                 }
                 self.objOrderRequest = obj
                 self.makePayment(strRKey, amt: strAmt, orderID: strOKey)
             case .CustomError(let str):
-                Alert.show(.appName, str, controller: self)
+                Alert.show(.error, str, controller: self)
             }
         }        
     }
@@ -43,7 +43,7 @@ extension DoctorDetailsVC {
                 debugPrint(status)
                 break
             case .CustomError(let str):
-                Alert.show(.appName, str, controller: self)
+                Alert.show(.error, str, controller: self)
             }
         }
     }
