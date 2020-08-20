@@ -63,9 +63,6 @@ final class APICall {
     
     public enum SubUrl: String {
         
-        
-       
-        
         case p_ConsultationRequest      = "create/order_id"
         case p_CreateConsultation       = "create/consultation"
         

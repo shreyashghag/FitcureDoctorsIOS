@@ -15,7 +15,7 @@ final class ProfileVC: UIViewController {
     @IBOutlet private weak var viewMain         : UIView!
     @IBOutlet private weak var viewProfileBack  : UIView!
     @IBOutlet private weak var viewProfile      : UIView!
-    @IBOutlet private weak var imgvProfile      : UIImageView!
+    @IBOutlet internal weak var imgvProfile     : UIImageView!
     @IBOutlet private weak var btnEdit          : UIButton!
     
     @IBOutlet private weak var lblName          : UILabel!
@@ -29,24 +29,43 @@ final class ProfileVC: UIViewController {
     @IBOutlet private weak var lblCity          : UILabel!
         
     // MARK:- Variable
+    var profileObj: UserModel?
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getPatientInfo()
+    }
         
     // MARK:- SetUpView
     private func setUpView() {
         self.navigationItem.setTitle(.Profile)
+        viewMain.setCorner(withRadius: 10)
         viewProfile.setCorner(withRadius: viewProfile.frame.height * 0.5)
         imgvProfile.setCorner(withRadius: imgvProfile.frame.height * 0.5)
     }
-
-    // MARK:- Button Action
-    @objc func btnAddFamilyMemberPressed() {
-        pushAddFamilyMemberVC()
+    
+    func setUpData() {
+        lblName.text = profileObj?.name ?? "NA"
+        lblDegree.text = profileObj?.qualification ?? "NA"
+        lblEmail.text = profileObj?.email ?? "NA"
+        lblMobileNo.text = profileObj?.mobile ?? "NA"
+        lblWorkingSince.text = "NA"
+        if let workingSince = profileObj?.workingSince {
+            lblWorkingSince.text = "\(workingSince)"
+        }
+        lblAssociateHos.text = profileObj?.associateHospital ?? "NA"
+        lblLanguage.text = profileObj?.preferredLanguages ?? "NA"
+        lblRegisNo.text = profileObj?.registrationNo ?? "NA"
+        lblCity.text = profileObj?.city ?? "NA"
     }
+        
+    // MARK:- Button Action
+    
     
     // MARK:- Custom Methods
         

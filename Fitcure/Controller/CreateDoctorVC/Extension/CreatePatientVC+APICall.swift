@@ -49,43 +49,10 @@ extension CreateDoctorVC {
         CreateDoctorModel.registerDoctorApi(parameters: parameter, media: arrMedia) { (result) in
             self.hideLoader()
             switch result {
-            case .Success(let str):
-                print("str==",str)
-                DispatchQueue.main.async {
-                    self.getPatientInfo(response: str)
-                }
-                
+            case .Success( _):
+                Alert.show(.Success, "Registration successfull done.")
             case .CustomError(let strErr):
                 Alert.show(.error, strErr)
-            }
-        }
-    }
-    
-    func getPatientInfo(response:Int) {
-        self.showLoader()
-        PatientInfoModel.getPetienInfo(id: response){(result) in
-            self.hideLoader()
-            switch result {
-            case .Success(let arr):
-                guard let firstObj = arr.first,
-                    let patientId = firstObj.patientId,
-                    let name = firstObj.name,
-                    let mobile = firstObj.mobile,
-                    let email = firstObj.email
-                else {
-                    Alert.show(.error, .Oops)
-                    return
-                }
-                UserData.saveData(.userID, patientId)
-                UserData.saveData(.name, name)
-                UserData.saveData(.Mobile, mobile)
-                UserData.saveData(.Email, email)
-                DispatchQueue.main.async {
-                    self.pushTabbarVC()
-                }
-                
-            case .CustomError(let str):
-                Alert.show(.error, str)
             }
         }
     }

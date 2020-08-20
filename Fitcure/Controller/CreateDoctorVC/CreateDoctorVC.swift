@@ -129,7 +129,7 @@ final class CreateDoctorVC: UIViewController {
            print("Capture Signature: \(signature.image)")
            print("Capture time: \(signature.date)")
            self?.captureSignatureImageView.image = signature.image
-           self?.mediaForSigView  =  APICall.Media(withImage: signature.image, forKey: "signature_bitmap", andFileName: "\(self!.txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
+           self?.mediaForSigView  =  APICall.Media(withImage: signature.image, forKey: "images", andFileName: "\(self!.txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
             
           }
          }
@@ -267,7 +267,10 @@ final class CreateDoctorVC: UIViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: TermsConditionPopUpVC.self)) as? TermsConditionPopUpVC else { return }
         self.present(vc, animated: true, completion: nil)
     }
-    
+    func pushUploadDocVC() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: UploadDocVC.self)) as? UploadDocVC else { return }
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+    }
     // MARK:- ReceiveMemoryWarning
     override func didReceiveMemoryWarning() {
         debugPrint("⚠️🤦‍♂️⚠️ Receive Memory Warning on \(self) ⚠️🤦‍♂️⚠️")

@@ -50,6 +50,21 @@ struct LoginModel: Codable {
         }
     }
     
+    static func getDoctorInfo(id:Int,_ complection: ((Result<[UserModel]>)->())?) {
+            
+             APICall.webRequest(apiType: .GET, endPoint: .d_DoctorList, strID: "\(id)", parameters: [:], decodableObj: LoginModel.self) { (result) in
+                 switch result {
+                 case .Success(let obj, _, _):
+                     if !(obj?.error ?? false) {
+                         complection?(.Success(obj?.response ?? []))
+                     } else {
+                       complection?(.CustomError(obj?.error.debugDescription ?? Alert.AlertMessage.Oops.rawValue))
+                     }
+                 case .CustomError(let str):
+                     complection?(.CustomError(str))
+                 }
+             }
+         }
 } //struct
 
 // MARK: - Response

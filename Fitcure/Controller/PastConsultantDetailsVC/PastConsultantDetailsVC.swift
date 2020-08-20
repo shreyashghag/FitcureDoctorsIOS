@@ -77,13 +77,17 @@ final class PastConsultantDetailsVC: UIViewController {
         
     }
     @IBAction private func btnNotifyPatientPressed() {
-        
+        pushPickerPopUpVC()
     }
     
     // MARK:- Push Methods
     private func pushSendFeedbackVC() {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: FeedBackVC.self)) as? FeedBackVC else { return }
         //vc.obj = obj
+        self.present(vc, animated: true, completion: nil)
+    }
+    private func pushPickerPopUpVC() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PickerPopVC.self)) as? PickerPopVC else { return }
         self.present(vc, animated: true, completion: nil)
     }
     

@@ -22,6 +22,7 @@ extension UINavigationItem {
         case FamilyMember = "Family Member"
         case History = "History"
         case FAQ = "FAQ's"
+        case UploadDoc = "Upload Document"
     }
     
     func setTitle(_ _title: NavTitle) {
