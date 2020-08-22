@@ -16,6 +16,7 @@ final class WebVC: UIViewController {
     // MARK:- Variables
     var strUrl = ""
     var strTitle = ""
+    var localFilePath: URL?
     var webView: WKWebView!
     var isPrivacyPolicy = false
     
@@ -42,6 +43,9 @@ final class WebVC: UIViewController {
         
         if let url = URL(string: strUrl) {
             let request = URLRequest(url: url)
+            webView.load(request)
+        } else if let path = localFilePath {
+            let request = URLRequest(url: path)
             webView.load(request)
         }
     }

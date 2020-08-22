@@ -63,7 +63,6 @@ final class PastConsultantDetailsVC: UIViewController {
         btnWritePrescription.isHidden = !showActive
         btnNotify.isHidden = !showActive
         imgvProfile.setImage(str: obj.profileImage, isDoc: false)
-        
     }
     
     // MARK:- Button Actions
@@ -87,7 +86,19 @@ final class PastConsultantDetailsVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     private func pushPickerPopUpVC() {
+        debugPrint(obj?.updatedAt ?? "")
+        guard let date = Date.getDate(obj?.updatedAt ?? ""), Date() >= date else {
+            Alert.show(.error, .Oops)
+            return
+        }
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PickerPopVC.self)) as? PickerPopVC else { return }
+        vc.maxDate = Date.addDurationOn(date: date, component: .hour, 4)
+        vc.onDidSelectDate = { [weak self] selectedDate in
+            guard let self = self else { return }
+            let strDate = String.getTime(selectedDate)
+            self.api_NotifyPatient(strDate)            
+        }
+        
         self.present(vc, animated: true, completion: nil)
     }
     

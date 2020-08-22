@@ -22,12 +22,12 @@ extension SignUpVC {
             case .Success(let str):
                 Alert.show(.error, str)
             case .CustomError(_ ):
-                self.SendOtpToUser()
+                self.api_SendOtpToUser()
             }
         }
     }
     
-    func SendOtpToUser(){
+    func api_SendOtpToUser(){
         var parameter = [String: Any]()
         parameter["mobile"] = txtfMobileNumber.text ?? ""
         self.showLoader()

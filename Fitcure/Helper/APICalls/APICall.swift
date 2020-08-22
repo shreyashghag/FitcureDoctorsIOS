@@ -31,6 +31,9 @@ final class APICall {
         let mimeType: String
         var img: UIImage?
         
+        /**
+            mimeType: application/pdf, image/jpeg
+         */
         init?(data: Data, forKey: String, mimeType: String, fileName: String) {
             self.key = forKey
             self.mimeType = mimeType
@@ -82,7 +85,8 @@ final class APICall {
         case d_ActiveConsultation       = "get/consultation/active/"
         case d_RejectedConsultation     = "get/consultation/rejected/"
         case d_ChangeConsultation       = "consultation/change/"
-        
+        case d_NotifyPatient            = "notify/patient"
+        case d_UploadDocs               = "upload/docs"
         
     }
         
@@ -385,6 +389,7 @@ extension APICall {
                 }
             }
             for mediaObj in arrMedia ?? [] {
+                debugPrint("Media Name:- ", mediaObj.filename)
                 multipartFormData.append(mediaObj.data, withName: mediaObj.key, fileName: mediaObj.filename , mimeType: mediaObj.mimeType)
             }
             

@@ -22,13 +22,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f_FitcureLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2Iz-6m-OVw">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <rect key="frame" x="107" y="308" width="200" height="200"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rehab Call Physiotherapist" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEz-s8-fin">
+                                <rect key="frame" x="15" y="508" width="384" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <color key="textColor" red="0.35725712780000002" green="0.83546364309999999" blue="0.7828289866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iEz-s8-fin" firstAttribute="leading" secondItem="uNt-nM-5jC" secondAttribute="leading" constant="15" id="8ya-Eq-UKL"/>
+                            <constraint firstItem="uNt-nM-5jC" firstAttribute="trailing" secondItem="iEz-s8-fin" secondAttribute="trailing" constant="15" id="D0r-Bg-KR0"/>
+                            <constraint firstItem="iEz-s8-fin" firstAttribute="top" secondItem="2Iz-6m-OVw" secondAttribute="bottom" id="HXX-Lp-8Ob"/>
                             <constraint firstItem="2Iz-6m-OVw" firstAttribute="centerX" secondItem="SrL-Ui-oTJ" secondAttribute="centerX" id="S8j-UT-dAQ"/>
-                            <constraint firstItem="2Iz-6m-OVw" firstAttribute="centerY" secondItem="SrL-Ui-oTJ" secondAttribute="centerY" id="hCI-q7-KnU"/>
+                            <constraint firstItem="2Iz-6m-OVw" firstAttribute="centerY" secondItem="SrL-Ui-oTJ" secondAttribute="centerY" constant="-40" id="hCI-q7-KnU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uNt-nM-5jC"/>
                     </view>
@@ -3180,26 +3189,63 @@ This policy is effective as of 1 July 2020.</string>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHd-lR-sKK">
                                                     <rect key="frame" x="10" y="15" width="394" height="180"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3i-Z1-JuY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="136"/>
-                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9JG-Wj-Z5n">
+                                                            <rect key="frame" x="137" y="38" width="120" height="84"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="f_dataUpload" translatesAutoresizingMaskIntoConstraints="NO" id="M3i-Z1-JuY">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="120" id="K3Q-kU-TQ2"/>
+                                                                        <constraint firstAttribute="height" constant="50" id="eBj-QD-jyC"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BbZ-Q5-I4S">
+                                                                    <rect key="frame" x="0.0" y="50" width="120" height="34"/>
+                                                                    <color key="tintColor" red="0.35765326019999999" green="0.83537232880000001" blue="0.78669649360000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" title="View File">
+                                                                        <color key="titleColor" red="0.35765326019999999" green="0.83537232880000001" blue="0.78669649360000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="btnViewPressed" destination="XS0-Mw-isU" eventType="touchUpInside" id="xm3-Zh-z28"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Documents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLq-6m-A03">
                                                             <rect key="frame" x="10" y="146" width="374" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                             <color key="textColor" red="0.35725712780000002" green="0.83546364309999999" blue="0.7828289866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h9E-Hk-qec">
+                                                            <rect key="frame" x="344" y="5" width="45" height="45"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PJ-if-fb0">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="45" id="ATs-d8-59S"/>
+                                                                        <constraint firstAttribute="width" constant="45" id="v5E-l4-elp"/>
+                                                                    </constraints>
+                                                                    <color key="tintColor" red="0.35765326019999999" green="0.83537232880000001" blue="0.78669649360000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" image="f_Delete"/>
+                                                                    <connections>
+                                                                        <action selector="btnDeletePressed" destination="XS0-Mw-isU" eventType="touchUpInside" id="i6o-3f-7EB"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="M3i-Z1-JuY" firstAttribute="top" secondItem="uHd-lR-sKK" secondAttribute="top" id="5Kz-dL-ZjM"/>
                                                         <constraint firstAttribute="trailing" secondItem="ZLq-6m-A03" secondAttribute="trailing" constant="10" id="6v5-Yf-y2t"/>
                                                         <constraint firstAttribute="bottom" secondItem="ZLq-6m-A03" secondAttribute="bottom" constant="10" id="Ci0-R2-QBS"/>
-                                                        <constraint firstAttribute="height" constant="180" id="JeY-fN-s0c"/>
-                                                        <constraint firstItem="ZLq-6m-A03" firstAttribute="top" secondItem="M3i-Z1-JuY" secondAttribute="bottom" constant="10" id="VnW-XV-6Z7"/>
-                                                        <constraint firstItem="M3i-Z1-JuY" firstAttribute="leading" secondItem="uHd-lR-sKK" secondAttribute="leading" id="aY2-W8-Z2D"/>
+                                                        <constraint firstItem="9JG-Wj-Z5n" firstAttribute="centerX" secondItem="uHd-lR-sKK" secondAttribute="centerX" id="HJF-6m-U22"/>
+                                                        <constraint firstAttribute="trailing" secondItem="h9E-Hk-qec" secondAttribute="trailing" constant="5" id="Kzu-BL-R9g"/>
+                                                        <constraint firstAttribute="height" constant="180" id="TgA-mC-OLf"/>
+                                                        <constraint firstItem="h9E-Hk-qec" firstAttribute="top" secondItem="uHd-lR-sKK" secondAttribute="top" constant="5" id="mlD-p6-L5I"/>
                                                         <constraint firstItem="ZLq-6m-A03" firstAttribute="leading" secondItem="uHd-lR-sKK" secondAttribute="leading" constant="10" id="sZN-tL-dex"/>
-                                                        <constraint firstAttribute="trailing" secondItem="M3i-Z1-JuY" secondAttribute="trailing" id="vil-T5-qbD"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="180" id="shL-uQ-M8n"/>
+                                                        <constraint firstItem="9JG-Wj-Z5n" firstAttribute="centerY" secondItem="uHd-lR-sKK" secondAttribute="centerY" constant="-10" id="tQR-VD-bh0"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -3213,6 +3259,8 @@ This policy is effective as of 1 July 2020.</string>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="btnDelete" destination="2PJ-if-fb0" id="NLm-vu-mmy"/>
+                                            <outlet property="btnView" destination="BbZ-Q5-I4S" id="skD-ug-hke"/>
                                             <outlet property="imgvDoc" destination="M3i-Z1-JuY" id="0DX-vo-Sfa"/>
                                             <outlet property="lblTitle" destination="ZLq-6m-A03" id="cjf-vx-LJa"/>
                                             <outlet property="viewBG" destination="uHd-lR-sKK" id="aXX-iB-bD7"/>
@@ -3237,6 +3285,7 @@ This policy is effective as of 1 July 2020.</string>
                                                     </state>
                                                     <connections>
                                                         <action selector="btnOkeyPressed" destination="l3M-iD-AG4" eventType="touchUpInside" id="KPl-S8-Vue"/>
+                                                        <action selector="btnUploadPressed:" destination="KjF-Nr-pLi" eventType="touchUpInside" id="ARa-AZ-ing"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -4380,7 +4429,7 @@ This policy is effective as of 1 July 2020.</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xrn-y0-I6G">
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xrn-y0-I6G">
                                         <rect key="frame" x="10" y="56.666666666666686" width="290" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="6E0-I3-NcH"/>
@@ -4479,6 +4528,7 @@ This policy is effective as of 1 July 2020.</string>
         <image name="f_ShowPassword" width="16.666666030883789" height="16.666666030883789"/>
         <image name="f_TAndC" width="20" height="20"/>
         <image name="f_Tick" width="20" height="20"/>
+        <image name="f_dataUpload" width="20" height="20"/>
         <image name="f_placeholder" width="103" height="103"/>
         <image name="icloud.and.arrow.up" catalog="system" width="128" height="106"/>
         <image name="logo" width="39" height="42"/>

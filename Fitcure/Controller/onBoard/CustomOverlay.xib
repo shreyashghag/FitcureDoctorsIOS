@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMw-dt-lF7">
-                    <rect key="frame" x="10" y="30" width="355" height="31"/>
+                    <rect key="frame" x="10" y="10" width="355" height="31"/>
                     <fontDescription key="fontDescription" name="Lato-Heavy" family="Lato" pointSize="16"/>
                     <state key="normal" title="Skip">
                         <color key="titleColor" red="0.35686274509999999" green="0.83529411760000005" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,7 +53,7 @@
                 <constraint firstAttribute="trailing" secondItem="Nzm-rP-scd" secondAttribute="trailing" constant="10" id="BIT-9Z-Yuk"/>
                 <constraint firstAttribute="bottom" secondItem="thy-MX-zfS" secondAttribute="bottom" constant="50" id="Jcv-qU-GVN"/>
                 <constraint firstItem="Nzm-rP-scd" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="10" id="JiP-0X-nls"/>
-                <constraint firstItem="aMw-dt-lF7" firstAttribute="top" secondItem="qRh-M2-ev8" secondAttribute="top" constant="30" id="Tpw-MV-U78"/>
+                <constraint firstItem="aMw-dt-lF7" firstAttribute="top" secondItem="qRh-M2-ev8" secondAttribute="top" constant="10" id="Tpw-MV-U78"/>
                 <constraint firstAttribute="trailing" secondItem="aMw-dt-lF7" secondAttribute="trailing" constant="10" id="VcU-xR-tDj"/>
                 <constraint firstItem="aMw-dt-lF7" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="10" id="Z2I-Rd-sye"/>
                 <constraint firstItem="thy-MX-zfS" firstAttribute="leading" secondItem="qRh-M2-ev8" secondAttribute="leading" constant="100" id="e1M-W6-TiA"/>

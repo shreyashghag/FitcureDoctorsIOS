@@ -186,7 +186,8 @@ extension Alert {
         case ConsultationReason = "Please enter consultation reason."
         case PatientName        = "Please select patient name."
         case MailConfigure      = "Mail services are not available"
-        
+        case pdfAllowed         = "Please select pdf file."
+        case AllpdfNeeded       = "Please all select files."
     }
     
 } //Alert

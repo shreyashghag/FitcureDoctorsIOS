@@ -86,7 +86,11 @@ final class SettingVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
-    
+    func pushUploadDocVC() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: UploadDocVC.self)) as? UploadDocVC else { return }
+        vc.strMobileNo = ""
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+    }
     // MARK:- ReceiveMemoryWarning
     override func didReceiveMemoryWarning() {
         debugPrint("⚠️🤦‍♂️⚠️ Receive Memory Warning on \(self) ⚠️🤦‍♂️⚠️")

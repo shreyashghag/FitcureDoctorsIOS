@@ -13,6 +13,9 @@ final class UploadFooterCell: UITableViewCell {
     // MARK:- Outlet
     @IBOutlet private weak var btnUpload: UIButton!
     
+    // MARK:- Variables
+    var onUploadPressed: (()->())?
+    
     // MARK:- Default Methods
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,4 +26,9 @@ final class UploadFooterCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-}
+    // MARK:- Button Action
+    @IBAction private func btnUploadPressed(_ sender: UIButton) {
+        onUploadPressed?()
+    }
+    
+} //class

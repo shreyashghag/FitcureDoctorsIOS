@@ -18,6 +18,7 @@ final class PickerPopVC: UIViewController {
     @IBOutlet private weak var btnBack          : UIButton!
     
     // MARK:- Variables
+    var maxDate: Date?
     var onDidSelectDate: ((Date)->())?
     
     // MARK:- View Life Cycle
@@ -40,14 +41,15 @@ final class PickerPopVC: UIViewController {
     
     // MARK:- SetUpView
     private func setUpView() {
-        datePicker.date = Date()
+        datePicker.minimumDate = Date()
+        datePicker.maximumDate = maxDate
         viewMain.setCorner(withRadius: 10)
     }
     
     // MARK:- Button Actions
     @IBAction private func btnSelectDatePressed() {
         onDidSelectDate?(datePicker.date)
-        debugPrint(datePicker.date)
+        debugPrint(String.getTime(datePicker.date))
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction private func btnCancelPressed() {

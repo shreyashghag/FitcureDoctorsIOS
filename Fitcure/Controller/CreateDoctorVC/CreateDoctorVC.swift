@@ -269,7 +269,8 @@ final class CreateDoctorVC: UIViewController {
     }
     func pushUploadDocVC() {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: UploadDocVC.self)) as? UploadDocVC else { return }
-        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+        vc.strMobileNo = txtfMobileNo.text ?? ""
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     // MARK:- ReceiveMemoryWarning
     override func didReceiveMemoryWarning() {

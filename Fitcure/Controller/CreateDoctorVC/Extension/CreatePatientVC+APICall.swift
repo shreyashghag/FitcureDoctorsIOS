@@ -46,11 +46,12 @@ extension CreateDoctorVC {
         }
         
         self.showLoader()
+        
         CreateDoctorModel.registerDoctorApi(parameters: parameter, media: arrMedia) { (result) in
             self.hideLoader()
             switch result {
-            case .Success( _):
-                Alert.show(.Success, "Registration successfull done.")
+            case .Success( _ ):
+                self.pushUploadDocVC()
             case .CustomError(let strErr):
                 Alert.show(.error, strErr)
             }
