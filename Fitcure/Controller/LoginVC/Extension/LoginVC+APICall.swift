@@ -16,6 +16,7 @@ extension LoginVC {
         parameter["mobile"] = txtfMobileNumber.text ?? ""
         parameter["password"] = txtfPassword.text ?? ""
         parameter["token"] = strNotificationToken
+        parameter["deviceType"] = "IOS"
         
         self.showLoader()
         LoginModel.login(parameter) { (result) in

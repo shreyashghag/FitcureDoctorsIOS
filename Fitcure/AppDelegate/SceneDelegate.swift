@@ -15,6 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        //guard let res = connectionOptions.notificationResponse, let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        //appDelegate.checkNotificationAndOpen(res.notification.request.content.userInfo, isWithDelay: true)
     }
 
 

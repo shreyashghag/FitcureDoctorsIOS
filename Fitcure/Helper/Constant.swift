@@ -8,4 +8,4 @@
 
 import Foundation
 
-var strNotificationToken = "No Notification Available Right Now..."
+var strNotificationToken = (UserData.returnValue(.NotificationToken) as? String) ?? "No Notification Available Right Now..."

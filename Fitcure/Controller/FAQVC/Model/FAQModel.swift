@@ -38,7 +38,7 @@ struct FAQModel {
         
         arr.append(FAQModel(
         strQuestion: "When can I get a refund, if doctor does not contact?",
-        strAnswer: "If the doctor cannot contact you within 4 hours for any reason then you will get a refund within 2 hours.",
+        strAnswer: "If the doctor cannot contact you within 4 hours for any reason then you will get a refund within 7 days.",
         isShow: false))
         
         arr.append(FAQModel(
@@ -63,7 +63,7 @@ struct FAQModel {
         
         arr.append(FAQModel(
         strQuestion: "What if doctors reject your request?",
-        strAnswer: "Patient will get refund within 2 hours.",
+        strAnswer: "Patient will get refund within 7 days.",
         isShow: false))
         
         arr.append(FAQModel(
@@ -77,8 +77,8 @@ struct FAQModel {
         isShow: false))
         
         arr.append(FAQModel(
-        strQuestion: "What if the amount is not refunded in 2 hours?",
-        strAnswer: "If due to any circumstances the amount is not refunded back to the patient in 2 hours please contact us on the below email <Email ID> ",
+        strQuestion: "What if the amount is not refunded in 7 days?",
+        strAnswer: "If due to any circumstances the amount is not refunded back to the patient in 7 days please contact us on the below email <Email ID> ",
         isShow: false))
         
         return arr

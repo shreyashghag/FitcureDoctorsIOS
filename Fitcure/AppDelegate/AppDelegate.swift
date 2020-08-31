@@ -28,6 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Keyboard Manager
         setUpIQKeyboardManager()
         
+        // Notification Methods
+        checkPushNotifications()
+        
+        if let notification = launchOptions?[UIApplication.LaunchOptionsKey.remoteNotification] as? [AnyHashable: Any] {
+            //checkNotificationAndOpen(notification, isWithDelay: true)
+        }
+        
         return true
     }
 
