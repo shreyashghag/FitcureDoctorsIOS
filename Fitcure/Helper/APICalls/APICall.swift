@@ -135,6 +135,12 @@ final class APICall {
     static let RefundPolicy: String = {
         return APICall.MainBaseURL + "staticmedia/docs/refund.html"
     }()
+    static let bergBalanceScale: String = {
+        return APICall.MainBaseURL + "staticmedia/training/fp-berg-balance-scale.pdf"
+    }()
+    static let DASH: String = {
+        return APICall.MainBaseURL + "staticmedia/training/DASH.pdf"
+    }()
     
     // MARK:- Public Network availibility
     class public func networkAvailibity() {

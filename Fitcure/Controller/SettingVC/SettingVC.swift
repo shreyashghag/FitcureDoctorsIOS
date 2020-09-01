@@ -13,13 +13,14 @@ final class SettingVC: UIViewController {
     
     // MARK:- Enums
     enum SettingOptions: String {
-        case PrivacyPolicy = "Privacy Policy"
-        case TermsAndCondition = "Terms And Condition"
-        case RefundPolicy = "Refund Policy"
-        case FAQ = "FAQ's"
-        case Report = "Report A Problem"
-        case RateUs = "Rate Us"
-        case Logout = "Logout"
+        case OutcomeMeasures    = "Outcome measures"
+        case PrivacyPolicy      = "Privacy Policy"
+        case TermsAndCondition  = "Terms And Condition"
+        case RefundPolicy       = "Refund Policy"
+        case FAQ                = "FAQ's"
+        case Report             = "Report A Problem"
+        case RateUs             = "Rate Us"
+        case Logout             = "Logout"
     }
     
     // MARK:- Outlets
@@ -91,6 +92,11 @@ final class SettingVC: UIViewController {
         vc.strMobileNo = ""
         self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
     }
+    func pushSubSettingVC() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: SubSettingVC.self)) as? SubSettingVC else { return }
+        self.tabBarController?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK:- ReceiveMemoryWarning
     override func didReceiveMemoryWarning() {
         debugPrint("⚠️🤦‍♂️⚠️ Receive Memory Warning on \(self) ⚠️🤦‍♂️⚠️")

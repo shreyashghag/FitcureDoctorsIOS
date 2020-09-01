@@ -12,14 +12,22 @@ import UIKit
 extension SettingVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var type: SettingOptions
-        if indexPath.section == 0 {
+        var type: SettingOptions = .OutcomeMeasures
+
+        switch indexPath.section {
+        case 0:
+            type = .OutcomeMeasures
+        case 1:
             type = arrApplication[indexPath.row]
-        } else {
+        case 2:
             type = arrAccount[indexPath.row]
+        default:
+            break
         }
-        
+                
         switch type {
+            case .OutcomeMeasures:
+            pushSubSettingVC()
         case .PrivacyPolicy:
             pushWebVC(type.rawValue, APICall.PrivacyPolicy)
         case .TermsAndCondition:
@@ -49,26 +57,46 @@ extension SettingVC: UITableViewDelegate {
 // MARK:- Extension For:- UITableViewDataSource
 extension SettingVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? arrApplication.count : arrAccount.count
+        switch section {
+        case 1:
+            return arrApplication.count
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SettingCell.self), for: indexPath) as? SettingCell else { return SettingCell() }
-        if indexPath.section == 0 {
+        switch indexPath.section {
+        case 0:
+            cell.setData(.OutcomeMeasures)
+        case 1:
             cell.setData(arrApplication[indexPath.row])
-        } else {
+        case 2:
             cell.setData(arrAccount[indexPath.row])
+        default:
+            break
         }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SettingCell.self)) as? SettingCell else { return nil }
-        cell.setHeaderTitle(section == 0 ? "Application" : "Account", section != 0)
+        switch section {
+        case 0:
+            cell.setHeaderTitle("Training", false)
+        case 1:
+            cell.setHeaderTitle("Application", true)
+        case 2:
+            cell.setHeaderTitle("Account", true)
+        default:
+            break
+        }
         return cell
     }
 } //extension

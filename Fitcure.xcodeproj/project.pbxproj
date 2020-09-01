@@ -34,6 +34,9 @@
 		2B43F87224B9A9E600B90008 /* ProfileVC+APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43F87124B9A9E600B90008 /* ProfileVC+APICalls.swift */; };
 		2B4A21A524B9C8280089E836 /* AddFamilyMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A21A424B9C8280089E836 /* AddFamilyMemberVC.swift */; };
 		2B50CBB824F561D00022DBDA /* AppDelegate+PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50CBB724F561D00022DBDA /* AppDelegate+PushNotification.swift */; };
+		2B5FF2E224FE9D9200AC7B83 /* SubSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FF2E124FE9D9200AC7B83 /* SubSettingVC.swift */; };
+		2B5FF2E624FE9DCE00AC7B83 /* SubSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FF2E524FE9DCE00AC7B83 /* SubSettingCell.swift */; };
+		2B5FF2E824FE9E1500AC7B83 /* SubSettingVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FF2E724FE9E1500AC7B83 /* SubSettingVC+TableView.swift */; };
 		2B638A4A24A9BACE001EE997 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B638A4924A9BACE001EE997 /* LoginVC.swift */; };
 		2B6428AB24B4A217006E35EE /* CreatePatientVC+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6428AA24B4A217006E35EE /* CreatePatientVC+TextField.swift */; };
 		2B6428AF24B4A239006E35EE /* CreatePatientVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6428AE24B4A239006E35EE /* CreatePatientVC+APICall.swift */; };
@@ -156,6 +159,9 @@
 		2B43F87124B9A9E600B90008 /* ProfileVC+APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+APICalls.swift"; sourceTree = "<group>"; };
 		2B4A21A424B9C8280089E836 /* AddFamilyMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberVC.swift; sourceTree = "<group>"; };
 		2B50CBB724F561D00022DBDA /* AppDelegate+PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+PushNotification.swift"; sourceTree = "<group>"; };
+		2B5FF2E124FE9D9200AC7B83 /* SubSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingVC.swift; sourceTree = "<group>"; };
+		2B5FF2E524FE9DCE00AC7B83 /* SubSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingCell.swift; sourceTree = "<group>"; };
+		2B5FF2E724FE9E1500AC7B83 /* SubSettingVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubSettingVC+TableView.swift"; sourceTree = "<group>"; };
 		2B638A4924A9BACE001EE997 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2B6428AA24B4A217006E35EE /* CreatePatientVC+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatePatientVC+TextField.swift"; sourceTree = "<group>"; };
 		2B6428AE24B4A239006E35EE /* CreatePatientVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatePatientVC+APICall.swift"; sourceTree = "<group>"; };
@@ -326,6 +332,7 @@
 				2BE642E624C2EF2400F10EF6 /* DropDownVC */,
 				2B37A49B24EE41B3004DED9F /* PickerPopVC */,
 				2B97124824C5B8140025B26C /* TermsConditionPopUpVC */,
+				2B5FF2E024FE9D7800AC7B83 /* SubSettingVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -467,6 +474,32 @@
 				2BE642F524C2F33700F10EF6 /* Extension */,
 			);
 			path = AddFamilyMemberVC;
+			sourceTree = "<group>";
+		};
+		2B5FF2E024FE9D7800AC7B83 /* SubSettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				2B5FF2E124FE9D9200AC7B83 /* SubSettingVC.swift */,
+				2B5FF2E424FE9DB300AC7B83 /* View */,
+				2B5FF2E324FE9DAD00AC7B83 /* Extension */,
+			);
+			path = SubSettingVC;
+			sourceTree = "<group>";
+		};
+		2B5FF2E324FE9DAD00AC7B83 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B5FF2E724FE9E1500AC7B83 /* SubSettingVC+TableView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2B5FF2E424FE9DB300AC7B83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5FF2E524FE9DCE00AC7B83 /* SubSettingCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2B6428A924B4A207006E35EE /* Extension */ = {
@@ -1034,6 +1067,7 @@
 				5507E41224ACF56B00E9FE1C /* SettingCell.swift in Sources */,
 				2B1AB06624AA300D006A0089 /* OtpView.swift in Sources */,
 				2BE642F124C2F2D700F10EF6 /* RelationModel.swift in Sources */,
+				2B5FF2E824FE9E1500AC7B83 /* SubSettingVC+TableView.swift in Sources */,
 				C6190F2924BD8C2300E5754D /* CreateDoctorModel.swift in Sources */,
 				2B65466E24E3063D00EECD0B /* Ext-String.swift in Sources */,
 				C6190F2C24BDB77D00E5754D /* NextLocationVC+TextField.swift in Sources */,
@@ -1050,7 +1084,9 @@
 				55C9C5FF24ACB6E400E53FAE /* HomeVC.swift in Sources */,
 				2B37A4A924EE4F76004DED9F /* UploadFooterCell.swift in Sources */,
 				5521977D24B39BC7004B7742 /* PastConsultsCell.swift in Sources */,
+				2B5FF2E624FE9DCE00AC7B83 /* SubSettingCell.swift in Sources */,
 				2B37A4A524EE4834004DED9F /* UploadDocVC+TableView.swift in Sources */,
+				2B5FF2E224FE9D9200AC7B83 /* SubSettingVC.swift in Sources */,
 				2B37A49D24EE41FD004DED9F /* PickerPopVC.swift in Sources */,
 				2B310DE624F176A60045E308 /* UploadDocVC+APICall.swift in Sources */,
 				2B6428BB24B4B3C0006E35EE /* PastConsultantDetailsVC.swift in Sources */,

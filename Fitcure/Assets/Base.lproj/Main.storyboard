@@ -4504,6 +4504,92 @@ This policy is effective as of 1 July 2020.</string>
             </objects>
             <point key="canvasLocation" x="2024.6376811594205" y="5362.5"/>
         </scene>
+        <!--SubSettingVC-->
+        <scene sceneID="1IG-IJ-kq0">
+            <objects>
+                <viewController storyboardIdentifier="SubSettingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qz4-Pn-Uvk" userLabel="SubSettingVC" customClass="SubSettingVC" customModule="Rehab_Call_Physiotherapist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QxQ-jx-x9G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Psl-8f-mhu">
+                                <rect key="frame" x="0.0" y="49" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="a75-Bm-qel">
+                                    <rect key="frame" x="0.0" y="202" width="414" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SubSettingCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubSettingCell" rowHeight="146" id="PaE-z2-ufV" userLabel="SubSettingCell" customClass="SubSettingCell" customModule="Rehab_Call_Physiotherapist" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PaE-z2-ufV" id="kWy-7x-E7l">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="146"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPs-Nq-gfE">
+                                                    <rect key="frame" x="5" y="6" width="404" height="135"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Policy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iju-h5-eLu">
+                                                            <rect key="frame" x="18" y="20" width="368" height="21.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="Iju-h5-eLu" secondAttribute="trailing" constant="10" id="4zV-0o-vxW"/>
+                                                        <constraint firstItem="Iju-h5-eLu" firstAttribute="top" secondItem="mPs-Nq-gfE" secondAttribute="top" constant="20" id="bk4-2R-LIj"/>
+                                                        <constraint firstItem="Iju-h5-eLu" firstAttribute="leading" secondItem="mPs-Nq-gfE" secondAttribute="leadingMargin" constant="10" id="eC0-zT-bIb"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Iju-h5-eLu" secondAttribute="bottom" constant="20" id="yrR-Mt-yzE"/>
+                                                    </constraints>
+                                                </view>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTt-uk-q8g">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                                                    <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="hRa-wa-zFb"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mPs-Nq-gfE" firstAttribute="top" secondItem="GTt-uk-q8g" secondAttribute="bottom" constant="5" id="Sin-Gj-lR6"/>
+                                                <constraint firstAttribute="bottom" secondItem="mPs-Nq-gfE" secondAttribute="bottom" constant="5" id="Vuu-Sr-eRw"/>
+                                                <constraint firstItem="mPs-Nq-gfE" firstAttribute="leading" secondItem="kWy-7x-E7l" secondAttribute="leading" constant="5" id="YTl-8E-cy4"/>
+                                                <constraint firstItem="GTt-uk-q8g" firstAttribute="leading" secondItem="kWy-7x-E7l" secondAttribute="leading" id="dlt-mZ-tHe"/>
+                                                <constraint firstItem="GTt-uk-q8g" firstAttribute="top" secondItem="kWy-7x-E7l" secondAttribute="top" id="s8Y-Wv-fGX"/>
+                                                <constraint firstAttribute="trailing" secondItem="mPs-Nq-gfE" secondAttribute="trailing" constant="5" id="v6R-cV-URV"/>
+                                                <constraint firstAttribute="trailing" secondItem="GTt-uk-q8g" secondAttribute="trailing" id="zSQ-5W-TgQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="Iju-h5-eLu" id="Ebg-Ns-uZ9"/>
+                                            <outlet property="viewBack" destination="mPs-Nq-gfE" id="7sx-HV-iAL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Psl-8f-mhu" firstAttribute="top" secondItem="oE7-Zp-jQW" secondAttribute="top" constant="5" id="MJp-5g-4fm"/>
+                            <constraint firstItem="oE7-Zp-jQW" firstAttribute="bottom" secondItem="Psl-8f-mhu" secondAttribute="bottom" id="MWo-nq-PEl"/>
+                            <constraint firstItem="oE7-Zp-jQW" firstAttribute="trailing" secondItem="Psl-8f-mhu" secondAttribute="trailing" id="QOb-mH-psQ"/>
+                            <constraint firstItem="Psl-8f-mhu" firstAttribute="leading" secondItem="oE7-Zp-jQW" secondAttribute="leading" id="R40-6d-lDY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oE7-Zp-jQW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YUn-G1-r5M"/>
+                    <connections>
+                        <outlet property="tableView" destination="Psl-8f-mhu" id="Nfs-E0-88m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhP-Ev-8E4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792.753623188406" y="4583.7053571428569"/>
+        </scene>
     </scenes>
     <resources>
         <image name="big_logo" width="100" height="106"/>
