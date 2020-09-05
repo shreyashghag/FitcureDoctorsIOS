@@ -17,7 +17,7 @@ class VideoChatViewController: UIViewController {
     @IBOutlet weak var micButton: UIButton!
     @IBOutlet weak var cameraButton: UIButton!
     
-    weak var logVC: LogViewController?
+    //weak var logVC: LogViewController?
     
     
     var muted = false {
@@ -68,14 +68,14 @@ class VideoChatViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else {
-            return
-        }
+//        guard let identifier = segue.identifier else {
+//            return
+//        }
         
-        if identifier == "EmbedLogViewController",
-            let vc = segue.destination as? LogViewController {
-            self.logVC = vc
-        }
+//        if identifier == "EmbedLogViewController",
+//            let vc = segue.destination as? LogViewController {
+//            self.logVC = vc
+//        }
     }
     
     func setUpVideo() {
@@ -95,13 +95,13 @@ class VideoChatViewController: UIViewController {
             getAgoraEngine().joinChannel(byUserAccount: name, token: tempToken, channelId: channelName) { [weak self] (sid, uid, elapsed) in
                 self?.userID = uid
                 self!.isLocalVideoRender = true
-                self!.logVC?.log(type: .info, content: "did join channel")
+                //self!.logVC?.log(type: .info, content: "did join channel")
             }
         } else {
             getAgoraEngine().joinChannel(byToken: tempToken, channelId: channelName, info: nil, uid: userID) { [weak self] (sid, uid, elapsed) in
                 self?.userID = uid
                 self!.isLocalVideoRender = true
-                self!.logVC?.log(type: .info, content: "did join channel")
+                //self!.logVC?.log(type: .info, content: "did join channel")
             }
         }
         isStartCalling = true
@@ -136,7 +136,7 @@ class VideoChatViewController: UIViewController {
         getAgoraEngine().leaveChannel(nil)
         localVideo.isHidden = true
         remoteUserIDs.removeAll()
-        self.logVC?.log(type: .info, content: "did leave channel")
+        //self.logVC?.log(type: .info, content: "did leave channel")
     }
     
     
@@ -201,7 +201,7 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
     ///   - engine: RTC engine instance
     ///   - warningCode: Warning code
     func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurWarning warningCode: AgoraWarningCode) {
-        logVC?.log(type: .warning, content: "did occur warning, code: \(warningCode.rawValue)")
+        //logVC?.log(type: .warning, content: "did occur warning, code: \(warningCode.rawValue)")
     }
     
     /// Reports an error during SDK runtime.
@@ -209,7 +209,7 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
     ///   - engine: RTC engine instance
     ///   - errorCode: Error code
     func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurError errorCode: AgoraErrorCode) {
-        logVC?.log(type: .error, content: "did occur error, code: \(errorCode.rawValue)")
+        //logVC?.log(type: .error, content: "did occur error, code: \(errorCode.rawValue)")
     }
 }
 

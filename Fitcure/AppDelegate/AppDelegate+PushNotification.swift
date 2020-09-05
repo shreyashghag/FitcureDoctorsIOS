@@ -68,11 +68,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         debugPrint("🔔🔔")
         debugPrint(notification.request.content.userInfo)
         debugPrint("🔔🔔")
-        
+        guard UserData.returnValue(.userID) != nil else { return }
         guard UIApplication.shared.applicationState == .active || UIApplication.shared.applicationState == .background else { return }
         let dict = notification.request.content.userInfo as? [String : Any] ?? [:]
         let strMessage = dict["messageFrom"] as? String ?? ""
-            
+        
         switch strMessage {
         case "Video Call Request Rejected":
             NotificationCenter.default.post(name: .callCanceled, object: nil)
@@ -86,10 +86,10 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         debugPrint("🔔🔔")
         debugPrint(response.notification.request.content.userInfo)
         debugPrint("🔔🔔")
-                
+        guard UserData.returnValue(.userID) != nil else { return }
         let dict = response.notification.request.content.userInfo as? [String : Any] ?? [:]
         let strMessage = dict["messageFrom"] as? String ?? ""
-            
+        
         switch strMessage {
         case "Video Call Request Rejected":
             NotificationCenter.default.post(name: .callCanceled, object: nil)
