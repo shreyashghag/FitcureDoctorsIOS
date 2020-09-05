@@ -28,4 +28,21 @@ extension PastConsultantDetailsVC {
         }
     }
     
+    func api_CallRequest() {
+        var parameter = [String: Any]()
+        parameter["doctorId"] = obj?.doctorID ?? 0
+        parameter["patientId"] = obj?.patientID ?? 0
+        
+        self.showLoader()
+        CustomModel.callRequest(parameter) { (result) in
+            self.hideLoader()
+            switch result {
+            case .Success(_ ):
+                self.pushToVideoCallingVC()
+            case .CustomError(let str):
+                Alert.show(.error, str)
+            }
+        }
+    }
+    
 } //extension

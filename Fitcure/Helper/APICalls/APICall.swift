@@ -87,6 +87,7 @@ final class APICall {
         case d_ChangeConsultation       = "consultation/change/"
         case d_NotifyPatient            = "notify/patient"
         case d_UploadDocs               = "upload/docs"
+        case d_CallRequestSend          = "send/callingNotifications/"
         
     }
         

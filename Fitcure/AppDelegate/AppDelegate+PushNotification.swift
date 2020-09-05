@@ -11,7 +11,7 @@ import UserNotifications
 
 // MARK:- Extension For :- Notification Methods
 extension AppDelegate: UNUserNotificationCenterDelegate {
-        
+    
     // MARK:- Extension For :- Requst and UnRequest
     func checkPushNotifications() {
         UNUserNotificationCenter.current().delegate = self
@@ -23,6 +23,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 if UserData.returnValue(.NotificationToken) == nil {
                     self.registerForPushNotifications()
                 }
+                strNotificationToken = (UserData.returnValue(.NotificationToken) as? String) ?? "No Notification Available Right Now..."
             }
         }
     }
@@ -33,6 +34,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             DispatchQueue.main.async {
                 UIApplication.shared.registerForRemoteNotifications()
             }
+            debugPrint(error?.localizedDescription ?? "")
         }
     }
     
@@ -68,7 +70,15 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         debugPrint("🔔🔔")
         
         guard UIApplication.shared.applicationState == .active || UIApplication.shared.applicationState == .background else { return }
-        
+        let dict = notification.request.content.userInfo as? [String : Any] ?? [:]
+        let strMessage = dict["messageFrom"] as? String ?? ""
+            
+        switch strMessage {
+        case "Video Call Request Rejected":
+            NotificationCenter.default.post(name: .callCanceled, object: nil)
+        default:
+            break
+        }
         completionHandler([.alert, .sound, .badge])
     }
     
@@ -76,6 +86,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         debugPrint("🔔🔔")
         debugPrint(response.notification.request.content.userInfo)
         debugPrint("🔔🔔")
+                
+        let dict = response.notification.request.content.userInfo as? [String : Any] ?? [:]
+        let strMessage = dict["messageFrom"] as? String ?? ""
+            
+        switch strMessage {
+        case "Video Call Request Rejected":
+            NotificationCenter.default.post(name: .callCanceled, object: nil)
+        default:
+            break
+        }
         
         completionHandler()
     }

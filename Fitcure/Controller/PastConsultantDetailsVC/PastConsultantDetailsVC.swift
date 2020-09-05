@@ -70,7 +70,7 @@ final class PastConsultantDetailsVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction private func btnVideoCallPressed() {
-        pushSendFeedbackVC()
+        api_CallRequest()
     }
     @IBAction private func btnWritePrescriptionPressed() {
         
@@ -99,6 +99,15 @@ final class PastConsultantDetailsVC: UIViewController {
             self.api_NotifyPatient(strDate)            
         }
         
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func pushToVideoCallingVC() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: VideoChatViewController.self)) as? VideoChatViewController else { return }
+        vc.userID = UInt(self.obj?.doctorID ?? 0)
+        vc.remoteUserIDs = [UInt(self.obj?.patientID ?? 0)]
+        vc.channelName = "\(self.obj?.patientID ?? 0)\(self.obj?.doctorID ?? 0)"
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
     

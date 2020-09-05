@@ -2,13 +2,14 @@ import UIKit
 import AgoraRtcKit
 
 class VideoChatViewController: UIViewController {
-     let appID = "58e55b92295e4c3db91f27c6668de7d1"
-     var agoraKit: AgoraRtcEngineKit?
-     let tempToken: String? = nil
-     var userID: UInt = 0
-     var userName: String? = nil
-     var channelName = "default"
-     var remoteUserIDs: [UInt] = []
+    let appID = "58e55b92295e4c3db91f27c6668de7d1"
+    var agoraKit: AgoraRtcEngineKit?
+    let tempToken: String? = nil
+    var userID: UInt = 0
+    var userName: String? = nil
+    var channelName = "default"
+    var remoteUserIDs: [UInt] = []
+    
     @IBOutlet weak var localVideo: UIView!
     @IBOutlet weak var remoteVideo: UIView!
     @IBOutlet weak var remoteVideoMutedIndicator: UIImageView!
@@ -17,7 +18,7 @@ class VideoChatViewController: UIViewController {
     @IBOutlet weak var cameraButton: UIButton!
     
     weak var logVC: LogViewController?
-   
+    
     
     var muted = false {
         didSet {
@@ -35,13 +36,13 @@ class VideoChatViewController: UIViewController {
             remoteVideo.isHidden = !isRemoteVideoRender
         }
     }
-
+    
     var isLocalVideoRender: Bool = false {
         didSet {
             localVideoMutedIndicator.isHidden = isLocalVideoRender
         }
     }
-
+    
     var isStartCalling: Bool = true {
         didSet {
             if isStartCalling {
@@ -51,11 +52,19 @@ class VideoChatViewController: UIViewController {
             cameraButton.isHidden = !isStartCalling
         }
     }
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(onPatientCallDenied), name: .callCanceled, object: nil)
         setUpVideo()
         joinChannel()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParent {
+            NotificationCenter.default.removeObserver(self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,71 +78,77 @@ class VideoChatViewController: UIViewController {
         }
     }
     
-   func setUpVideo() {
-          getAgoraEngine().enableVideo()
-          
-          let videoCanvas = AgoraRtcVideoCanvas()
-          videoCanvas.uid = userID
-          videoCanvas.view = localVideo
-          videoCanvas.renderMode = .fit
-          getAgoraEngine().setupLocalVideo(videoCanvas)
-      }
-      
-      func joinChannel() {
-          localVideo.isHidden = false
-          
-          if let name = userName {
-              getAgoraEngine().joinChannel(byUserAccount: name, token: tempToken, channelId: channelName) { [weak self] (sid, uid, elapsed) in
-                  self?.userID = uid
+    func setUpVideo() {
+        getAgoraEngine().enableVideo()
+        
+        let videoCanvas = AgoraRtcVideoCanvas()
+        videoCanvas.uid = userID
+        videoCanvas.view = localVideo
+        videoCanvas.renderMode = .fit
+        getAgoraEngine().setupLocalVideo(videoCanvas)
+    }
+    
+    func joinChannel() {
+        localVideo.isHidden = false
+        
+        if let name = userName {
+            getAgoraEngine().joinChannel(byUserAccount: name, token: tempToken, channelId: channelName) { [weak self] (sid, uid, elapsed) in
+                self?.userID = uid
                 self!.isLocalVideoRender = true
                 self!.logVC?.log(type: .info, content: "did join channel")
-              }
-          } else {
-              getAgoraEngine().joinChannel(byToken: tempToken, channelId: channelName, info: nil, uid: userID) { [weak self] (sid, uid, elapsed) in
-                  self?.userID = uid
+            }
+        } else {
+            getAgoraEngine().joinChannel(byToken: tempToken, channelId: channelName, info: nil, uid: userID) { [weak self] (sid, uid, elapsed) in
+                self?.userID = uid
                 self!.isLocalVideoRender = true
                 self!.logVC?.log(type: .info, content: "did join channel")
-              }
-          }
-         isStartCalling = true
-      }
-      
-      private func getAgoraEngine() -> AgoraRtcEngineKit {
-          if agoraKit == nil {
-              agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: appID, delegate: self)
-          }
-          
-          return agoraKit!
-      }
-      
+            }
+        }
+        isStartCalling = true
+    }
+    
+    @objc private func onPatientCallDenied() {
+        self.leaveChannel()
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func getAgoraEngine() -> AgoraRtcEngineKit {
+        if agoraKit == nil {
+            agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: appID, delegate: self)
+        }
+        
+        return agoraKit!
+    }
+    
     @IBAction func didClickHangUpButton(_ sender: UIButton) {
         sender.isSelected.toggle()
         if sender.isSelected {
-             leaveChannel()
+            leaveChannel()
+            self.dismiss(animated: true, completion: nil)
         } else {
             joinChannel()
         }
     }
     func leaveChannel() {
-         isRemoteVideoRender = false
-         isLocalVideoRender = false
-         isStartCalling = false
-         getAgoraEngine().leaveChannel(nil)
-         localVideo.isHidden = true
-         remoteUserIDs.removeAll()
-         self.logVC?.log(type: .info, content: "did leave channel")
-     }
-     
+        isRemoteVideoRender = false
+        isLocalVideoRender = false
+        isStartCalling = false
+        getAgoraEngine().leaveChannel(nil)
+        localVideo.isHidden = true
+        remoteUserIDs.removeAll()
+        self.logVC?.log(type: .info, content: "did leave channel")
+    }
+    
     
     @IBAction func didClickMuteButton(_ sender: UIButton) {
         sender.isSelected.toggle()
         // mute local audio
-       if muted {
-                getAgoraEngine().muteLocalAudioStream(false)
-            } else {
-                getAgoraEngine().muteLocalAudioStream(true)
-            }
-            muted = !muted
+        if muted {
+            getAgoraEngine().muteLocalAudioStream(false)
+        } else {
+            getAgoraEngine().muteLocalAudioStream(true)
+        }
+        muted = !muted
     }
     
     @IBAction func didClickSwitchCameraButton(_ sender: UIButton) {
@@ -152,7 +167,7 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
     ///   - elapsed: Time elapsed (ms) from the local user calling JoinChannel method until the SDK triggers this callback.
     func rtcEngine(_ engine: AgoraRtcEngineKit, firstRemoteVideoDecodedOfUid uid:UInt, size:CGSize, elapsed:Int) {
         isRemoteVideoRender = true
-              
+        
         // Only one remote video view is available for this
         // tutorial. Here we check if there exists a surface
         // view tagged as this uid.

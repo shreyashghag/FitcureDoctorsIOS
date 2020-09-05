@@ -18,6 +18,21 @@ struct CustomModel: Codable {
         case message = "Message"
     }
     
+    static func callRequest(_ parameter: [String: Any], complection: ((Result<String>)->())?) {
+        APICall.webRequest(apiType: .POST, endPoint: .d_CallRequestSend, parameters: parameter, decodableObj: CustomModel.self) { (result) in
+            switch result {
+            case .Success(let obj, _, _):
+                if !(obj?.error ?? false), let strMsg = obj?.message {
+                    complection?(.Success(strMsg))
+                } else {
+                    complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
+                }
+            case .CustomError(let str):
+                complection?(.CustomError(str))
+            }
+        }
+    }
+    
     static func notifyPatient(_ parameter: [String: Any], complection: ((Result<String>)->())?) {
         APICall.webRequest(apiType: .POST, endPoint: .d_NotifyPatient, parameters: parameter, decodableObj: CustomModel.self) { (result) in
             switch result {

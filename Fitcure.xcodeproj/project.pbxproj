@@ -60,6 +60,7 @@
 		2B97125324C5CA7F0025B26C /* FeedBackVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B97125224C5CA7F0025B26C /* FeedBackVC+APICall.swift */; };
 		2B97125524C5CC7F0025B26C /* FeedBackVC+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B97125424C5CC7F0025B26C /* FeedBackVC+TextView.swift */; };
 		2BA5F25D24ED69C200FE8E54 /* ExpertOpenionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA5F25C24ED69C200FE8E54 /* ExpertOpenionView.swift */; };
+		2BB5467F25039D6600FCECF2 /* Ext-Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB5467E25039D6600FCECF2 /* Ext-Notification.swift */; };
 		2BBC69EE24ADB3BE00C77D24 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBC69ED24ADB3BE00C77D24 /* Constant.swift */; };
 		2BBC69F024ADB46000C77D24 /* Ext-ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBC69EF24ADB46000C77D24 /* Ext-ViewController.swift */; };
 		2BDE1F8124D9BA6300CC517B /* DoctorDetailsVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE1F8024D9BA6300CC517B /* DoctorDetailsVC+APICall.swift */; };
@@ -185,6 +186,7 @@
 		2B97125224C5CA7F0025B26C /* FeedBackVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedBackVC+APICall.swift"; sourceTree = "<group>"; };
 		2B97125424C5CC7F0025B26C /* FeedBackVC+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedBackVC+TextView.swift"; sourceTree = "<group>"; };
 		2BA5F25C24ED69C200FE8E54 /* ExpertOpenionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertOpenionView.swift; sourceTree = "<group>"; };
+		2BB5467E25039D6600FCECF2 /* Ext-Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-Notification.swift"; sourceTree = "<group>"; };
 		2BBC69ED24ADB3BE00C77D24 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2BBC69EF24ADB46000C77D24 /* Ext-ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-ViewController.swift"; sourceTree = "<group>"; };
 		2BDE1F8024D9BA6300CC517B /* DoctorDetailsVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoctorDetailsVC+APICall.swift"; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				2B65466D24E3063D00EECD0B /* Ext-String.swift */,
 				C63620AE24E96C2E00BC9BCC /* Canvas.swift */,
 				2B310DE124F16A990045E308 /* Ext-Date.swift */,
+				2BB5467E25039D6600FCECF2 /* Ext-Notification.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1116,6 +1119,7 @@
 				2B12EE6524A9A58E00EF91EB /* SceneDelegate.swift in Sources */,
 				2B97124D24C5BC710025B26C /* WebVC.swift in Sources */,
 				2B8C071924E440A700D25D94 /* FAQVC+Extension.swift in Sources */,
+				2BB5467F25039D6600FCECF2 /* Ext-Notification.swift in Sources */,
 				C657997A24ADC7870094410B /* SignUpVC+APICall.swift in Sources */,
 				2B37A4A724EE485A004DED9F /* UploadDocCell.swift in Sources */,
 				5512795224AB78410080909D /* LoginVC+TextField.swift in Sources */,
