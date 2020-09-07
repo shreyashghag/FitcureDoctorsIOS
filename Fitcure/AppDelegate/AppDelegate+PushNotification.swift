@@ -20,11 +20,9 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             case .notDetermined, .denied:
                 self.registerForPushNotifications()
             default:
-                if UserData.returnValue(.NotificationToken) == nil {
-                    self.registerForPushNotifications()
-                }
-                strNotificationToken = (UserData.returnValue(.NotificationToken) as? String) ?? "No Notification Available Right Now..."
+                self.registerForPushNotifications()
             }
+            strNotificationToken = (UserData.returnValue(.NotificationToken) as? String) ?? "No Notification Available Right Now..."
         }
     }
     
