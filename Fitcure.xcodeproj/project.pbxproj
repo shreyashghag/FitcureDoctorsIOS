@@ -111,6 +111,7 @@
 		C657998424ADEB670094410B /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998324ADEB670094410B /* LocationVC.swift */; };
 		C657998624ADF2580094410B /* NextLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998524ADF2580094410B /* NextLocationVC.swift */; };
 		C657998924AE045E0094410B /* CreateDoctorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998824AE045E0094410B /* CreateDoctorVC.swift */; };
+		C66205D72505EF1B00B34CC0 /* SignaturePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205D62505EF1B00B34CC0 /* SignaturePopUpVC.swift */; };
 		C673074424BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C673074324BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift */; };
 		FBB4FB9A05FCA45D6474DAC4 /* Pods_Fitcure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */; };
 /* End PBXBuildFile section */
@@ -237,6 +238,7 @@
 		C657998324ADEB670094410B /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		C657998524ADF2580094410B /* NextLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLocationVC.swift; sourceTree = "<group>"; };
 		C657998824AE045E0094410B /* CreateDoctorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDoctorVC.swift; sourceTree = "<group>"; };
+		C66205D62505EF1B00B34CC0 /* SignaturePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePopUpVC.swift; sourceTree = "<group>"; };
 		C673074324BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatePatientVC+ImagePicker.swift"; sourceTree = "<group>"; };
 		FA2D9DB607E8AD6B3427ED02 /* Pods-Fitcure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitcure.release.xcconfig"; path = "Target Support Files/Pods-Fitcure/Pods-Fitcure.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -929,6 +931,7 @@
 		C657998724AE043C0094410B /* CreateDoctorVC */ = {
 			isa = PBXGroup;
 			children = (
+				C66205D62505EF1B00B34CC0 /* SignaturePopUpVC.swift */,
 				C657998824AE045E0094410B /* CreateDoctorVC.swift */,
 				C6190F2724BD8BF600E5754D /* Model */,
 				2B6428A924B4A207006E35EE /* Extension */,
@@ -1094,6 +1097,7 @@
 				2B310DE624F176A60045E308 /* UploadDocVC+APICall.swift in Sources */,
 				2B6428BB24B4B3C0006E35EE /* PastConsultantDetailsVC.swift in Sources */,
 				2BFDFD5024D9A73100957B7F /* RequestForConsultVC+APICall.swift in Sources */,
+				C66205D72505EF1B00B34CC0 /* SignaturePopUpVC.swift in Sources */,
 				2B26D70724B09DAD006D2FBB /* HomeVC+APICall.swift in Sources */,
 				5507E41624ACFFB800E9FE1C /* Ext-NavigationItem.swift in Sources */,
 				55C9C60324ACB6F700E53FAE /* SettingVC.swift in Sources */,

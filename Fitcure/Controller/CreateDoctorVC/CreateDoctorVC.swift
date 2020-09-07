@@ -14,7 +14,7 @@ import SkyFloatingLabelTextField
 final class CreateDoctorVC: UIViewController {
     
     // MARK:- Outlets
-    
+
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var  signatureImg : UIImageView!
     
@@ -33,8 +33,6 @@ final class CreateDoctorVC: UIViewController {
     @IBOutlet weak var txtfpreferredLanguages: SkyFloatingLabelTextField!
     @IBOutlet weak var txtfspeciality: SkyFloatingLabelTextField!
     
-    @IBOutlet weak var signHereLabel: UILabel!
-    @IBOutlet weak var signatureView: DrawSignatureView!
     @IBOutlet weak var captureSignatureImageView : UIImageView!
   
     
@@ -61,12 +59,7 @@ final class CreateDoctorVC: UIViewController {
 
         setUpView()
     }
-    @IBAction func clearBtnTapped(_ sender: UIButton) {
-           
-        self.captureSignatureImageView.image = nil
-        self.signatureView.erase()
-           
-       }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -90,49 +83,17 @@ final class CreateDoctorVC: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tcPressed))
         lblTC.addGestureRecognizer(gesture)
         
-
-        signatureView.layer.borderWidth = 0.5
-        signatureView.layer.borderColor = UIColor.black.cgColor
-        signatureView.layer.cornerRadius = 10
-        self.signatureState()
         
         
     }
     
-    /// Signature State by CallBack
-    private func signatureState() {
-    
-      self.signatureView.currentTouchState = { [weak self] (touchState) in
-        self!.captureSignatureImageView.image = nil
-        self!.scrollView.isScrollEnabled = false
-        switch touchState {
-            
-        case .began:
-          print("began")
-         
-        case .moved:
-          print("moved")
-        case .ended:
-          print("ended")
-        case .none:
-          print("none")
-        }
-      }
-    }
+   
 
     /// Capture Siganture
       @IBAction func captureSignature(_ sender: UIButton) {
 
-        self.signatureView.captureSignature { [weak self] (signature) in
-         self!.scrollView.isScrollEnabled = true
-          if let signature = signature {
-           print("Capture Signature: \(signature.image)")
-           print("Capture time: \(signature.date)")
-           self?.captureSignatureImageView.image = signature.image
-           self?.mediaForSigView  =  APICall.Media(withImage: signature.image, forKey: "images", andFileName: "\(self!.txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
-            
-          }
-         }
+        pushSignaturePopupVC()
+
        }
 
     private func setUpTextField() {
@@ -267,6 +228,11 @@ final class CreateDoctorVC: UIViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: TermsConditionPopUpVC.self)) as? TermsConditionPopUpVC else { return }
         self.present(vc, animated: true, completion: nil)
     }
+    func pushSignaturePopupVC() {
+           guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: SignaturePopUpVC.self)) as? SignaturePopUpVC else { return }
+           vc.delegate = self
+           self.present(vc, animated: true, completion: nil)
+       }
     func pushUploadDocVC() {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: UploadDocVC.self)) as? UploadDocVC else { return }
         vc.strMobileNo = txtfMobileNo.text ?? ""
@@ -283,3 +249,20 @@ final class CreateDoctorVC: UIViewController {
     }
     
 } //class
+extension CreateDoctorVC :CreateDoctorVCDelegate {
+    
+    func removePopUpView() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func selectedDigitalSig(digitalSig: UIImage) {
+        
+                   captureSignatureImageView.image = digitalSig
+                   mediaForSigView  =  APICall.Media(withImage: digitalSig, forKey: "images", andFileName: "\(txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
+        
+                  
+    }
+    
+    
+}

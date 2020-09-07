@@ -30,9 +30,9 @@ extension CreateDoctorVC {
         parameter["speciality"] = txtfspeciality.text ?? ""
         parameter["token"] = strNotificationToken
         parameter["speciality"] = txtfspeciality.text ?? ""
-        parameter["profile_image"] = "\( txtfMobileNo.text ?? "")_Doctor_Profile.png"
-        parameter["signature"] = "\( txtfMobileNo.text ?? "")_Doctor_Digital_Signature.png"
-        parameter["signature_bitmap"] = "\( txtfMobileNo.text ?? "")_Doctor_Bitmap_Signature.png"
+        parameter["profile_image"] = "\( txtfMobileNo.text ?? "")_DoctorsProfilePic.png"
+        parameter["signature"] = "\( txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png"
+        parameter["signature_bitmap"] = "\( txtfMobileNo.text ?? "")_DoctorsBitmapSignature.png"
         
         parameter["deviceType"] = "IOS"
         

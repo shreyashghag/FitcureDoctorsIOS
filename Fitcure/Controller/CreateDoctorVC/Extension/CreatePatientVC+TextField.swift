@@ -178,7 +178,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             
             if(newString.length<4)
             {
-                txtfnameOfCouncil.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfnameOfCouncil.errorMessage = "PLEASE ENTER YOUR COUNCIL "
                 
             }
                 
@@ -191,7 +191,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             }
             if(newString.length==0)
             {
-                txtfnameOfCouncil.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+               txtfnameOfCouncil.errorMessage = "PLEASE ENTER YOUR COUNCIL "
                 
             }
             return newString.length <= maxLength
@@ -206,7 +206,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             
             if(newString.length<4)
             {
-                txtfqualification.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfqualification.errorMessage = "PLEASE ENTER YOUR QUALIFICATION "
                 
             }
                 
@@ -234,7 +234,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             
             if(newString.length<4)
             {
-                txtfassociateHospital.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfassociateHospital.errorMessage = "PLEASE ENTER YOUR ASSOCIATE HOSPITAL "
                 
             }
                 
@@ -247,7 +247,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             }
             if(newString.length==0)
             {
-                txtfassociateHospital.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfassociateHospital.errorMessage = "PLEASE ENTER YOUR ASSOCIATE HOSPITAL "
                 
             }
             return newString.length <= maxLength
@@ -262,7 +262,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             
             if(newString.length<4)
             {
-                txtfpreferredLanguages.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfpreferredLanguages.errorMessage = "PLEASE ENTER PREFERRED LANGUAGES "
                 
             }
                 
@@ -275,7 +275,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             }
             if(newString.length==0)
             {
-                txtfpreferredLanguages.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfpreferredLanguages.errorMessage = "PLEASE ENTER PREFERRED LANGUAGES "
                 
             }
             return newString.length <= maxLength
@@ -290,7 +290,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             
             if(newString.length<4)
             {
-                txtfspeciality.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfspeciality.errorMessage = "PLEASE ENTER SPECIALITY "
                 
             }
                 
@@ -303,7 +303,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             }
             if(newString.length==0)
             {
-                txtfspeciality.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfspeciality.errorMessage = "PLEASE ENTER SPECIALITY "
                 
             }
             return newString.length <= maxLength
@@ -318,7 +318,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             
             if(newString.length<4)
             {
-                txtfworkingSince.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfworkingSince.errorMessage = "PLEASE ENTER WORKING SIENCE "
                 
             }
                 
@@ -331,7 +331,7 @@ extension CreateDoctorVC: UITextFieldDelegate {
             }
             if(newString.length==0)
             {
-                txtfworkingSince.errorMessage = Alert.AlertMessage.nameRequired.rawValue
+                txtfworkingSince.errorMessage = "PLEASE ENTER WORKING SIENCE "
                 
             }
             return newString.length <= maxLength
