@@ -25,7 +25,7 @@ class PrescriptionVC: UIViewController {
     fileprivate func getDestinationPath(_ number: Int) -> String {
         return NSHomeDirectory() + "/sample\(number).pdf"
     }
-    @IBOutlet weak var pdfView: PDFView!
+  
     
     @IBOutlet weak var adviceTxtFild: SkyFloatingLabelTextField!
     
