@@ -73,7 +73,7 @@ final class PastConsultantDetailsVC: UIViewController {
         api_CallRequest()
     }
     @IBAction private func btnWritePrescriptionPressed() {
-        
+        pushPrescriptionkVC()
     }
     @IBAction private func btnNotifyPatientPressed() {
         pushPickerPopUpVC()
@@ -85,6 +85,12 @@ final class PastConsultantDetailsVC: UIViewController {
         //vc.obj = obj
         self.present(vc, animated: true, completion: nil)
     }
+    
+    private func pushPrescriptionkVC() {
+           guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: PrescriptionVC.self)) as? PrescriptionVC else { return }
+        vc.obj = obj
+        self.navigationController?.pushViewController(vc, animated: true)
+       }
     private func pushPickerPopUpVC() {
         debugPrint(obj?.updatedAt ?? "")
         guard let date = Date.getDate(obj?.updatedAt ?? ""), Date() >= date else {

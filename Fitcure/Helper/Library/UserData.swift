@@ -25,6 +25,9 @@ final class UserData {
         case BikeTutorials              = "ShowBikeTutorials"
         case CustomerNumber             = "customerSupport"
         case currentLocation            = "currentLocation"
+        case registrationNo             = "registrationNo"
+        case qualification              = "qualification"
+        case signatureBitmapImage       = "signatureBitmapImage"
     }
     
     // MARK:- init Methods

@@ -7,8 +7,21 @@
 //
 
 import UIKit
-
+import MessageUI
 final class HomeVC: UIViewController {
+    
+    
+    @IBAction func subbmitExpertOpinionBtn(_ sender: UIButton) {
+        
+        sendEmail()
+    }
+    
+    
+    
+    
+    
+    
+    
     
     // MARK:- Enums
     enum HomeSelectionTab { case ActiveConsults, CallRequest, ExpertOpinion}
@@ -115,4 +128,26 @@ final class HomeVC: UIViewController {
         debugPrint("🏹 Controller is removed from memory \(self) 🎯 🏆")
     }
     
-} //class
+    func sendEmail() {
+        
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["rehebcall@gmail.com"])
+            mail.setMessageBody("</br></br></br></br>" + "-- </br> " + "----- Patient Name : \(viewExpert.txtfName.text ?? ""), Patient Age : \(viewExpert.txtfAge.text ?? ""), Aggreavting Factors  : \(viewExpert.txtfAgreevating.text ?? "") , History of illness : \(viewExpert.txtfHistory.text ?? ""), Other Diseases : \(viewExpert.txtfOtherIssue.text ?? "") </br></br></br></br>", isHTML: true)
+            mail.setSubject("Expert Opinion Request")
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+}
+
+
+extension HomeVC :MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
