@@ -204,6 +204,7 @@ extension Alert {
         case FileSelected   = "File Selected"
         case sorry          = "Sorry!"
         case OTPGenerated   = "OTP Send"
+        case appName        = "Rehab Call Physiotherapist"
     }
     
     /// Enum For Alert Button Titles

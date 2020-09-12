@@ -90,6 +90,7 @@ final class APICall {
         case d_CallRequestSend          = "send/callingNotifications/"
         case d_helpinghand              = "create/helpinghand/"
         case d_sendPrescription         = "send/prescription/"
+        case d_updateProfile            = "update/doctor/"
        
     }
         
