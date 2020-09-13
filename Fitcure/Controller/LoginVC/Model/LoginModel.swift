@@ -27,23 +27,31 @@ struct LoginModel: Codable {
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false) {
-                    guard let firstObj = obj?.response?.first,
-                        let id = firstObj.id,
-                        let name = firstObj.name,
-                        let mobile = firstObj.mobile,
-                        let email = firstObj.email
-                        else {
-                            complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
-                            return
+                                     guard let firstObj = obj?.response?.first,
+                            let id = firstObj.id,
+                            let name = firstObj.name,
+                            let mobile = firstObj.mobile,
+                            let email = firstObj.email,
+                            let registrationNo = firstObj.registrationNo,
+                            let qualification = firstObj.qualification,
+                            let signatureBitmapImage = firstObj.signatureBitmapImage
+                            
+                            else {
+                                complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
+                                return
+                        }
+                        UserData.saveData(.userID, id)
+                        UserData.saveData(.name, name)
+                        UserData.saveData(.Mobile, mobile)
+                        UserData.saveData(.Email, email)
+                        UserData.saveData(.registrationNo, registrationNo)
+                        UserData.saveData(.qualification, qualification)
+                        UserData.saveData(.signatureBitmapImage, signatureBitmapImage)
+                        complection?(.Success(firstObj))
+                    } else {
+                        complection?(.CustomError(obj?.error.debugDescription ?? Alert.AlertMessage.Oops.rawValue))
                     }
-                    UserData.saveData(.userID, id)
-                    UserData.saveData(.name, name)
-                    UserData.saveData(.Mobile, mobile)
-                    UserData.saveData(.Email, email)
-                    complection?(.Success(firstObj))
-                } else {
-                    complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
-                }
+
             case .CustomError(let str):
                 complection?(.CustomError(str))
             }
@@ -56,6 +64,7 @@ struct LoginModel: Codable {
             switch result {
             case .Success(let obj, _, _):
                 if !(obj?.error ?? false) {
+                    
                     complection?(.Success(obj?.response ?? []))
                 } else {
                     complection?(.CustomError(obj?.error.debugDescription ?? Alert.AlertMessage.Oops.rawValue))
@@ -76,7 +85,11 @@ struct LoginModel: Codable {
                         let id = firstObj.id,
                         let name = firstObj.name,
                         let mobile = firstObj.mobile,
-                        let email = firstObj.email
+                        let email = firstObj.email,
+                        let registrationNo = firstObj.registrationNo,
+                        let qualification = firstObj.qualification,
+                        let signatureBitmapImage = firstObj.signatureBitmapImage
+                        
                         else {
                             complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
                             return
@@ -85,6 +98,9 @@ struct LoginModel: Codable {
                     UserData.saveData(.name, name)
                     UserData.saveData(.Mobile, mobile)
                     UserData.saveData(.Email, email)
+                    UserData.saveData(.registrationNo, registrationNo)
+                    UserData.saveData(.qualification, qualification)
+                    UserData.saveData(.signatureBitmapImage, signatureBitmapImage)
                     complection?(.Success(obj?.response ?? []))
                 } else {
                     complection?(.CustomError(obj?.error.debugDescription ?? Alert.AlertMessage.Oops.rawValue))

@@ -15,7 +15,7 @@ final class CreateDoctorVC: UIViewController {
     
     // MARK:- Outlets
 
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var  scrollView: UIScrollView!
     @IBOutlet weak var  signatureImg : UIImageView!
     
     @IBOutlet weak var btnSignature: UIButton!

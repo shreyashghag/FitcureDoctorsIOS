@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -76,9 +76,6 @@
 		2BFDFD5024D9A73100957B7F /* RequestForConsultVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD4F24D9A73100957B7F /* RequestForConsultVC+APICall.swift */; };
 		2BFDFD5224D9AC6100957B7F /* RequestForConsultVC+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD5124D9AC6100957B7F /* RequestForConsultVC+TextView.swift */; };
 		2BFDFD5524D9B02F00957B7F /* ConsultRequestOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD5424D9B02F00957B7F /* ConsultRequestOrderModel.swift */; };
-		2BFDFD5824D9B21900957B7F /* RazorPayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD5724D9B21900957B7F /* RazorPayHelper.swift */; };
-		2BFDFD5B24D9B23400957B7F /* Razorpay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFDFD5924D9B22D00957B7F /* Razorpay.xcframework */; };
-		2BFDFD5C24D9B23400957B7F /* Razorpay.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFDFD5924D9B22D00957B7F /* Razorpay.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5507E40C24ACE0A800E9FE1C /* HomeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507E40B24ACE0A800E9FE1C /* HomeVC+TableView.swift */; };
 		5507E40F24ACF54E00E9FE1C /* SettingVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507E40E24ACF54E00E9FE1C /* SettingVC+TableView.swift */; };
 		5507E41224ACF56B00E9FE1C /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5507E41124ACF56B00E9FE1C /* SettingCell.swift */; };
@@ -97,6 +94,8 @@
 		55C9C60324ACB6F700E53FAE /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C9C60224ACB6F700E53FAE /* SettingVC.swift */; };
 		708B9F3546F42E6233D4E3B7 /* Pods_Fitcure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */; };
 		C607779524CEC91E00FFC780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B12EE6B24A9A59200EF91EB /* Assets.xcassets */; };
+		C60B26862508CE5600872BC6 /* PrescriptionVC+ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B26852508CE5600872BC6 /* PrescriptionVC+ApiCall.swift */; };
+		C60B26882508CEA400872BC6 /* PrescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60B26872508CEA400872BC6 /* PrescriptionModel.swift */; };
 		C61365DB24E9373C00C1CDF4 /* CustomOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61365D624E9373C00C1CDF4 /* CustomOverlay.xib */; };
 		C61365DC24E9373C00C1CDF4 /* CustomPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = C61365D724E9373C00C1CDF4 /* CustomPage.xib */; };
 		C61365DD24E9373C00C1CDF4 /* StoryboardExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61365D824E9373C00C1CDF4 /* StoryboardExample.swift */; };
@@ -111,7 +110,16 @@
 		C657998424ADEB670094410B /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998324ADEB670094410B /* LocationVC.swift */; };
 		C657998624ADF2580094410B /* NextLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998524ADF2580094410B /* NextLocationVC.swift */; };
 		C657998924AE045E0094410B /* CreateDoctorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998824AE045E0094410B /* CreateDoctorVC.swift */; };
+		C65F425E2509F123009C700B /* EditProfileVC+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F42582509F123009C700B /* EditProfileVC+TextField.swift */; };
+		C65F425F2509F123009C700B /* EditProfileVC+ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F42592509F123009C700B /* EditProfileVC+ApiCall.swift */; };
+		C65F42602509F123009C700B /* EditProfileVC+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F425A2509F123009C700B /* EditProfileVC+ImagePicker.swift */; };
+		C65F42612509F123009C700B /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F425B2509F123009C700B /* EditProfileVC.swift */; };
+		C65F42622509F123009C700B /* PatientProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F425D2509F123009C700B /* PatientProfileModel.swift */; };
 		C66205D72505EF1B00B34CC0 /* SignaturePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205D62505EF1B00B34CC0 /* SignaturePopUpVC.swift */; };
+		C66205DC2506297200B34CC0 /* PrescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205DB2506297200B34CC0 /* PrescriptionVC.swift */; };
+		C66205E425066EED00B34CC0 /* ExpertOpenionView+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205E325066EED00B34CC0 /* ExpertOpenionView+TextField.swift */; };
+		C66205E6250673F800B34CC0 /* ExpertOpenionView+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205E5250673F800B34CC0 /* ExpertOpenionView+APICall.swift */; };
+		C66205E82506772300B34CC0 /* ExpertOpenionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205E72506772300B34CC0 /* ExpertOpenionModel.swift */; };
 		C673074424BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C673074324BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift */; };
 		FBB4FB9A05FCA45D6474DAC4 /* Pods_Fitcure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */; };
 /* End PBXBuildFile section */
@@ -123,7 +131,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2BFDFD5C24D9B23400957B7F /* Razorpay.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,8 +211,6 @@
 		2BFDFD4F24D9A73100957B7F /* RequestForConsultVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestForConsultVC+APICall.swift"; sourceTree = "<group>"; };
 		2BFDFD5124D9AC6100957B7F /* RequestForConsultVC+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestForConsultVC+TextView.swift"; sourceTree = "<group>"; };
 		2BFDFD5424D9B02F00957B7F /* ConsultRequestOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultRequestOrderModel.swift; sourceTree = "<group>"; };
-		2BFDFD5724D9B21900957B7F /* RazorPayHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazorPayHelper.swift; sourceTree = "<group>"; };
-		2BFDFD5924D9B22D00957B7F /* Razorpay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Razorpay.xcframework; sourceTree = "<group>"; };
 		5507E40B24ACE0A800E9FE1C /* HomeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+TableView.swift"; sourceTree = "<group>"; };
 		5507E40E24ACF54E00E9FE1C /* SettingVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingVC+TableView.swift"; sourceTree = "<group>"; };
 		5507E41124ACF56B00E9FE1C /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
@@ -224,6 +229,8 @@
 		55C9C60224ACB6F700E53FAE /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		6BA3A9057D021FA75836AE41 /* Pods_Fitcure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitcure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A256D2250EC3F6220B55D65D /* Pods-Fitcure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitcure.debug.xcconfig"; path = "Target Support Files/Pods-Fitcure/Pods-Fitcure.debug.xcconfig"; sourceTree = "<group>"; };
+		C60B26852508CE5600872BC6 /* PrescriptionVC+ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrescriptionVC+ApiCall.swift"; sourceTree = "<group>"; };
+		C60B26872508CEA400872BC6 /* PrescriptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionModel.swift; sourceTree = "<group>"; };
 		C61365D624E9373C00C1CDF4 /* CustomOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverlay.xib; sourceTree = "<group>"; };
 		C61365D724E9373C00C1CDF4 /* CustomPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPage.xib; sourceTree = "<group>"; };
 		C61365D824E9373C00C1CDF4 /* StoryboardExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExample.swift; sourceTree = "<group>"; };
@@ -238,7 +245,16 @@
 		C657998324ADEB670094410B /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		C657998524ADF2580094410B /* NextLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLocationVC.swift; sourceTree = "<group>"; };
 		C657998824AE045E0094410B /* CreateDoctorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDoctorVC.swift; sourceTree = "<group>"; };
+		C65F42582509F123009C700B /* EditProfileVC+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+TextField.swift"; sourceTree = "<group>"; };
+		C65F42592509F123009C700B /* EditProfileVC+ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+ApiCall.swift"; sourceTree = "<group>"; };
+		C65F425A2509F123009C700B /* EditProfileVC+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+ImagePicker.swift"; sourceTree = "<group>"; };
+		C65F425B2509F123009C700B /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		C65F425D2509F123009C700B /* PatientProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientProfileModel.swift; sourceTree = "<group>"; };
 		C66205D62505EF1B00B34CC0 /* SignaturePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePopUpVC.swift; sourceTree = "<group>"; };
+		C66205DB2506297200B34CC0 /* PrescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionVC.swift; sourceTree = "<group>"; };
+		C66205E325066EED00B34CC0 /* ExpertOpenionView+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertOpenionView+TextField.swift"; sourceTree = "<group>"; };
+		C66205E5250673F800B34CC0 /* ExpertOpenionView+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertOpenionView+APICall.swift"; sourceTree = "<group>"; };
+		C66205E72506772300B34CC0 /* ExpertOpenionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertOpenionModel.swift; sourceTree = "<group>"; };
 		C673074324BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreatePatientVC+ImagePicker.swift"; sourceTree = "<group>"; };
 		FA2D9DB607E8AD6B3427ED02 /* Pods-Fitcure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitcure.release.xcconfig"; path = "Target Support Files/Pods-Fitcure/Pods-Fitcure.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,7 +265,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB4FB9A05FCA45D6474DAC4 /* Pods_Fitcure.framework in Frameworks */,
-				2BFDFD5B24D9B23400957B7F /* Razorpay.xcframework in Frameworks */,
 				708B9F3546F42E6233D4E3B7 /* Pods_Fitcure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +298,6 @@
 				2B12EE7824A9A5D400EF91EB /* Controller */,
 				2B12EE7724A9A5CD00EF91EB /* Assets */,
 				2B1AB06724AA37AA006A0089 /* Helper */,
-				2BFDFD5624D9B20700957B7F /* RazorPayHelper */,
 				2B12EE7024A9A59200EF91EB /* Info.plist */,
 			);
 			path = Fitcure;
@@ -312,6 +326,8 @@
 		2B12EE7824A9A5D400EF91EB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C65F42562509F123009C700B /* EditProfile */,
+				C66205D8250628F800B34CC0 /* PrescriptionVC */,
 				C61365D524E9373C00C1CDF4 /* onBoard */,
 				2B8C070E24E4406700D25D94 /* FAQVC */,
 				2B26D70A24B0A6FA006D2FBB /* SplashVC */,
@@ -381,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				2B65466B24E2FCE200EECD0B /* PatientRequestModel.swift */,
+				C66205E72506772300B34CC0 /* ExpertOpenionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -701,20 +718,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		2BFDFD5624D9B20700957B7F /* RazorPayHelper */ = {
-			isa = PBXGroup;
-			children = (
-				2BFDFD5924D9B22D00957B7F /* Razorpay.xcframework */,
-				2BFDFD5724D9B21900957B7F /* RazorPayHelper.swift */,
-			);
-			path = RazorPayHelper;
-			sourceTree = "<group>";
-		};
 		5507E40A24ACE09800E9FE1C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				2B26D70624B09DAD006D2FBB /* HomeVC+APICall.swift */,
 				5507E40B24ACE0A800E9FE1C /* HomeVC+TableView.swift */,
+				C66205E325066EED00B34CC0 /* ExpertOpenionView+TextField.swift */,
+				C66205E5250673F800B34CC0 /* ExpertOpenionView+APICall.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -939,6 +949,60 @@
 			path = CreateDoctorVC;
 			sourceTree = "<group>";
 		};
+		C65F42562509F123009C700B /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				C65F42572509F123009C700B /* Extension */,
+				C65F425B2509F123009C700B /* EditProfileVC.swift */,
+				C65F425C2509F123009C700B /* Model */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		C65F42572509F123009C700B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C65F42582509F123009C700B /* EditProfileVC+TextField.swift */,
+				C65F42592509F123009C700B /* EditProfileVC+ApiCall.swift */,
+				C65F425A2509F123009C700B /* EditProfileVC+ImagePicker.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C65F425C2509F123009C700B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C65F425D2509F123009C700B /* PatientProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C66205D8250628F800B34CC0 /* PrescriptionVC */ = {
+			isa = PBXGroup;
+			children = (
+				C66205DA2506295800B34CC0 /* Model */,
+				C66205D92506294A00B34CC0 /* Extension */,
+				C66205DB2506297200B34CC0 /* PrescriptionVC.swift */,
+			);
+			path = PrescriptionVC;
+			sourceTree = "<group>";
+		};
+		C66205D92506294A00B34CC0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C60B26852508CE5600872BC6 /* PrescriptionVC+ApiCall.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C66205DA2506295800B34CC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C60B26872508CEA400872BC6 /* PrescriptionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C676BF8024CB221D00D6ADF7 /* VideoCallingVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1071,6 +1135,7 @@
 				2B12EE6724A9A58E00EF91EB /* SignUpVC.swift in Sources */,
 				2B1AB06324AA2FA8006A0089 /* OtpVerificationVC.swift in Sources */,
 				5507E41224ACF56B00E9FE1C /* SettingCell.swift in Sources */,
+				C65F42622509F123009C700B /* PatientProfileModel.swift in Sources */,
 				2B1AB06624AA300D006A0089 /* OtpView.swift in Sources */,
 				2BE642F124C2F2D700F10EF6 /* RelationModel.swift in Sources */,
 				2B5FF2E824FE9E1500AC7B83 /* SubSettingVC+TableView.swift in Sources */,
@@ -1080,15 +1145,16 @@
 				2B6428AF24B4A239006E35EE /* CreatePatientVC+APICall.swift in Sources */,
 				5512795024AB749B0080909D /* Ext-AppDelegate.swift in Sources */,
 				2B26D70C24B0A709006D2FBB /* SplashVC.swift in Sources */,
+				C65F425E2509F123009C700B /* EditProfileVC+TextField.swift in Sources */,
 				2B2BEAF724C2E35500954C6F /* OtpVerificationVC+APICall.swift in Sources */,
 				C657998424ADEB670094410B /* LocationVC.swift in Sources */,
 				2BFDFD4D24D9991E00957B7F /* LogViewController.swift in Sources */,
 				5512794A24AB724F0080909D /* SignUpVC+TextField.swift in Sources */,
 				2B8C071324E4409500D25D94 /* FAQVC.swift in Sources */,
 				2BE642F724C2F36200F10EF6 /* AddFamilyMemberVC+APICall.swift in Sources */,
-				2BFDFD5824D9B21900957B7F /* RazorPayHelper.swift in Sources */,
 				55C9C5FF24ACB6E400E53FAE /* HomeVC.swift in Sources */,
 				2B37A4A924EE4F76004DED9F /* UploadFooterCell.swift in Sources */,
+				C60B26862508CE5600872BC6 /* PrescriptionVC+ApiCall.swift in Sources */,
 				5521977D24B39BC7004B7742 /* PastConsultsCell.swift in Sources */,
 				2B5FF2E624FE9DCE00AC7B83 /* SubSettingCell.swift in Sources */,
 				2B37A4A524EE4834004DED9F /* UploadDocVC+TableView.swift in Sources */,
@@ -1113,12 +1179,14 @@
 				C657998624ADF2580094410B /* NextLocationVC.swift in Sources */,
 				2B8C071E24E4435000D25D94 /* HistoryVC.swift in Sources */,
 				2B638A4A24A9BACE001EE997 /* LoginVC.swift in Sources */,
+				C66205E82506772300B34CC0 /* ExpertOpenionModel.swift in Sources */,
 				2BFDFD5224D9AC6100957B7F /* RequestForConsultVC+TextView.swift in Sources */,
 				2B97125324C5CA7F0025B26C /* FeedBackVC+APICall.swift in Sources */,
 				2B6428B924B4B3A4006E35EE /* DoctorDetailsVC.swift in Sources */,
 				2B6428B724B4B380006E35EE /* RequestForConsultVC.swift in Sources */,
 				2BDE1F8124D9BA6300CC517B /* DoctorDetailsVC+APICall.swift in Sources */,
 				2B310DE224F16A990045E308 /* Ext-Date.swift in Sources */,
+				C65F42602509F123009C700B /* EditProfileVC+ImagePicker.swift in Sources */,
 				2B37A4A024EE47A8004DED9F /* UploadDocVC.swift in Sources */,
 				2B12EE6524A9A58E00EF91EB /* SceneDelegate.swift in Sources */,
 				2B97124D24C5BC710025B26C /* WebVC.swift in Sources */,
@@ -1126,6 +1194,7 @@
 				2BB5467F25039D6600FCECF2 /* Ext-Notification.swift in Sources */,
 				C657997A24ADC7870094410B /* SignUpVC+APICall.swift in Sources */,
 				2B37A4A724EE485A004DED9F /* UploadDocCell.swift in Sources */,
+				C60B26882508CEA400872BC6 /* PrescriptionModel.swift in Sources */,
 				5512795224AB78410080909D /* LoginVC+TextField.swift in Sources */,
 				2BA5F25D24ED69C200FE8E54 /* ExpertOpenionView.swift in Sources */,
 				2B50CBB824F561D00022DBDA /* AppDelegate+PushNotification.swift in Sources */,
@@ -1136,14 +1205,18 @@
 				2BE642EB24C2EF3E00F10EF6 /* DropDownCell.swift in Sources */,
 				2B97124A24C5B86C0025B26C /* TermsConditionPopUpVC.swift in Sources */,
 				2BFABF6224F153A400823C58 /* UploadDocVC+iCloud.swift in Sources */,
+				C65F425F2509F123009C700B /* EditProfileVC+ApiCall.swift in Sources */,
 				2B4A21A524B9C8280089E836 /* AddFamilyMemberVC.swift in Sources */,
+				C66205E6250673F800B34CC0 /* ExpertOpenionView+APICall.swift in Sources */,
 				2B43F87224B9A9E600B90008 /* ProfileVC+APICalls.swift in Sources */,
 				5512795C24AB89A70080909D /* LoginModel.swift in Sources */,
 				C61365DE24E9373C00C1CDF4 /* CustomOverlay.swift in Sources */,
+				C65F42612509F123009C700B /* EditProfileVC.swift in Sources */,
 				2B97125524C5CC7F0025B26C /* FeedBackVC+TextView.swift in Sources */,
 				C61365DF24E9373C00C1CDF4 /* CustomPage.swift in Sources */,
 				55C9C60124ACB6ED00E53FAE /* ProfileVC.swift in Sources */,
 				2BFDFD5524D9B02F00957B7F /* ConsultRequestOrderModel.swift in Sources */,
+				C66205DC2506297200B34CC0 /* PrescriptionVC.swift in Sources */,
 				2B8C072324E443B900D25D94 /* HistoryVC+APICall.swift in Sources */,
 				5507E40F24ACF54E00E9FE1C /* SettingVC+TableView.swift in Sources */,
 				2B97125024C5C9700025B26C /* ConsultationFeedbackModel.swift in Sources */,
@@ -1163,6 +1236,7 @@
 				2BBC69F024ADB46000C77D24 /* Ext-ViewController.swift in Sources */,
 				55C9C5FA24ACB69C00E53FAE /* TabBarVC.swift in Sources */,
 				5512795524AB7DFF0080909D /* APICall.swift in Sources */,
+				C66205E425066EED00B34CC0 /* ExpertOpenionView+TextField.swift in Sources */,
 				2BFDFD4C24D9991E00957B7F /* VideoChatViewController.swift in Sources */,
 				2B26D70924B09FA6006D2FBB /* Ext-Image.swift in Sources */,
 			);

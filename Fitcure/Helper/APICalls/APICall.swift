@@ -88,7 +88,10 @@ final class APICall {
         case d_NotifyPatient            = "notify/patient"
         case d_UploadDocs               = "upload/docs"
         case d_CallRequestSend          = "send/callingNotifications/"
-        
+        case d_helpinghand              = "create/helpinghand/"
+        case d_sendPrescription         = "send/prescription/"
+        case d_updateProfile            = "update/doctor/"
+       
     }
         
     struct ErrorMessageModel: Codable {
@@ -142,7 +145,9 @@ final class APICall {
     static let DASH: String = {
         return APICall.MainBaseURL + "staticmedia/training/DASH.pdf"
     }()
-    
+    static let ViewPresecription: String = {
+           return APICall.MainBaseURL + "staticmedia/prescription/"
+       }()
     // MARK:- Public Network availibility
     class public func networkAvailibity() {
         reachabilityManager?.listener = { (status) in

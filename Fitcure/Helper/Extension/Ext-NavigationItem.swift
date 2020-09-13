@@ -24,6 +24,8 @@ extension UINavigationItem {
         case FAQ = "FAQ's"
         case UploadDoc = "Upload Document"
         case OutcomeMeasures = "Outcome Measures"
+        case Prescription = "Prescription"
+        
     }
     
     func setTitle(_ _title: NavTitle) {

@@ -31,7 +31,6 @@ final class DoctorDetailsVC: UIViewController {
     // RazorPayObj Class scope
     var amt: Double = 35000//in paise
     var objOrderRequest: OrderRequestModel?
-    private var razorPayObj: RazorPayHelper?
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -101,22 +100,7 @@ final class DoctorDetailsVC: UIViewController {
     
     // MARK:- RazorPayHelper Methods
     func makePayment(_ strKey: String, amt: String, orderID: String) {
-        razorPayObj = nil
-                
-        let strName = UserData.returnValue(.name) as? String ?? ""
-        let strEmail = UserData.returnValue(.Email) as? String ?? ""
-        let strMobile = UserData.returnValue(.Mobile) as? String ?? ""
         
-        razorPayObj = RazorPayHelper(strKey, self, totalPayable: amt, orderID: orderID)
-        razorPayObj?.openPaymentGateway(name: strName, contact: strMobile, email: strEmail) { [weak self] (result) in
-            guard let self = self else { return }
-            switch result {
-            case .Success(let dict):
-                self.onPaymentSuccess(dict)
-            case .CustomError(let str):
-                Alert.show(.error, str)
-            }
-        }
     }
     
     func onPaymentSuccess(_ response: [String : Any]) {

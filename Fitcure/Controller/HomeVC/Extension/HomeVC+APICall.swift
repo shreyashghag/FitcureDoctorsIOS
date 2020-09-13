@@ -32,6 +32,7 @@ extension HomeVC {
             switch result {
             case .Success(let arr):
                 self.arrRequest = arr
+                
                 self.tableView.reloadData()
             case .CustomError(let str):
                 Alert.show(.error, str)

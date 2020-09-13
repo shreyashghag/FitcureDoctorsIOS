@@ -62,8 +62,11 @@ final class ProfileVC: UIViewController {
         lblLanguage.text = profileObj?.preferredLanguages ?? "NA"
         lblRegisNo.text = profileObj?.registrationNo ?? "NA"
         lblCity.text = profileObj?.city ?? "NA"
+        btnEdit.addTarget(self, action: #selector(handleEditProfile), for: .touchUpInside)
     }
-        
+        @objc func handleEditProfile() {
+               pushEditProfileVC()
+        }
     // MARK:- Button Action
     
     
@@ -71,9 +74,9 @@ final class ProfileVC: UIViewController {
         
     
     // MARK:- Push Methods
-    func pushAddFamilyMemberVC(_ obj: FamilyModel? = nil) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: AddFamilyMemberVC.self)) as? AddFamilyMemberVC else { return }
-        vc.obj = obj
+    func pushEditProfileVC() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: EditProfileVC.self)) as? EditProfileVC else { return }
+        vc.doctorObj = profileObj
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
