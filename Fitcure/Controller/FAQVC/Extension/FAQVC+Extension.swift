@@ -26,7 +26,7 @@ extension FAQVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FAQCell.self), for: indexPath) as? FAQCell else { return FAQCell() }
-        cell.setData(arrFAQ[indexPath.row].strQuestion, arrFAQ[indexPath.row].strAnswer, isShow: arrFAQ[indexPath.row].isShow, strImg: arrFAQ[indexPath.row].strImg)
+        cell.setData(arrFAQ[indexPath.row].strQuestion, arrFAQ[indexPath.row].strAnswer, isShow: arrFAQ[indexPath.row].isShow, strImg: arrFAQ[indexPath.row].strImgName)
         return cell
     }
 } //extension

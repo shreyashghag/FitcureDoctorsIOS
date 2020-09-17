@@ -33,6 +33,11 @@
 		2B43F87024B9A8FB00B90008 /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43F86F24B9A8FB00B90008 /* FamilyModel.swift */; };
 		2B43F87224B9A9E600B90008 /* ProfileVC+APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43F87124B9A9E600B90008 /* ProfileVC+APICalls.swift */; };
 		2B4A21A524B9C8280089E836 /* AddFamilyMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A21A424B9C8280089E836 /* AddFamilyMemberVC.swift */; };
+		2B4C1F12250F2F15001DA30E /* PatientProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C1F11250F2F15001DA30E /* PatientProfileModel.swift */; };
+		2B4C1F14250F2F1D001DA30E /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C1F13250F2F1D001DA30E /* EditProfileVC.swift */; };
+		2B4C1F18250F2F26001DA30E /* EditProfileVC+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C1F15250F2F25001DA30E /* EditProfileVC+TextField.swift */; };
+		2B4C1F19250F2F26001DA30E /* EditProfileVC+ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C1F16250F2F25001DA30E /* EditProfileVC+ApiCall.swift */; };
+		2B4C1F1A250F2F26001DA30E /* EditProfileVC+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4C1F17250F2F26001DA30E /* EditProfileVC+ImagePicker.swift */; };
 		2B50CBB824F561D00022DBDA /* AppDelegate+PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50CBB724F561D00022DBDA /* AppDelegate+PushNotification.swift */; };
 		2B5FF2E224FE9D9200AC7B83 /* SubSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FF2E124FE9D9200AC7B83 /* SubSettingVC.swift */; };
 		2B5FF2E624FE9DCE00AC7B83 /* SubSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5FF2E524FE9DCE00AC7B83 /* SubSettingCell.swift */; };
@@ -70,9 +75,7 @@
 		2BE642F424C2F33400F10EF6 /* AddFamilyMemberVC+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE642F324C2F33400F10EF6 /* AddFamilyMemberVC+TextField.swift */; };
 		2BE642F724C2F36200F10EF6 /* AddFamilyMemberVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE642F624C2F36200F10EF6 /* AddFamilyMemberVC+APICall.swift */; };
 		2BFABF6224F153A400823C58 /* UploadDocVC+iCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFABF6124F153A400823C58 /* UploadDocVC+iCloud.swift */; };
-		2BFDFD4B24D9991E00957B7F /* Log.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BFDFD4824D9991D00957B7F /* Log.storyboard */; };
 		2BFDFD4C24D9991E00957B7F /* VideoChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD4924D9991E00957B7F /* VideoChatViewController.swift */; };
-		2BFDFD4D24D9991E00957B7F /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD4A24D9991E00957B7F /* LogViewController.swift */; };
 		2BFDFD5024D9A73100957B7F /* RequestForConsultVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD4F24D9A73100957B7F /* RequestForConsultVC+APICall.swift */; };
 		2BFDFD5224D9AC6100957B7F /* RequestForConsultVC+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD5124D9AC6100957B7F /* RequestForConsultVC+TextView.swift */; };
 		2BFDFD5524D9B02F00957B7F /* ConsultRequestOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDFD5424D9B02F00957B7F /* ConsultRequestOrderModel.swift */; };
@@ -110,11 +113,6 @@
 		C657998424ADEB670094410B /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998324ADEB670094410B /* LocationVC.swift */; };
 		C657998624ADF2580094410B /* NextLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998524ADF2580094410B /* NextLocationVC.swift */; };
 		C657998924AE045E0094410B /* CreateDoctorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C657998824AE045E0094410B /* CreateDoctorVC.swift */; };
-		C65F425E2509F123009C700B /* EditProfileVC+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F42582509F123009C700B /* EditProfileVC+TextField.swift */; };
-		C65F425F2509F123009C700B /* EditProfileVC+ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F42592509F123009C700B /* EditProfileVC+ApiCall.swift */; };
-		C65F42602509F123009C700B /* EditProfileVC+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F425A2509F123009C700B /* EditProfileVC+ImagePicker.swift */; };
-		C65F42612509F123009C700B /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F425B2509F123009C700B /* EditProfileVC.swift */; };
-		C65F42622509F123009C700B /* PatientProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F425D2509F123009C700B /* PatientProfileModel.swift */; };
 		C66205D72505EF1B00B34CC0 /* SignaturePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205D62505EF1B00B34CC0 /* SignaturePopUpVC.swift */; };
 		C66205DC2506297200B34CC0 /* PrescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205DB2506297200B34CC0 /* PrescriptionVC.swift */; };
 		C66205E425066EED00B34CC0 /* ExpertOpenionView+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66205E325066EED00B34CC0 /* ExpertOpenionView+TextField.swift */; };
@@ -167,6 +165,11 @@
 		2B43F86F24B9A8FB00B90008 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
 		2B43F87124B9A9E600B90008 /* ProfileVC+APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+APICalls.swift"; sourceTree = "<group>"; };
 		2B4A21A424B9C8280089E836 /* AddFamilyMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberVC.swift; sourceTree = "<group>"; };
+		2B4C1F11250F2F15001DA30E /* PatientProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PatientProfileModel.swift; path = Model/PatientProfileModel.swift; sourceTree = SOURCE_ROOT; };
+		2B4C1F13250F2F1D001DA30E /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		2B4C1F15250F2F25001DA30E /* EditProfileVC+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+TextField.swift"; sourceTree = "<group>"; };
+		2B4C1F16250F2F25001DA30E /* EditProfileVC+ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+ApiCall.swift"; sourceTree = "<group>"; };
+		2B4C1F17250F2F26001DA30E /* EditProfileVC+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+ImagePicker.swift"; sourceTree = "<group>"; };
 		2B50CBB724F561D00022DBDA /* AppDelegate+PushNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+PushNotification.swift"; sourceTree = "<group>"; };
 		2B5FF2E124FE9D9200AC7B83 /* SubSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingVC.swift; sourceTree = "<group>"; };
 		2B5FF2E524FE9DCE00AC7B83 /* SubSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubSettingCell.swift; sourceTree = "<group>"; };
@@ -205,9 +208,7 @@
 		2BE642F624C2F36200F10EF6 /* AddFamilyMemberVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddFamilyMemberVC+APICall.swift"; sourceTree = "<group>"; };
 		2BFABF6024F152B500823C58 /* Rehab Call Physiotherapist.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Rehab Call Physiotherapist.entitlements"; sourceTree = "<group>"; };
 		2BFABF6124F153A400823C58 /* UploadDocVC+iCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UploadDocVC+iCloud.swift"; sourceTree = "<group>"; };
-		2BFDFD4824D9991D00957B7F /* Log.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Log.storyboard; sourceTree = "<group>"; };
 		2BFDFD4924D9991E00957B7F /* VideoChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoChatViewController.swift; sourceTree = "<group>"; };
-		2BFDFD4A24D9991E00957B7F /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		2BFDFD4F24D9A73100957B7F /* RequestForConsultVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestForConsultVC+APICall.swift"; sourceTree = "<group>"; };
 		2BFDFD5124D9AC6100957B7F /* RequestForConsultVC+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestForConsultVC+TextView.swift"; sourceTree = "<group>"; };
 		2BFDFD5424D9B02F00957B7F /* ConsultRequestOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultRequestOrderModel.swift; sourceTree = "<group>"; };
@@ -245,11 +246,6 @@
 		C657998324ADEB670094410B /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		C657998524ADF2580094410B /* NextLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextLocationVC.swift; sourceTree = "<group>"; };
 		C657998824AE045E0094410B /* CreateDoctorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDoctorVC.swift; sourceTree = "<group>"; };
-		C65F42582509F123009C700B /* EditProfileVC+TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+TextField.swift"; sourceTree = "<group>"; };
-		C65F42592509F123009C700B /* EditProfileVC+ApiCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+ApiCall.swift"; sourceTree = "<group>"; };
-		C65F425A2509F123009C700B /* EditProfileVC+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileVC+ImagePicker.swift"; sourceTree = "<group>"; };
-		C65F425B2509F123009C700B /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
-		C65F425D2509F123009C700B /* PatientProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientProfileModel.swift; sourceTree = "<group>"; };
 		C66205D62505EF1B00B34CC0 /* SignaturePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignaturePopUpVC.swift; sourceTree = "<group>"; };
 		C66205DB2506297200B34CC0 /* PrescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrescriptionVC.swift; sourceTree = "<group>"; };
 		C66205E325066EED00B34CC0 /* ExpertOpenionView+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertOpenionView+TextField.swift"; sourceTree = "<group>"; };
@@ -952,8 +948,8 @@
 		C65F42562509F123009C700B /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
+				2B4C1F13250F2F1D001DA30E /* EditProfileVC.swift */,
 				C65F42572509F123009C700B /* Extension */,
-				C65F425B2509F123009C700B /* EditProfileVC.swift */,
 				C65F425C2509F123009C700B /* Model */,
 			);
 			path = EditProfile;
@@ -962,9 +958,9 @@
 		C65F42572509F123009C700B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				C65F42582509F123009C700B /* EditProfileVC+TextField.swift */,
-				C65F42592509F123009C700B /* EditProfileVC+ApiCall.swift */,
-				C65F425A2509F123009C700B /* EditProfileVC+ImagePicker.swift */,
+				2B4C1F16250F2F25001DA30E /* EditProfileVC+ApiCall.swift */,
+				2B4C1F17250F2F26001DA30E /* EditProfileVC+ImagePicker.swift */,
+				2B4C1F15250F2F25001DA30E /* EditProfileVC+TextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -972,7 +968,7 @@
 		C65F425C2509F123009C700B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C65F425D2509F123009C700B /* PatientProfileModel.swift */,
+				2B4C1F11250F2F15001DA30E /* PatientProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1006,8 +1002,6 @@
 		C676BF8024CB221D00D6ADF7 /* VideoCallingVC */ = {
 			isa = PBXGroup;
 			children = (
-				2BFDFD4824D9991D00957B7F /* Log.storyboard */,
-				2BFDFD4A24D9991E00957B7F /* LogViewController.swift */,
 				2BFDFD4924D9991E00957B7F /* VideoChatViewController.swift */,
 			);
 			path = VideoCallingVC;
@@ -1079,7 +1073,6 @@
 				C61365DB24E9373C00C1CDF4 /* CustomOverlay.xib in Resources */,
 				2B12EE6A24A9A58E00EF91EB /* Main.storyboard in Resources */,
 				C607779524CEC91E00FFC780 /* Assets.xcassets in Resources */,
-				2BFDFD4B24D9991E00957B7F /* Log.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1135,7 +1128,6 @@
 				2B12EE6724A9A58E00EF91EB /* SignUpVC.swift in Sources */,
 				2B1AB06324AA2FA8006A0089 /* OtpVerificationVC.swift in Sources */,
 				5507E41224ACF56B00E9FE1C /* SettingCell.swift in Sources */,
-				C65F42622509F123009C700B /* PatientProfileModel.swift in Sources */,
 				2B1AB06624AA300D006A0089 /* OtpView.swift in Sources */,
 				2BE642F124C2F2D700F10EF6 /* RelationModel.swift in Sources */,
 				2B5FF2E824FE9E1500AC7B83 /* SubSettingVC+TableView.swift in Sources */,
@@ -1145,10 +1137,8 @@
 				2B6428AF24B4A239006E35EE /* CreatePatientVC+APICall.swift in Sources */,
 				5512795024AB749B0080909D /* Ext-AppDelegate.swift in Sources */,
 				2B26D70C24B0A709006D2FBB /* SplashVC.swift in Sources */,
-				C65F425E2509F123009C700B /* EditProfileVC+TextField.swift in Sources */,
 				2B2BEAF724C2E35500954C6F /* OtpVerificationVC+APICall.swift in Sources */,
 				C657998424ADEB670094410B /* LocationVC.swift in Sources */,
-				2BFDFD4D24D9991E00957B7F /* LogViewController.swift in Sources */,
 				5512794A24AB724F0080909D /* SignUpVC+TextField.swift in Sources */,
 				2B8C071324E4409500D25D94 /* FAQVC.swift in Sources */,
 				2BE642F724C2F36200F10EF6 /* AddFamilyMemberVC+APICall.swift in Sources */,
@@ -1172,6 +1162,7 @@
 				2BBC69EE24ADB3BE00C77D24 /* Constant.swift in Sources */,
 				C673074424BC2E3E00035C1F /* CreatePatientVC+ImagePicker.swift in Sources */,
 				2B12EE6324A9A58E00EF91EB /* AppDelegate.swift in Sources */,
+				2B4C1F14250F2F1D001DA30E /* EditProfileVC.swift in Sources */,
 				2B43F87024B9A8FB00B90008 /* FamilyModel.swift in Sources */,
 				C63620AF24E96C2E00BC9BCC /* Canvas.swift in Sources */,
 				2B8C072124E443B000D25D94 /* HistoryVC+TableView.swift in Sources */,
@@ -1186,7 +1177,6 @@
 				2B6428B724B4B380006E35EE /* RequestForConsultVC.swift in Sources */,
 				2BDE1F8124D9BA6300CC517B /* DoctorDetailsVC+APICall.swift in Sources */,
 				2B310DE224F16A990045E308 /* Ext-Date.swift in Sources */,
-				C65F42602509F123009C700B /* EditProfileVC+ImagePicker.swift in Sources */,
 				2B37A4A024EE47A8004DED9F /* UploadDocVC.swift in Sources */,
 				2B12EE6524A9A58E00EF91EB /* SceneDelegate.swift in Sources */,
 				2B97124D24C5BC710025B26C /* WebVC.swift in Sources */,
@@ -1199,19 +1189,20 @@
 				2BA5F25D24ED69C200FE8E54 /* ExpertOpenionView.swift in Sources */,
 				2B50CBB824F561D00022DBDA /* AppDelegate+PushNotification.swift in Sources */,
 				5512795724AB81E90080909D /* LoginVC+APICall.swift in Sources */,
+				2B4C1F1A250F2F26001DA30E /* EditProfileVC+ImagePicker.swift in Sources */,
 				2BE642E824C2EF2E00F10EF6 /* DropDownVC.swift in Sources */,
 				C657998924AE045E0094410B /* CreateDoctorVC.swift in Sources */,
 				2B6428B524B4B357006E35EE /* FeedBackVC.swift in Sources */,
 				2BE642EB24C2EF3E00F10EF6 /* DropDownCell.swift in Sources */,
 				2B97124A24C5B86C0025B26C /* TermsConditionPopUpVC.swift in Sources */,
 				2BFABF6224F153A400823C58 /* UploadDocVC+iCloud.swift in Sources */,
-				C65F425F2509F123009C700B /* EditProfileVC+ApiCall.swift in Sources */,
+				2B4C1F19250F2F26001DA30E /* EditProfileVC+ApiCall.swift in Sources */,
 				2B4A21A524B9C8280089E836 /* AddFamilyMemberVC.swift in Sources */,
 				C66205E6250673F800B34CC0 /* ExpertOpenionView+APICall.swift in Sources */,
 				2B43F87224B9A9E600B90008 /* ProfileVC+APICalls.swift in Sources */,
 				5512795C24AB89A70080909D /* LoginModel.swift in Sources */,
 				C61365DE24E9373C00C1CDF4 /* CustomOverlay.swift in Sources */,
-				C65F42612509F123009C700B /* EditProfileVC.swift in Sources */,
+				2B4C1F18250F2F26001DA30E /* EditProfileVC+TextField.swift in Sources */,
 				2B97125524C5CC7F0025B26C /* FeedBackVC+TextView.swift in Sources */,
 				C61365DF24E9373C00C1CDF4 /* CustomPage.swift in Sources */,
 				55C9C60124ACB6ED00E53FAE /* ProfileVC.swift in Sources */,
@@ -1223,6 +1214,7 @@
 				2B8C071B24E4427700D25D94 /* HistoryConsultsCell.swift in Sources */,
 				C657997D24ADC9C80094410B /* SignUpModel.swift in Sources */,
 				2B65466C24E2FCE200EECD0B /* PatientRequestModel.swift in Sources */,
+				2B4C1F12250F2F15001DA30E /* PatientProfileModel.swift in Sources */,
 				C61365DD24E9373C00C1CDF4 /* StoryboardExample.swift in Sources */,
 				2B310DE424F174B90045E308 /* CustomModel.swift in Sources */,
 				2B310DE924F18A200045E308 /* PastConsultantDetailsVC+APICall.swift in Sources */,
@@ -1386,7 +1378,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Fitcure/Rehab Call Physiotherapist.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_TEAM = 394TUZ4LCT;
 				INFOPLIST_FILE = Fitcure/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1411,7 +1403,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Fitcure/Rehab Call Physiotherapist.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.2;
+				CURRENT_PROJECT_VERSION = 1.0.4;
 				DEVELOPMENT_TEAM = 394TUZ4LCT;
 				INFOPLIST_FILE = Fitcure/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

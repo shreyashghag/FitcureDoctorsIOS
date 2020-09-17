@@ -2,6 +2,7 @@ import UIKit
 import AgoraRtcKit
 
 class VideoChatViewController: UIViewController {
+    
     let appID = "58e55b92295e4c3db91f27c6668de7d1"
     var agoraKit: AgoraRtcEngineKit?
     let tempToken: String? = nil
@@ -9,16 +10,18 @@ class VideoChatViewController: UIViewController {
     var userName: String? = nil
     var channelName = "default"
     var remoteUserIDs: [UInt] = []
+    var strDocID = ""
     
     @IBOutlet weak var localVideo: UIView!
     @IBOutlet weak var remoteVideo: UIView!
     @IBOutlet weak var remoteVideoMutedIndicator: UIImageView!
     @IBOutlet weak var localVideoMutedIndicator: UIView!
+    @IBOutlet weak var videoPauseButton: UIButton!
     @IBOutlet weak var micButton: UIButton!
     @IBOutlet weak var cameraButton: UIButton!
     
-    //weak var logVC: LogViewController?
-    
+    //    weak var logVC: LogViewController?
+    var pasueVideo = false
     
     var muted = false {
         didSet {
@@ -55,9 +58,10 @@ class VideoChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(onPatientCallDenied), name: .callCanceled, object: nil)
         setUpVideo()
         joinChannel()
+        videoPauseButton.setCorner(withRadius: videoPauseButton.frame.height * 0.5)
+        NotificationCenter.default.addObserver(self, selector: #selector(onPatientCallDenied), name: .callCanceled, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,14 +72,14 @@ class VideoChatViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let identifier = segue.identifier else {
-//            return
-//        }
-        
-//        if identifier == "EmbedLogViewController",
-//            let vc = segue.destination as? LogViewController {
-//            self.logVC = vc
-//        }
+        //        guard let identifier = segue.identifier else {
+        //            return
+        //        }
+        //
+        //        if identifier == "EmbedLogViewController",
+        //            let vc = segue.destination as? LogViewController {
+        //            self.logVC = vc
+        //        }
     }
     
     func setUpVideo() {
@@ -95,22 +99,22 @@ class VideoChatViewController: UIViewController {
             getAgoraEngine().joinChannel(byUserAccount: name, token: tempToken, channelId: channelName) { [weak self] (sid, uid, elapsed) in
                 self?.userID = uid
                 self!.isLocalVideoRender = true
-                //self!.logVC?.log(type: .info, content: "did join channel")
+                //                self!.logVC?.log(type: .info, content: "did join channel")
             }
         } else {
             getAgoraEngine().joinChannel(byToken: tempToken, channelId: channelName, info: nil, uid: userID) { [weak self] (sid, uid, elapsed) in
                 self?.userID = uid
                 self!.isLocalVideoRender = true
-                //self!.logVC?.log(type: .info, content: "did join channel")
+                //                self!.logVC?.log(type: .info, content: "did join channel")
             }
         }
         isStartCalling = true
     }
     
     @objc private func onPatientCallDenied() {
-        self.leaveChannel()
-        self.dismiss(animated: true, completion: nil)
-    }
+           self.leaveChannel()
+           self.dismiss(animated: true, completion: nil)
+       }
     
     private func getAgoraEngine() -> AgoraRtcEngineKit {
         if agoraKit == nil {
@@ -136,7 +140,7 @@ class VideoChatViewController: UIViewController {
         getAgoraEngine().leaveChannel(nil)
         localVideo.isHidden = true
         remoteUserIDs.removeAll()
-        //self.logVC?.log(type: .info, content: "did leave channel")
+        //        self.logVC?.log(type: .info, content: "did leave channel")
     }
     
     
@@ -149,6 +153,16 @@ class VideoChatViewController: UIViewController {
             getAgoraEngine().muteLocalAudioStream(true)
         }
         muted = !muted
+    }
+    
+    @IBAction func didClickPauseVideoButton(_ sender: UIButton) {
+        
+        pasueVideo.toggle()
+        if pasueVideo {
+            agoraKit!.disableVideo()
+        } else {
+            agoraKit!.enableVideo()
+        }
     }
     
     @IBAction func didClickSwitchCameraButton(_ sender: UIButton) {
@@ -194,6 +208,7 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
     ///   - byUid: User ID of the remote user.
     func rtcEngine(_ engine: AgoraRtcEngineKit, didVideoMuted muted:Bool, byUid:UInt) {
         isRemoteVideoRender = !muted
+        pasueVideo = muted
     }
     
     /// Reports a warning during SDK runtime.
@@ -201,7 +216,7 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
     ///   - engine: RTC engine instance
     ///   - warningCode: Warning code
     func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurWarning warningCode: AgoraWarningCode) {
-        //logVC?.log(type: .warning, content: "did occur warning, code: \(warningCode.rawValue)")
+        //        logVC?.log(type: .warning, content: "did occur warning, code: \(warningCode.rawValue)")
     }
     
     /// Reports an error during SDK runtime.
@@ -209,7 +224,6 @@ extension VideoChatViewController: AgoraRtcEngineDelegate {
     ///   - engine: RTC engine instance
     ///   - errorCode: Error code
     func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurError errorCode: AgoraErrorCode) {
-        //logVC?.log(type: .error, content: "did occur error, code: \(errorCode.rawValue)")
+        //        logVC?.log(type: .error, content: "did occur error, code: \(errorCode.rawValue)")
     }
 }
-
