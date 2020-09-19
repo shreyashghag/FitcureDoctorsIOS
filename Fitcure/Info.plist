@@ -23,17 +23,17 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>This app wants to take pictures.</string>
+	<string>We need camera access to set your profile picture and also for document upload.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Description</string>
+	<string>We need location access to get your current location to get your address.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Description</string>
+	<string>We need location access to get your current location to get your address.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Description</string>
+	<string>We need location access to get your current location to get your address.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>${PRODUCT_NAME} Microphone Usage</string>
+	<string>We need microphone access to connect with doctor for video call.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app wants to use your photos.</string>
+	<string>We need photo library access to set your profile picture and also for document upload.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
