@@ -3301,7 +3301,7 @@ This policy is effective as of 1 July 2020.</string>
                                                     <constraint firstAttribute="height" constant="45" id="pls-U6-3WY"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                <state key="normal" title="Okey">
+                                                <state key="normal" title="Okay">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -3601,8 +3601,10 @@ This policy is effective as of 1 July 2020.</string>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imgvDropDown" destination="G0m-7w-gDZ" id="r88-fG-QcQ"/>
+                                            <outlet property="imgvFAQ" destination="pQC-Oq-e3C" id="rnr-pX-0hv"/>
                                             <outlet property="lblAnswer" destination="oqi-O9-Ipx" id="Tc7-bz-eVJ"/>
                                             <outlet property="lblQuestion" destination="eDf-cx-1PK" id="JNl-PY-bBi"/>
+                                            <outlet property="viewImgv" destination="Kks-hW-Vcd" id="Mtj-uP-CqZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

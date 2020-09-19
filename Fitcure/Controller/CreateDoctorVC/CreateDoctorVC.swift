@@ -14,7 +14,7 @@ import SkyFloatingLabelTextField
 final class CreateDoctorVC: UIViewController {
     
     // MARK:- Outlets
-
+    
     @IBOutlet weak var  scrollView: UIScrollView!
     @IBOutlet weak var  signatureImg : UIImageView!
     
@@ -34,7 +34,7 @@ final class CreateDoctorVC: UIViewController {
     @IBOutlet weak var txtfspeciality: SkyFloatingLabelTextField!
     
     @IBOutlet weak var captureSignatureImageView : UIImageView!
-  
+    
     
     @IBOutlet weak var segGender        : UISegmentedControl!
     @IBOutlet weak var lblTC            : UILabel!
@@ -56,10 +56,10 @@ final class CreateDoctorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
-
+        
         setUpView()
     }
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -87,15 +87,15 @@ final class CreateDoctorVC: UIViewController {
         
     }
     
-   
-
+    
+    
     /// Capture Siganture
-      @IBAction func captureSignature(_ sender: UIButton) {
-
+    @IBAction func captureSignature(_ sender: UIButton) {
+        
         pushSignaturePopupVC()
-
-       }
-
+        
+    }
+    
     private func setUpTextField() {
         
         txtfPassword.isSecureTextEntry = true
@@ -120,7 +120,7 @@ final class CreateDoctorVC: UIViewController {
             txtf?.delegate = self
         }
         txtfEmail.keyboardType = .emailAddress
-       
+        
         txtfMobileNo.keyboardType = .numberPad
         txtfworkingSince.keyboardType = .numberPad
     }
@@ -153,8 +153,8 @@ final class CreateDoctorVC: UIViewController {
             let associateHospital = txtfassociateHospital.text, !associateHospital.isEmpty,(txtfassociateHospital.text?.count)!>=1,
             let preferredLanguages = txtfpreferredLanguages.text, !preferredLanguages.isEmpty,(txtfpreferredLanguages.text?.count)!>=1,
             let speciality = txtfspeciality.text, !speciality.isEmpty,(txtfspeciality.text?.count)!>=1
-        
-          else {
+            
+            else {
                 btnSave.isEnabled = false
                 btnSave.alpha = 0.4
                 return
@@ -173,11 +173,11 @@ final class CreateDoctorVC: UIViewController {
     
     @IBAction func btnSignatureImage(_ sender: UIButton) {
         isProfileClick = false
-       self.imagePicker.present(from: sender)
+        self.imagePicker.present(from: sender)
     }
     
     
-        
+    
     @IBAction func segGenderSelectionChanged(_ sender: UISegmentedControl) {
         
         switch sender.selectedSegmentIndex {
@@ -197,11 +197,11 @@ final class CreateDoctorVC: UIViewController {
         if isTCButtonTapped {
             btnSave.isEnabled = true
             btnSave.alpha = 1.0
-             pushTCPopupVC()
+            pushTCPopupVC()
         } else {
             btnSave.isEnabled = false
             btnSave.alpha = 0.4
-           
+            
         }
     }
     
@@ -229,10 +229,10 @@ final class CreateDoctorVC: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     func pushSignaturePopupVC() {
-           guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: SignaturePopUpVC.self)) as? SignaturePopUpVC else { return }
-           vc.delegate = self
-           self.present(vc, animated: true, completion: nil)
-       }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: SignaturePopUpVC.self)) as? SignaturePopUpVC else { return }
+        vc.delegate = self
+        self.present(vc, animated: true, completion: nil)
+    }
     func pushUploadDocVC() {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: UploadDocVC.self)) as? UploadDocVC else { return }
         vc.strMobileNo = txtfMobileNo.text ?? ""
@@ -258,11 +258,7 @@ extension CreateDoctorVC :CreateDoctorVCDelegate {
     
     func selectedDigitalSig(digitalSig: UIImage) {
         
-                   captureSignatureImageView.image = digitalSig
-                   mediaForSigView  =  APICall.Media(withImage: digitalSig, forKey: "images", andFileName: "\(txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
-        
-                  
+        captureSignatureImageView.image = digitalSig
+        mediaForSigView  =  APICall.Media(withImage: digitalSig, forKey: "images", andFileName: "\(txtfMobileNo.text ?? "")_DoctorsBitmapSignature.png")
     }
-    
-    
 }

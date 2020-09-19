@@ -30,7 +30,14 @@ extension UploadDocVC {
             else { return }
         
         var arrMedia = [APICall.Media]()
-        
+
+        var dict = [String: Any]()
+        dict["mobile"] = strMobileNo
+        dict["aadharcard"] = "\(strMobileNo)_aadarcard.pdf"
+        dict["degree_certificate"] = "\(strMobileNo)_degreeCertificate.pdf"
+        dict["registration_number_certificate"] = "\(strMobileNo)_registrationNumberCertificate.pdf"
+        dict["cancelled_cheque"] = "\(strMobileNo)_canncelledCheque.pdf"
+                
         do {
             let data0 = try Data(contentsOf: path0)
             let data1 = try Data(contentsOf: path1)
@@ -54,7 +61,7 @@ extension UploadDocVC {
         }
         
         self.showLoader()
-        CustomModel.uploadDoc(arrMedia, ["mobile" : strMobileNo]) { (result) in
+        CustomModel.uploadDoc(arrMedia, dict) { (result) in
             self.hideLoader()
             switch result {
             case .Success(let str):

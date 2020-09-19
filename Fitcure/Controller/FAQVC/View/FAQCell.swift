@@ -30,11 +30,15 @@ class FAQCell: UITableViewCell {
         lblQuestion.text = strQuestion
         lblAnswer.text = strAnswer
         lblAnswer.isHidden = !isShow
-        viewImgv.isHidden = strImg.isEmpty
         imgvDropDown.image = UIImage(named: !isShow ? "f_DropDown" : "f_DropUp")
+        
         if !strImg.isEmpty {
+            viewImgv.isHidden = !isShow
+            imgvFAQ.isHidden = !isShow
             imgvFAQ.image = UIImage(named: strImg)
         } else {
+            viewImgv.isHidden = true
+            imgvFAQ.isHidden = true
             imgvFAQ.image = nil
         }
     }

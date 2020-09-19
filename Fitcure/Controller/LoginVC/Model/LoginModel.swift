@@ -49,7 +49,7 @@ struct LoginModel: Codable {
                         UserData.saveData(.signatureBitmapImage, signatureBitmapImage)
                         complection?(.Success(firstObj))
                     } else {
-                        complection?(.CustomError(obj?.error.debugDescription ?? Alert.AlertMessage.Oops.rawValue))
+                        complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
                     }
 
             case .CustomError(let str):

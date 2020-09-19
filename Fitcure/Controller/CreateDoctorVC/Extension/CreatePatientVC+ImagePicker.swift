@@ -110,7 +110,7 @@ extension CreateDoctorVC: ImagePickerDelegate {
             else{
                 
                 self.signatureImg.image = img
-                self.mediaForSigimg  =  APICall.Media(withImage: img, forKey: "images", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsBitmapSignature.png")
+                self.mediaForSigimg  =  APICall.Media(withImage: img, forKey: "images", andFileName: "\(self.txtfMobileNo.text ?? "")_DoctorsDigitalSignature.png")
             }
            
         }        

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 // MARK:- Extension For:- UITableViewDelegate
 extension SettingVC: UITableViewDelegate {
@@ -39,7 +40,7 @@ extension SettingVC: UITableViewDelegate {
         case .Report:
             sendEmail()
         case .RateUs:
-            break
+            SKStoreReviewController.requestReview()
         case .Logout:
             logoutHandle()
         }
