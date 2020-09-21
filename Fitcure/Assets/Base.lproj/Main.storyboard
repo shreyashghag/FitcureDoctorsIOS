@@ -394,7 +394,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5LC-cL-wcn" userLabel="ProfileVC" customClass="ProfileVC" customModule="Rehab_Call_Physiotherapist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wxK-04-dOz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-NK-yqO">
@@ -714,7 +714,7 @@
             <objects>
                 <viewController storyboardIdentifier="SettingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c3X-1d-o6Q" userLabel="SettingVC" customClass="SettingVC" customModule="Rehab_Call_Physiotherapist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="slK-mI-2Qw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="475"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wk9-Fm-4d4">
@@ -1946,7 +1946,6 @@
                     <tabBarItem key="tabBarItem" title="HOME" image="f_Home" id="LEj-6U-24G"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="CLt-hY-Cff">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.35725712780000002" green="0.83546364309999999" blue="0.7828289866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3400,7 +3399,7 @@ This policy is effective as of 1 July 2020.</string>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Documents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLq-6m-A03">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Documents" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZLq-6m-A03">
                                                             <rect key="frame" x="10" y="146" width="280" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                             <color key="textColor" red="0.35725712780000002" green="0.83546364309999999" blue="0.7828289866" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3513,7 +3512,7 @@ This policy is effective as of 1 July 2020.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AUv-z1-AAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6421.739130434783" y="130.58035714285714"/>
+            <point key="canvasLocation" x="6420" y="129.92957746478874"/>
         </scene>
         <!--LogViewController-->
         <scene sceneID="gm0-Dc-YKv">
@@ -4558,7 +4557,7 @@ This policy is effective as of 1 July 2020.</string>
                                 <rect key="frame" x="0.0" y="5" width="320" height="563"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="a75-Bm-qel">
-                                    <rect key="frame" x="0.0" y="202" width="320" height="1"/>
+                                    <rect key="frame" x="0.0" y="562" width="320" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>

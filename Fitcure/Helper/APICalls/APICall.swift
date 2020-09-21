@@ -115,7 +115,7 @@ final class APICall {
     }
         
     // MARK:- Public Variables
-    static var isStaging            = true
+    static var isStaging            = false
     static var isNetworkAvailable   = false
     static var MainBaseURL: String  = {
         if isStaging {

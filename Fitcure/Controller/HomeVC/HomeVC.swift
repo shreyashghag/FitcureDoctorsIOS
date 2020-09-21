@@ -11,17 +11,9 @@ import MessageUI
 final class HomeVC: UIViewController {
     
     
-    @IBAction func subbmitExpertOpinionBtn(_ sender: UIButton) {
-        
+    @IBAction func subbmitExpertOpinionBtn(_ sender: UIButton) {        
         sendEmail()
     }
-    
-    
-    
-    
-    
-    
-    
     
     // MARK:- Enums
     enum HomeSelectionTab { case ActiveConsults, CallRequest, ExpertOpinion}
