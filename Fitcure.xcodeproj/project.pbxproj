@@ -30,6 +30,10 @@
 		2B37A4A524EE4834004DED9F /* UploadDocVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37A4A424EE4834004DED9F /* UploadDocVC+TableView.swift */; };
 		2B37A4A724EE485A004DED9F /* UploadDocCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37A4A624EE485A004DED9F /* UploadDocCell.swift */; };
 		2B37A4A924EE4F76004DED9F /* UploadFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37A4A824EE4F76004DED9F /* UploadFooterCell.swift */; };
+		2B38CA83252B68C20095E335 /* MobileNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38CA82252B68C20095E335 /* MobileNumberView.swift */; };
+		2B38CA85252B68E10095E335 /* ForgotPasswordOTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38CA84252B68E10095E335 /* ForgotPasswordOTPView.swift */; };
+		2B38CA87252B695D0095E335 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B38CA86252B695D0095E335 /* ResetPasswordView.swift */; };
+		2B3C81F2252AF8DB00325DAA /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C81F1252AF8DB00325DAA /* ForgotPasswordVC.swift */; };
 		2B43F87024B9A8FB00B90008 /* FamilyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43F86F24B9A8FB00B90008 /* FamilyModel.swift */; };
 		2B43F87224B9A9E600B90008 /* ProfileVC+APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B43F87124B9A9E600B90008 /* ProfileVC+APICalls.swift */; };
 		2B4A21A524B9C8280089E836 /* AddFamilyMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A21A424B9C8280089E836 /* AddFamilyMemberVC.swift */; };
@@ -51,6 +55,7 @@
 		2B6428BB24B4B3C0006E35EE /* PastConsultantDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6428BA24B4B3C0006E35EE /* PastConsultantDetailsVC.swift */; };
 		2B65466C24E2FCE200EECD0B /* PatientRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65466B24E2FCE200EECD0B /* PatientRequestModel.swift */; };
 		2B65466E24E3063D00EECD0B /* Ext-String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B65466D24E3063D00EECD0B /* Ext-String.swift */; };
+		2B664068252C885900D47976 /* ForgotPasswordVC+APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B664067252C885900D47976 /* ForgotPasswordVC+APICall.swift */; };
 		2B8C071324E4409500D25D94 /* FAQVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071224E4409500D25D94 /* FAQVC.swift */; };
 		2B8C071524E4409A00D25D94 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071424E4409A00D25D94 /* FAQCell.swift */; };
 		2B8C071724E440A100D25D94 /* FAQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8C071624E440A100D25D94 /* FAQModel.swift */; };
@@ -162,6 +167,10 @@
 		2B37A4A424EE4834004DED9F /* UploadDocVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UploadDocVC+TableView.swift"; sourceTree = "<group>"; };
 		2B37A4A624EE485A004DED9F /* UploadDocCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadDocCell.swift; sourceTree = "<group>"; };
 		2B37A4A824EE4F76004DED9F /* UploadFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadFooterCell.swift; sourceTree = "<group>"; };
+		2B38CA82252B68C20095E335 /* MobileNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberView.swift; sourceTree = "<group>"; };
+		2B38CA84252B68E10095E335 /* ForgotPasswordOTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordOTPView.swift; sourceTree = "<group>"; };
+		2B38CA86252B695D0095E335 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		2B3C81F1252AF8DB00325DAA /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		2B43F86F24B9A8FB00B90008 /* FamilyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyModel.swift; sourceTree = "<group>"; };
 		2B43F87124B9A9E600B90008 /* ProfileVC+APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+APICalls.swift"; sourceTree = "<group>"; };
 		2B4A21A424B9C8280089E836 /* AddFamilyMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFamilyMemberVC.swift; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 		2B6428BA24B4B3C0006E35EE /* PastConsultantDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastConsultantDetailsVC.swift; sourceTree = "<group>"; };
 		2B65466B24E2FCE200EECD0B /* PatientRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientRequestModel.swift; sourceTree = "<group>"; };
 		2B65466D24E3063D00EECD0B /* Ext-String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-String.swift"; sourceTree = "<group>"; };
+		2B664067252C885900D47976 /* ForgotPasswordVC+APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordVC+APICall.swift"; sourceTree = "<group>"; };
 		2B8C071224E4409500D25D94 /* FAQVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQVC.swift; sourceTree = "<group>"; };
 		2B8C071424E4409A00D25D94 /* FAQCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
 		2B8C071624E440A100D25D94 /* FAQModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQModel.swift; sourceTree = "<group>"; };
@@ -328,6 +338,7 @@
 				2B8C070E24E4406700D25D94 /* FAQVC */,
 				2B26D70A24B0A6FA006D2FBB /* SplashVC */,
 				5512794824AB723B0080909D /* LoginVC */,
+				2B3C81F0252AF8BA00325DAA /* ForgotPasswordVC */,
 				5512794624AB72210080909D /* SignUpVC */,
 				C657998224ADEAFC0094410B /* LocationVC */,
 				C657998724AE043C0094410B /* CreateDoctorVC */,
@@ -468,6 +479,35 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		2B38CA80252B68840095E335 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B38CA82252B68C20095E335 /* MobileNumberView.swift */,
+				2B38CA84252B68E10095E335 /* ForgotPasswordOTPView.swift */,
+				2B38CA86252B695D0095E335 /* ResetPasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B38CA81252B68890095E335 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B664067252C885900D47976 /* ForgotPasswordVC+APICall.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2B3C81F0252AF8BA00325DAA /* ForgotPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				2B3C81F1252AF8DB00325DAA /* ForgotPasswordVC.swift */,
+				2B664069252C89F400D47976 /* Model */,
+				2B38CA80252B68840095E335 /* View */,
+				2B38CA81252B68890095E335 /* Extension */,
+			);
+			path = ForgotPasswordVC;
+			sourceTree = "<group>";
+		};
 		2B43F86824B9A6BF00B90008 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +606,13 @@
 				2B97125124C5CA740025B26C /* Extension */,
 			);
 			path = FeedBackVC;
+			sourceTree = "<group>";
+		};
+		2B664069252C89F400D47976 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		2B8C070E24E4406700D25D94 /* FAQVC */ = {
@@ -1132,6 +1179,7 @@
 				2BE642F124C2F2D700F10EF6 /* RelationModel.swift in Sources */,
 				2B5FF2E824FE9E1500AC7B83 /* SubSettingVC+TableView.swift in Sources */,
 				C6190F2924BD8C2300E5754D /* CreateDoctorModel.swift in Sources */,
+				2B38CA87252B695D0095E335 /* ResetPasswordView.swift in Sources */,
 				2B65466E24E3063D00EECD0B /* Ext-String.swift in Sources */,
 				C6190F2C24BDB77D00E5754D /* NextLocationVC+TextField.swift in Sources */,
 				2B6428AF24B4A239006E35EE /* CreatePatientVC+APICall.swift in Sources */,
@@ -1166,7 +1214,9 @@
 				2B43F87024B9A8FB00B90008 /* FamilyModel.swift in Sources */,
 				C63620AF24E96C2E00BC9BCC /* Canvas.swift in Sources */,
 				2B8C072124E443B000D25D94 /* HistoryVC+TableView.swift in Sources */,
+				2B38CA83252B68C20095E335 /* MobileNumberView.swift in Sources */,
 				2B6428AB24B4A217006E35EE /* CreatePatientVC+TextField.swift in Sources */,
+				2B664068252C885900D47976 /* ForgotPasswordVC+APICall.swift in Sources */,
 				C657998624ADF2580094410B /* NextLocationVC.swift in Sources */,
 				2B8C071E24E4435000D25D94 /* HistoryVC.swift in Sources */,
 				2B638A4A24A9BACE001EE997 /* LoginVC.swift in Sources */,
@@ -1175,6 +1225,7 @@
 				2B97125324C5CA7F0025B26C /* FeedBackVC+APICall.swift in Sources */,
 				2B6428B924B4B3A4006E35EE /* DoctorDetailsVC.swift in Sources */,
 				2B6428B724B4B380006E35EE /* RequestForConsultVC.swift in Sources */,
+				2B3C81F2252AF8DB00325DAA /* ForgotPasswordVC.swift in Sources */,
 				2BDE1F8124D9BA6300CC517B /* DoctorDetailsVC+APICall.swift in Sources */,
 				2B310DE224F16A990045E308 /* Ext-Date.swift in Sources */,
 				2B37A4A024EE47A8004DED9F /* UploadDocVC.swift in Sources */,
@@ -1193,6 +1244,7 @@
 				2BE642E824C2EF2E00F10EF6 /* DropDownVC.swift in Sources */,
 				C657998924AE045E0094410B /* CreateDoctorVC.swift in Sources */,
 				2B6428B524B4B357006E35EE /* FeedBackVC.swift in Sources */,
+				2B38CA85252B68E10095E335 /* ForgotPasswordOTPView.swift in Sources */,
 				2BE642EB24C2EF3E00F10EF6 /* DropDownCell.swift in Sources */,
 				2B97124A24C5B86C0025B26C /* TermsConditionPopUpVC.swift in Sources */,
 				2BFABF6224F153A400823C58 /* UploadDocVC+iCloud.swift in Sources */,
@@ -1378,7 +1430,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Fitcure/Rehab Call Physiotherapist.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.6;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 394TUZ4LCT;
 				INFOPLIST_FILE = Fitcure/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1386,7 +1438,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.fitcuredoctor;
 				PRODUCT_NAME = "Rehab Call Physiotherapist";
 				PROVISIONING_PROFILE_SPECIFIER = DevDoctorProfile;
@@ -1403,7 +1455,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Fitcure/Rehab Call Physiotherapist.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.6;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 394TUZ4LCT;
 				INFOPLIST_FILE = Fitcure/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1411,7 +1463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.fitcuredoctor;
 				PRODUCT_NAME = "Rehab Call Physiotherapist";
 				PROVISIONING_PROFILE_SPECIFIER = DistDoctorProfile;

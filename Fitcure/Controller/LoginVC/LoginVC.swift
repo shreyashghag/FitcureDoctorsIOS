@@ -71,6 +71,9 @@ final class LoginVC: UIViewController {
         guard checkValidations() else { return }
         api_Login()
     }
+    @IBAction private func btnForgotPasswordPressed() {
+        pushForgotPasswordVC()
+    }
     @IBAction private func btnSecurePressed() {
         txtfPassword.isSecureTextEntry.toggle()
         btnSecure.setImage(UIImage(named: txtfPassword.isSecureTextEntry ? "f_HidePassword" : "f_ShowPassword"), for: .normal)
@@ -94,7 +97,10 @@ final class LoginVC: UIViewController {
     private func pushSignUpVC() {
         self.navigationController?.popViewController(animated: true)
     }
-    
+    private func pushForgotPasswordVC() {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: ForgotPasswordVC.self)) as? ForgotPasswordVC else { return }
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     func pushTabbarVC() {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: TabBarVC.self)) as? TabBarVC else { return }
         self.navigationController?.setViewControllers([vc], animated: true)

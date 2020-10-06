@@ -40,8 +40,7 @@ extension SignUpVC {
             case .CustomError(let str):
                Alert.show(.error, str)
             }
-        }
-        
+        }        
     }
     
 } //extension

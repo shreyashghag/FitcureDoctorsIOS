@@ -91,6 +91,7 @@ final class APICall {
         case d_helpinghand              = "create/helpinghand/"
         case d_sendPrescription         = "send/prescription/"
         case d_updateProfile            = "update/doctorwithprofile/"
+        case d_forgotpassword           = "forgot/password/doctor/"
        
     }
         

@@ -8,6 +8,7 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+
 class EditProfileVC: UIViewController {
     
     // MARK:- Outlets

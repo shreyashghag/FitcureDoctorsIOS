@@ -188,6 +188,7 @@ extension Alert {
         case MailConfigure      = "Mail services are not available"
         case pdfAllowed         = "Please select pdf file."
         case AllpdfNeeded       = "Please all select files."
+        case passwordMismatch   = "New password and confirm password are not same."
     }
     
 } //Alert

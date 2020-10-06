@@ -64,4 +64,20 @@ struct CustomModel: Codable {
             }
         }
     }
+    
+    static func resetPassword(_ parameter: [String: Any], complection: ((Result<String>)->())?) {
+        
+        APICall.webRequest(apiType: .POST, endPoint: .d_forgotpassword, parameters: parameter, decodableObj: CustomModel.self) { (result) in
+            switch result {
+            case .Success(let obj, _, _):
+                if !(obj?.error ?? false), let firestObj = obj?.message {
+                    complection?(.Success(firestObj))
+                } else {
+                    complection?(.CustomError(obj?.message ?? Alert.AlertMessage.Oops.rawValue))
+                }
+            case .CustomError(let str):
+                complection?(.CustomError(str))
+            }
+        }
+    }
 }
